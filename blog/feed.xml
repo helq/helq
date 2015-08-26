@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>helq's blog</title>
+  <subtitle/>
+  <id>http://blog.url.com/blog</id>
+  <link href="http://blog.url.com/blog"/>
+  <link href="http://blog.url.com/blog/feed.xml" rel="self"/>
+  <updated>2015-08-23T15:12:00-05:00</updated>
+  <author>
+    <name>helq</name>
+  </author>
+  <entry>
+    <title>Splitting video or sound in multiple files - ffmpeg [bash script]</title>
+    <link rel="alternate" href="http://blog.url.com/blog/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg/"/>
+    <id>/blog/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg/</id>
+    <published>2015-08-23T15:12:00-05:00</published>
+    <updated>2015-08-25T23:23:03-05:00</updated>
+    <author>
+      <name>helq</name>
+    </author>
+    <content type="html">&lt;p&gt;Copying just a fraction of a sound (&lt;code&gt;.mp3&lt;/code&gt;, &lt;code&gt;.wma&lt;/code&gt;, &lt;code&gt;.aac&lt;/code&gt;, …) or video file
+(&lt;code&gt;.mp4&lt;/code&gt;, &lt;code&gt;.wma&lt;/code&gt;, …) using ffmpeg:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-bash"&gt;ffmpeg -i "$name" -acodec copy -vcodec copy -t $splitLen -ss $start "$new_name"
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;where &lt;code&gt;$name&lt;/code&gt; is the name of the file to split, &lt;code&gt;$splitLen&lt;/code&gt; is the lenght in
+seconds of the split, &lt;code&gt;$start&lt;/code&gt; the second in which the splitting start and the &lt;code&gt;$new_name&lt;/code&gt;
+for the file.&lt;/p&gt;
+
+&lt;p&gt;Now the idea is to copy fractions of the song (or video) in pieces of the same
+size, so that adding all the pieces we get the original song (video), so here
+a little script in bash that does that for you:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class="language-bash"&gt;splitVideo() {
+    # name file to split
+    name="$1"
+    totalTime="$(ffprobe -i "$name" -show_format 2&amp;gt; /dev/null | sed -n 's/duration=//p')"
+    # splitting time in seconds
+    splitLen=$2
+    numOfSplits="$(printf '%.0f\n' $[ totalTime / splitLen ])"
+
+    for i in {0..$numOfSplits}; do
+        start=$[ splitLen * i ]
+
+        num=$(printf '%02d' $[i+1])
+        new_name="${name%.*}_${num}.${name//*.}"
+
+        ffmpeg -i "$name" -acodec copy -vcodec copy \
+               -t $splitLen -ss $start \
+               -metadata "track=$[i+1]" \
+               "$new_name"
+    done
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Mode of use: &lt;code&gt;splitVideo "$name_of_the_file" $a_number&lt;/code&gt;, where &lt;code&gt;$a_number&lt;/code&gt; is
+the size of the split in seconds, if you put 600 it means 10 minutes.&lt;/p&gt;
+
+&lt;p&gt;Ok, in reallity is a bash function not a bash script &lt;em&gt;per se&lt;/em&gt;, but you can
+convert it in a bash script just deleting the &lt;code&gt;splitVideo&lt;/code&gt; definition and
+saving it in a file with a header like &lt;code&gt;#!\usr\env bash&lt;/code&gt; (or &lt;code&gt;zsh&lt;/code&gt;, or &lt;code&gt;sh&lt;/code&gt;).&lt;/p&gt;
+</content>
+  </entry>
+</feed>
