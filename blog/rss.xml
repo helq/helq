@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[HAUREN - helq's blog]]></title><description><![CDATA[thoughts, reflexions, software, maths, and other things that you're not interested in]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Mon, 05 Oct 2015 02:44:31 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Splitting video or sound in multiple files - ffmpeg [bash script]]]></title><description><![CDATA[<p>Copying just a fraction of a sound (<code>.mp3</code>, <code>.wma</code>, <code>.aac</code>, …) or video file
+(<code>.mp4</code>, <code>.wma</code>, …) using ffmpeg:</p>
+<pre><code class="lang-bash">ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy -t $splitLen -ss $start &quot;$new_name&quot;
+</code></pre>
+<p>where <code>$name</code> is the name of the file to split, <code>$splitLen</code> is the length in
+seconds of the split, <code>$start</code> the second in which the splitting start and the <code>$new_name</code>
+for the file.</p>
+<p>Now the idea is to copy fractions of the song (or video) in pieces of the same
+size, so that adding all the pieces we get the original song (video), so here
+a little script in bash that does that for you:</p>
+<pre><code class="lang-bash">splitVideo() {
+    # name file to split
+    name=&quot;$1&quot;
+    totalTime=&quot;$(ffprobe -i &quot;$name&quot; -show_format 2&gt; /dev/null | sed -n &#39;s/duration=//p&#39;)&quot;
+    # splitting time in seconds
+    splitLen=$2
+    numOfSplits=&quot;$(printf &#39;%.0f\n&#39; $[ totalTime / splitLen ])&quot;
+
+    for i in {0..$numOfSplits}; do
+        start=$[ splitLen * i ]
+
+        num=$(printf &#39;%02d&#39; $[i+1])
+        new_name=&quot;${name%.*}_${num}.${name//*.}&quot;
+
+        ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy \
+               -t $splitLen -ss $start \
+               -metadata &quot;track=$[i+1]&quot; \
+               &quot;$new_name&quot;
+    done
+}
+</code></pre>
+<p>Mode of use: <code>splitVideo &quot;$name_of_the_file&quot; $a_number</code>, where <code>$a_number</code> is
+the size of the split in seconds, for example if you put 600 it means 10
+minutes.</p>
+<p>Ok, in reallity it is a bash function not a bash script <em>per se</em>, but you can
+convert it in a bash script just deleting the <code>splitVideo</code> definition and
+saving it in a file with a header like <code>#!\usr\env bash</code> (or <code>zsh</code>, or <code>sh</code>).</p>
+<pre><code class="lang-bash">#!\usr\env bash
+
+# name file to split
+name=&quot;$1&quot;
+
+...
+
+done
+</code></pre>
+]]></description><link>https://helq.github.io/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg</guid><pubDate>Sun, 23 Aug 2015 20:12:00 GMT</pubDate></item></channel></rss>

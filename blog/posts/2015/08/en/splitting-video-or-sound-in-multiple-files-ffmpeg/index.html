@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="description" content="">
+  <link rel="icon" type="image/x-icon" href="/blog/img/favicon.ico">
+
+  <link rel=alternate type="application/atom+xml" title="Atom Feed" href="/blog/rss.xml" />
+
+  <link rel="stylesheet" href="/blog/assets/bower_components/normalize.css/normalize.css" />
+  <link rel="stylesheet" href="/blog/assets/css/style.css">
+
+  <title>HAUREN - Splitting video or sound in multiple files - ffmpeg [bash script]</title>
+</head>
+
+<body>
+  <header id="header">
+    <div class="center">
+      <div class="wrap">
+        <div id="site">
+          <h1><a href="/blog/">HAUREN</a></h1>
+
+          <h2><a href="/blog/">thoughts, reflexions, software, maths, and other things that you&#39;re not interested in</a></h2>
+
+        </div>
+        <nav id="menu">
+          <ul>
+
+            <li><a href="/blog/">home</a></li>
+
+            <li><a href="/blog/about/">about</a></li>
+
+            <li><a href="/blog/archive/">archive</a></li>
+
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div id="content">
+    <div class="center">
+      <div class="main-col">
+
+        <article class="post">
+
+          <div class="post-content">
+            <header>
+
+              <div class="meta">
+                <div class="icon"></div>
+                <time datetime="2015-08-23T20:12:00.000Z"><a href="/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg">2015-08-23</a></time>
+              </div>
+
+              <h1 class="title">Splitting video or sound in multiple files - ffmpeg [bash script]</h1>
+
+            </header>
+            <div class="entry">
+
+              <p>Copying just a fraction of a sound (<code>.mp3</code>, <code>.wma</code>, <code>.aac</code>, …) or video file (
+                <code>.mp4</code>, <code>.wma</code>, …) using ffmpeg:</p>
+              <pre><code class="lang-bash">ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy -t $splitLen -ss $start &quot;$new_name&quot;
+</code></pre>
+              <p>where <code>$name</code> is the name of the file to split, <code>$splitLen</code> is the length in seconds of the split, <code>$start</code> the second
+                in which the splitting start and the <code>$new_name</code> for the file.</p>
+              <p>Now the idea is to copy fractions of the song (or video) in pieces of the same size, so that adding all the pieces we get the original song (video),
+                so here a little script in bash that does that for you:</p>
+              <pre><code class="lang-bash">splitVideo() {
+    # name file to split
+    name=&quot;$1&quot;
+    totalTime=&quot;$(ffprobe -i &quot;$name&quot; -show_format 2&gt; /dev/null | sed -n &#39;s/duration=//p&#39;)&quot;
+    # splitting time in seconds
+    splitLen=$2
+    numOfSplits=&quot;$(printf &#39;%.0f\n&#39; $[ totalTime / splitLen ])&quot;
+
+    for i in {0..$numOfSplits}; do
+        start=$[ splitLen * i ]
+
+        num=$(printf &#39;%02d&#39; $[i+1])
+        new_name=&quot;${name%.*}_${num}.${name//*.}&quot;
+
+        ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy \
+               -t $splitLen -ss $start \
+               -metadata &quot;track=$[i+1]&quot; \
+               &quot;$new_name&quot;
+    done
+}
+</code></pre>
+              <p>Mode of use: <code>splitVideo &quot;$name_of_the_file&quot; $a_number</code>, where <code>$a_number</code> is the size of the split in seconds, for
+                example if you put 600 it means 10 minutes.
+              </p>
+              <p>Ok, in reallity it is a bash function not a bash script <em>per se</em>, but you can convert it in a bash script just deleting the <code>splitVideo</code>                definition and saving it in a file with a header like <code>#!\usr\env bash</code> (or <code>zsh</code>, or <code>sh</code>).</p>
+              <pre><code class="lang-bash">#!\usr\env bash
+
+# name file to split
+name=&quot;$1&quot;
+
+...
+
+done
+</code></pre>
+
+            </div>
+            <footer class="clearfix">
+
+              <div class="tags">
+
+                <a href="/blog/tags/ffmpeg/">#ffmpeg</a>
+
+                <a href="/blog/tags/sh/">#sh</a>
+
+                <a href="/blog/tags/scripting/">#scripting</a>
+
+                <a href="/blog/tags/programming/">#programming</a>
+
+              </div>
+
+            </footer>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </div>
+
+  <footer id="footer">
+    <div class="center">
+      &copy; 2015 helq. &nbsp;&nbsp; Blog generated using <a href="http://metalsmith.io">metalsmith</a> &nbsp;&nbsp; Layout based on the hexo theme <a href="https://github.com/dnxbf321/hexo-theme-simplest">simplest</a>
+    </div>
+  </footer>
+
+  <script src="/blog/assets/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/blog/assets/js/jquery.imagesloaded.min.js"></script>
+  <script src="/blog/assets/js/gallery.js"></script>
+
+  <script>
+    /* # reduce header when down scrolling */
+    (function() {
+      var $header = $('#header');
+      $(window).on('scroll', function() {
+        if (window.scrollY > 100) {
+          $header.addClass('small');
+        } else {
+          $header.removeClass('small');
+        }
+      });
+    }());
+  </script>
+
+</body>
+
+</html>
