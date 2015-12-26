@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/blog/assets/bower_components/normalize.css/normalize.css" />
   <link rel="stylesheet" href="/blog/assets/css/style.css">
 
-  <title>HAUREN - Splitting video or sound in multiple files - ffmpeg [bash script]</title>
+  <title>omnomnomelq - Splitting video or sound in multiple files - ffmpeg [bash script]</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     <div class="center">
       <div class="wrap">
         <div id="site">
-          <h1><a href="/blog/">HAUREN</a></h1>
+          <h1><a href="/blog/">omnomnomelq</a></h1>
 
           <h2><a href="/blog/">thoughts, reflexions, software, maths, and other things that you&#39;re not interested in</a></h2>
 
@@ -61,20 +61,24 @@
             </header>
             <div class="entry">
 
-              <p>Copying just a fraction of a sound (<code>.mp3</code>, <code>.wma</code>, <code>.aac</code>, …) or video file (
-                <code>.mp4</code>, <code>.wma</code>, …) using ffmpeg:</p>
+              <p>The present article describes how to split a video/sound in multiple files of same duration using ffmpeg. <a href="/blog/data/splitVideo.sh">Clic to download automated bash script.</a></p>
+              <p>With ffmpeg, to copy just a fraction of a sound (<code>.mp3</code>, <code>.wma</code>, <code>.aac</code>, …) or video file (<code>.mp4</code>, <code>.wma</code>,
+                …) use:</p>
               <pre><code class="lang-bash">ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy -t $splitLen -ss $start &quot;$new_name&quot;
 </code></pre>
               <p>where <code>$name</code> is the name of the file to split, <code>$splitLen</code> is the length in seconds of the split, <code>$start</code> the second
                 in which the splitting start and the <code>$new_name</code> for the file.</p>
-              <p>Now the idea is to copy fractions of the song (or video) in pieces of the same size, so that adding all the pieces we get the original song (video),
-                so here a little script in bash that does that for you:</p>
+              <p>The idea is to copy fractions of the song (or video) in pieces of the same size, so that adding all the pieces we get the original song (video). Here
+                a bash function that does the job:</p>
               <pre><code class="lang-bash">splitVideo() {
     # name file to split
     name=&quot;$1&quot;
-    totalTime=&quot;$(ffprobe -i &quot;$name&quot; -show_format 2&gt; /dev/null | sed -n &#39;s/duration=//p&#39;)&quot;
     # splitting time in seconds
     splitLen=$2
+
+    # total of the song
+    totalTime=&quot;$(ffprobe -i &quot;$name&quot; -show_format 2&gt; /dev/null | sed -n &#39;s/duration=//p&#39;)&quot;
+    # number of splits required
     numOfSplits=&quot;$(printf &#39;%.0f\n&#39; $[ totalTime / splitLen ])&quot;
 
     for i in {0..$numOfSplits}; do
@@ -90,19 +94,9 @@
     done
 }
 </code></pre>
-              <p>Mode of use: <code>splitVideo &quot;$name_of_the_file&quot; $a_number</code>, where <code>$a_number</code> is the size of the split in seconds, for
-                example if you put 600 it means 10 minutes.
-              </p>
-              <p>Ok, in reallity it is a bash function not a bash script <em>per se</em>, but you can convert it in a bash script just deleting the <code>splitVideo</code>                definition and saving it in a file with a header like <code>#!\usr\env bash</code> (or <code>zsh</code>, or <code>sh</code>).</p>
-              <pre><code class="lang-bash">#!\usr\env bash
-
-# name file to split
-name=&quot;$1&quot;
-
-...
-
-done
-</code></pre>
+              <p>Mode of use: <code>splitVideo &quot;$name_of_the_file&quot; $time_in_seconds</code>, where <code>$time_in_seconds</code> is the size of the split in
+                seconds, for example, if you put 600 it means 10 minutes.</p>
+              <p><a href="/blog/data/splitVideo.sh">Here the bash script.</a> It is the same code as in the bash function, just in a bash file ;)</p>
 
             </div>
             <footer class="clearfix">
@@ -111,11 +105,11 @@ done
 
                 <a href="/blog/tags/ffmpeg/">#ffmpeg</a>
 
-                <a href="/blog/tags/sh/">#sh</a>
-
-                <a href="/blog/tags/scripting/">#scripting</a>
+                <a href="/blog/tags/bash/">#bash</a>
 
                 <a href="/blog/tags/programming/">#programming</a>
+
+                <a href="/blog/tags/scripting/">#scripting</a>
 
               </div>
 
@@ -139,7 +133,7 @@ done
   <script src="/blog/assets/js/gallery.js"></script>
 
   <script>
-    /* # reduce header when down scrolling */
+    /* # reduce header while down scrolling */
     (function() {
       var $header = $('#header');
       $(window).on('scroll', function() {
