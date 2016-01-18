@@ -30,7 +30,7 @@ a {
 .center {
   margin: auto;
   min-width: 300px;
-  max-width: 1200px; }
+  max-width: 800px; }
 
 @media screen and (max-width: 1260px) {
   .center {
