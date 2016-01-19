@@ -11,8 +11,10 @@
 
   <link rel=alternate type="application/atom+xml" title="Atom Feed" href="/blog/rss.xml" />
 
-  <link rel="stylesheet" href="/blog/assets/bower_components/normalize.css/normalize.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
   <link rel="stylesheet" href="/blog/assets/css/style.css">
+  <!-- stylesheet for coloring source code -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/tomorrow.min.css">
 
   <title>omnomnomelq - helq&#39;s blog</title>
 </head>
@@ -56,7 +58,7 @@
                 <time datetime="2016-01-17T22:25:00.000Z"><a href="/blog/posts/2016/01/en/chinese-log-step-1">2016-01-17</a></time>
               </div>
 
-              <h1 class="title"><a href="/blog/posts/2016/01/en/chinese-log-step-1">Chinese Log - Step 1</a></h1>
+              <h1 class="title"><a href="/blog/posts/2016/01/en/chinese-log-step-1">Chinese Log - Step 1: Reading</a></h1>
 
             </header>
             <div class="entry">
@@ -65,12 +67,12 @@
                 I’m a beginner!). Not all links are meant to be helpful for the beginner though, they’re just resources I found useful.</p>
               <p>The bold links are the most relevant for the first stage of the learning process, the pronunciation part. But I think it’s worthed to read all the
                 links to get an initial picture of the Chinese language.</p>
-              <p>First of all, why do you wanna learn chinese?:</p>
+              <h2 id="first-of-all-why-do-you-wanna-learn-chinese-">First of all, why do you wanna learn chinese?:</h2>
               <ul>
                 <li><strong><a href="http://www.hackingchinese.com/goals-and-motivation-part-1-introduction/">Goals and motivation, part 1 – Introduction</a></strong>                  (my answer: just to know a different language. I wanted to learn French, Portuguese, or Chinese, and I decide for Chinese because is the hardest
                   from my mother language (spanish, btw))</li>
               </ul>
-              <p>About pronunciation and Pinyin:</p>
+              <h2 id="about-pronunciation-and-pinyin-">About pronunciation and Pinyin:</h2>
               <ul>
                 <li><strong><a href="https://en.wikipedia.org/wiki/Help:IPA_for_Mandarin">IPA for Manda…</a></strong></li>
               </ul>
@@ -205,9 +207,13 @@
     </div>
   </footer>
 
-  <script src="/blog/assets/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="/blog/assets/js/jquery.imagesloaded.min.js"></script>
-  <script src="/blog/assets/js/gallery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+  <!-- source code coloring -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
 
   <script>
     /* # reduce header while down scrolling */

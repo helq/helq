@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Mon, 18 Jan 2016 02:04:54 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Chinese Log - Step 1]]></title><description><![CDATA[<p>Here are the web pages I found useful when reading about Chinese Language as a complete beginner (huh, I’m talking like I knew Chinese, for the record: I’m a beginner!). Not all links are meant to be helpful for the beginner though, they’re just resources I found useful.</p>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Tue, 19 Jan 2016 04:33:55 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Chinese Log - Step 1: Reading]]></title><description><![CDATA[<p>Here are the web pages I found useful when reading about Chinese Language as a complete beginner (huh, I’m talking like I knew Chinese, for the record: I’m a beginner!). Not all links are meant to be helpful for the beginner though, they’re just resources I found useful.</p>
 <p>The bold links are the most relevant for the first stage of the learning process, the pronunciation part. But I think it’s worthed to read all the links to get an initial picture of the Chinese language.</p>
-<p>First of all, why do you wanna learn chinese?:</p>
+<h2 id="first-of-all-why-do-you-wanna-learn-chinese-">First of all, why do you wanna learn chinese?:</h2>
 <ul>
 <li><strong><a href="http://www.hackingchinese.com/goals-and-motivation-part-1-introduction/">Goals and motivation, part 1 – Introduction</a></strong> (my answer: just to know a different language. I wanted to learn French, Portuguese, or Chinese, and I decide for Chinese because is the hardest from my mother language (spanish, btw))</li>
 </ul>
-<p>About pronunciation and Pinyin:</p>
+<h2 id="about-pronunciation-and-pinyin-">About pronunciation and Pinyin:</h2>
 <ul>
 <li><strong><a href="https://en.wikipedia.org/wiki/Help:IPA_for_Mandarin">IPA for Mandarin</a></strong> Take a look at the awesome chart in the wikipedia. Learn what is IPA and how can you use it to learn a new language.</li>
 <li><strong><a href="https://fluent-forever.com/chapter3/">IPA explanation | Pronunciation/Ear training</a></strong> A clear explanation of IPA.</li>
@@ -36,14 +36,14 @@
 <li><strong><a href="http://www.sinosplice.com/learn-chinese/tone-pair-drills">Tone pair drills</a></strong></li>
 <li><a href="https://en.wikipedia.org/wiki/Standard_Chinese_phonology">Standard Chinese phonology</a> I left this at last because I haven’t even finish reading it. But it’s the wikipedia, so, I think, it has valuable information.</li>
 </ul>
-<p>About books:</p>
+<h2 id="about-books-">About books:</h2>
 <ul>
 <li><strong><a href="http://www.amazon.com/Assimil-Language-Courses-Chinese-compact/dp/0320006158">Assimil Chinese with Ease</a></strong> Book focus in self-learning</li>
 <li><a href="http://www.amazon.com/Schaums-Outline-Chinese-Grammar-Claudia/dp/0071377646">Schaum’s Outline of Chinese Grammar</a></li>
 <li><a href="http://www.amazon.com/Modern-Mandarin-Chinese-Grammar-Practical/dp/0415827140?tag=duckduckgo-ffab-20">Modern Mandarin Chinese Grammar: A Practical Guide</a></li>
 <li><a href="http://www.amazon.com/Reading-Writing-Chinese-Characters-Compounds/dp/080484299X">Reading and Writing Chinese: Third Edition</a> I’m not sure if this book is good because I don’t plan to learn to write in Chinese until I have the enough knowledge to understand Spoken Chinese.</li>
 </ul>
-<p>Characters:</p>
+<h2 id="characters-">Characters:</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Chinese_characters">Chinese Characters - Wikipedia</a> (Man, I love the wikipedia so much)</li>
 <li><a href="http://www.learnchineseok.com/2012/05/write-chinese-radicals-symbol-letters.html">Learn Chinese characters through radicals, etymology, …</a></li>
@@ -51,7 +51,7 @@
 <li><a href="https://web.archive.org/web/20150618081452/http://www.zein.se/patrick/chinen9p.html">Introduction to Chinese Characters</a></li>
 <li><a href="www.hanzicraft.com/">Character decomposition</a> (should this be in the dictionary list of resources below?)</li>
 </ul>
-<p>About Grammar:</p>
+<h2 id="about-grammar-">About Grammar:</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Chinese_grammar">Chinese Grammar - Wikipedia </a></li>
 <li><a href="http://resources.allsetlearning.com/chinese/grammar">Chinese Grammar Wiki</a></li>
@@ -59,20 +59,20 @@
 <li><a href="http://chinese.stackexchange.com/questions/16246/descriptive-generative-grammar-of-mandarin">StackExchange discussion about resources for chinese grammar</a></li>
 <li><a href="https://fluent-forever.com/learning-grammar-without-translation/">Learning grammar and abstract words without translation</a> A little tip to learn grammar without using translation (or trying it)</li>
 </ul>
-<p>Software:</p>
+<h2 id="software-">Software:</h2>
 <ul>
 <li><a href="https://ankiweb.net/shared/info/235147699">Timo’s All-In-One Chinese Deck</a> a deck to use with <a href="http://ankisrs.net/">Anki</a></li>
 <li><a href="http://www.hackingchinese.com/using-audacity-to-learn-chinese-speaking-and-listening/">Using Audacity to learn Chinese</a></li>
-<li><a href="http://www.fon.hum.uva.nl/praat/">Praat</a> software to study phonetics, a series explaining how to use it: <a href="http://www.snigel.nu/?p=7738">part1</a> <a href="http://www.snigel.nu/?p=7751">part2</a> <a href="http://www.snigel.nu/?p=7793">part3</a> (I got it from: <a href="http://www.hackingchinese.com/learning-to-pronounce-mandarin-with-pinyin-zhuyin-and-ipa-part-3/">Learning to pronounce Mandarin: Part 3</a>)</li>
+<li><a href="http://www.fon.hum.uva.nl/praat/">Praat</a> software to study phonetics, how to use it: <a href="http://www.sinosplice.com/life/archives/2008/01/21/seeing-the-tones-of-mandarin-chinese-with-praat">Seeing the Tones of Mandarin Chinese with Praat</a></li>
 </ul>
-<p>Dictionaries and word lists:</p>
+<h2 id="dictionaries-and-word-lists-">Dictionaries and word lists:</h2>
 <ul>
 <li><a href="http://ce.linedict.com/dict.html#/cnen/home">Line Dict</a></li>
 <li><a href="http://www.hskhsk.com/word-lists.html">HSK Lists</a> word lists from the <a href="https://en.wikipedia.org/wiki/Hanyu_Shuiping_Kaoshi">Chinese Proficiency Test</a></li>
 <li><a href="http://www.pleco.com/">Pleco dictionary</a></li>
 <li><a href="http://forvo.com/languages/zh/">Forvo</a> a web data base for thousands of word recordings in many languages</li>
 </ul>
-<p>Audios y videos:</p>
+<h2 id="audios-y-videos-">Audios y videos:</h2>
 <ul>
 <li><a href="https://chinesepod.com/">Chinesepod</a> podcasts in Chinese/English with different levels of difficulty, and other audio/video resources.</li>
 <li><a href="http://english.cntv.cn/learnchinese/">CCTV Learn Chinese</a> national Chinese news for foreigners</li>
@@ -93,19 +93,19 @@
 </li>
 <li><a href="http://www.chinese-forums.com/index.php?/topic/24097-tv-series-recommendations-and-index-thread/">TV Series Recommendations - Chinese-forums.com</a></li>
 </ul>
-<p>(more) web pages for learning Chinese:</p>
+<h2 id="-more-web-pages-for-learning-chinese-">(more) web pages for learning Chinese:</h2>
 <ul>
 <li><a href="http://livemocha.com/pages/languages/learn-mandarin-chinese/">Learn Chinese - Livemocha</a></li>
 <li><a href="http://www.chinese-skill.com/cs.html">ChineseSkill</a> Chinese doulingo-ish app</li>
 <li><a href="http://www.archchinese.com/">ArchChinese</a> dictionary, flashcards, tones, …</li>
 </ul>
-<p>More resources pages:</p>
+<h2 id="more-resources-pages-">More resources pages:</h2>
 <ul>
 <li><a href="http://www.iwillteachyoualanguage.com/resources/mandarin-chinese-resources/">111 Mandarin Chinese resources you wish you knew</a></li>
 <li><a href="https://eastasiastudent.net/china/mandarin/chinese-learning-tools/">My favourite Chinese learning tools</a></li>
 <li><a href="https://chinese.stackexchange.com/questions/1120/resources-for-learning-mandarin-chinese">Resources for learning Mandarin Chinese - StackExchange</a></li>
 </ul>
-<p>AND some RANDOM:</p>
+<h2 id="and-some-random-stuff-">And some random stuff:</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Lion-Eating_Poet_in_the_Stone_Den">Lion-Eating Poet in the Stone Den</a></li>
 <li><a href="https://www.youtube.com/watch?v=e73btaVo868">Cantonese Vs. Mandarin </a></li>
@@ -153,5 +153,5 @@
 }
 </code></pre>
 <p>Mode of use: <code>splitVideo &quot;$name_of_the_file&quot; $time_in_seconds</code>, where <code>$time_in_seconds</code> is the size of the split in seconds, for example, if you put 600 it means 10 minutes.</p>
-<p><a href="/blog/data/splitVideo.sh">Here the bash script.</a> It is the same code as in the bash function, just in a bash file ;)</p>
+<p><a href="/blog/data/splitVideo.sh">Here’s the bash script.</a> It is the same code as in the bash function, just in a bash file ;)</p>
 ]]></description><link>https://helq.github.io/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg</guid><pubDate>Sun, 23 Aug 2015 20:12:00 GMT</pubDate></item></channel></rss>

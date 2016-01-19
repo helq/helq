@@ -111,7 +111,7 @@ article {
         &::before {
           color: #fff;
           font: 20px $font-icon;
-          line-height: 36px;
+          line-height: 32px;
         }
       }
       time {
@@ -124,7 +124,7 @@ article {
           display: block;
           color: #fff;
           font-size: 13px;
-          line-height: 36px;
+          line-height: 32px;
         }
       }
     }
@@ -184,7 +184,7 @@ article {
       padding: 0 5px;
       border: 1px solid $color-border;
       border-radius: 3px;
-      background: #eee;
+      background: #fff;
       color: #666;
       font-size: 0.9em;
     }
@@ -194,7 +194,7 @@ article {
       padding: 7px 15px;
       border: 1px solid $color-border;
       border-radius: 2px;
-      background: #eee;
+      background: #fff;
       code {
         margin: 0;
         padding: 0;
@@ -296,7 +296,7 @@ article {
       padding-left: 25px;
       &::before {
         position: absolute;
-        top: 2px;
+        top: 0px;
         left: 1px;
         font: 1.1em $font-icon;
       }

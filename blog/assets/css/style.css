@@ -3,7 +3,7 @@
   font-family: 'FontAwesome';
   font-style: normal;
   font-weight: normal;
-  src: url(font/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(font/fontawesome-webfont.woff) format("woff"), url(font/fontawesome-webfont.ttf) format("truetype"), url(font/fontawesome-webfont.svg#FontAwesomeRegular) format("svg"); }
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/fonts/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/fonts/fontawesome-webfont.woff) format("woff"), url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/fonts/fontawesome-webfont.ttf) format("truetype"), url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/fonts/fontawesome-webfont.svg#FontAwesomeRegular) format("svg"); }
 /* 1366 * 768 */
 /* iPhone 6+ 414px */
 html {
@@ -175,7 +175,7 @@ article {
       article header .meta .icon::before {
         color: #fff;
         font: 20px FontAwesome;
-        line-height: 36px; }
+        line-height: 32px; }
     article header .meta time {
       display: block;
       float: left;
@@ -186,7 +186,7 @@ article {
         display: block;
         color: #fff;
         font-size: 13px;
-        line-height: 36px; }
+        line-height: 32px; }
   article header .title {
     font-weight: normal; }
     article header .title a {
@@ -226,7 +226,7 @@ article {
       padding: 0 5px;
       border: 1px solid #7C848C;
       border-radius: 3px;
-      background: #eee;
+      background: #fff;
       color: #666;
       font-size: 0.9em; }
     article .entry pre {
@@ -235,7 +235,7 @@ article {
       padding: 7px 15px;
       border: 1px solid #7C848C;
       border-radius: 2px;
-      background: #eee; }
+      background: #fff; }
       article .entry pre code {
         margin: 0;
         padding: 0;
@@ -312,7 +312,7 @@ article {
       padding-left: 25px; }
       article footer > div::before {
         position: absolute;
-        top: 2px;
+        top: 0px;
         left: 1px;
         font: 1.1em FontAwesome; }
     article footer a {

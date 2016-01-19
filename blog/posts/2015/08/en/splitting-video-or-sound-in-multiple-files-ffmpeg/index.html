@@ -11,8 +11,10 @@
 
   <link rel=alternate type="application/atom+xml" title="Atom Feed" href="/blog/rss.xml" />
 
-  <link rel="stylesheet" href="/blog/assets/bower_components/normalize.css/normalize.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
   <link rel="stylesheet" href="/blog/assets/css/style.css">
+  <!-- stylesheet for coloring source code -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/tomorrow.min.css">
 
   <title>omnomnomelq - Splitting video or sound in multiple files - ffmpeg [bash script]</title>
 </head>
@@ -96,7 +98,7 @@
 </code></pre>
               <p>Mode of use: <code>splitVideo &quot;$name_of_the_file&quot; $time_in_seconds</code>, where <code>$time_in_seconds</code> is the size of the split in
                 seconds, for example, if you put 600 it means 10 minutes.</p>
-              <p><a href="/blog/data/splitVideo.sh">Here the bash script.</a> It is the same code as in the bash function, just in a bash file ;)</p>
+              <p><a href="/blog/data/splitVideo.sh">Here’s the bash script.</a> It is the same code as in the bash function, just in a bash file ;)</p>
 
             </div>
             <footer class="clearfix">
@@ -128,9 +130,13 @@
     </div>
   </footer>
 
-  <script src="/blog/assets/bower_components/jquery/dist/jquery.min.js"></script>
-  <script src="/blog/assets/js/jquery.imagesloaded.min.js"></script>
-  <script src="/blog/assets/js/gallery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+  <!-- source code coloring -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
 
   <script>
     /* # reduce header while down scrolling */
