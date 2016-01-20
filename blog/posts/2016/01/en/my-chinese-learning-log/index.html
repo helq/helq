@@ -16,7 +16,7 @@
   <!-- stylesheet for coloring source code -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/tomorrow.min.css">
 
-  <title>omnomnomelq - Splitting video or sound in multiple files - ffmpeg [bash script]</title>
+  <title>omnomnomelq - My Chinese Learning Log</title>
 </head>
 
 <body>
@@ -55,63 +55,46 @@
 
               <div class="meta">
                 <div class="icon"></div>
-                <time datetime="2015-08-23T20:12:00.000Z"><a href="/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg">2015-08-23</a></time>
+                <time datetime="2016-01-15T19:25:00.000Z"><a href="/blog/posts/2016/01/en/my-chinese-learning-log">2016-01-15</a></time>
               </div>
 
-              <h1 class="title">Splitting video or sound in multiple files - ffmpeg [bash script]</h1>
+              <h1 class="title">My Chinese Learning Log</h1>
 
             </header>
             <div class="entry">
 
-              <p>The present article describes how to split a video/sound in multiple files of same duration using ffmpeg. <a href="/blog/data/splitVideo.sh">Click to download automated bash script.</a></p>
-              <p>With ffmpeg, to copy just a fraction of a sound (<code>.mp3</code>, <code>.wma</code>, <code>.aac</code>, …) or video file (<code>.mp4</code>, <code>.wma</code>,
-                …) use:</p>
-              <pre><code class="lang-bash">ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy -t $splitLen -ss $start &quot;$new_name&quot;
-</code></pre>
-              <p>where <code>$name</code> is the name of the file to split, <code>$splitLen</code> is the length in seconds of the split, <code>$start</code> the second
-                in which the splitting start and the <code>$new_name</code> for the file.</p>
-              <p>The idea is to copy fractions of the song (or video) in pieces of the same size, so that adding all the pieces we get the original song (video). Here
-                a bash function that does the job:</p>
-              <pre><code class="lang-bash">splitVideo() {
-    # name file to split
-    name=&quot;$1&quot;
-    # splitting time in seconds
-    splitLen=$2
-
-    # total of the song
-    totalTime=&quot;$(ffprobe -i &quot;$name&quot; -show_format 2&gt; /dev/null | sed -n &#39;s/duration=//p&#39;)&quot;
-    # number of splits required
-    numOfSplits=&quot;$(printf &#39;%.0f\n&#39; $[ totalTime / splitLen ])&quot;
-
-    for i in {0..$numOfSplits}; do
-        start=$[ splitLen * i ]
-
-        num=$(printf &#39;%02d&#39; $[i+1])
-        new_name=&quot;${name%.*}_${num}.${name//*.}&quot;
-
-        ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy \
-               -t $splitLen -ss $start \
-               -metadata &quot;track=$[i+1]&quot; \
-               &quot;$new_name&quot;
-    done
-}
-</code></pre>
-              <p>Mode of use: <code>splitVideo &quot;$name_of_the_file&quot; $time_in_seconds</code>, where <code>$time_in_seconds</code> is the size of the split in
-                seconds, for example, if you put 600 it means 10 minutes.</p>
-              <p><a href="/blog/data/splitVideo.sh">Here’s the bash script.</a> It is the same code as in the bash function, just in a bash file ;)</p>
+              <p>Welcome to my log! I intend to write here my progress while I learn Chinese from zero. That means, I will try to track my progress in this post (or
+                list of posts), the tools I use, the tools I make, my worries and difficulties and what I learn in the process.</p>
+              <p>I hope I will see in 1 or 2 years to this post and say, well… you did something with your “free” time.</p>
+              <p>So, after spending 1 week searching for resources to study Chinese, I came up with this study plan:</p>
+              <ol>
+                <li><a href="/blog/posts/2016/01/en/chinese-log-step-1/">Search for information and read the most I can about the basics of the language</a>, which means
+                  to read: wikipedia, blogs, books and their commentaries, … (time spent in this step: few days to few weeks)</li>
+                <li><a href="/blog/posts/2016/01/en/chinese-log-step-2/">Study pronunciation of Chinese Mandarin</a>, it’s a tricky language, with many weird sounds
+                  (zhi, chi, zi, ci, ji and qi sound incredibly similar to my ears) and tones. Use pinyin for this. (time spent: few weeks to one month or two)</li>
+                <li>Study spoken Chinese with help of written pinyin. Don’t even bother with the written Chinese, maybe learn some useful characters but not focus on
+                  learning them. (time spent: One year to many! Actually, I think I’ll never go out from this level)</li>
+                <li>Learn written Chinese, or memorize Characters by means of reading, mainly. Don’t focus on learning characters isolated, it’s a dumb idea (Chinese
+                  characters represent a sound, a syllable, and many (most?) words in Chinese are compose from 2 or more syllables).</li>
+              </ol>
+              <h2 id="measuring-my-progress">Measuring my progress</h2>
+              <p>I will measure my progress on hours using a spread sheet. I don’t wanna use days, because days are no reliable when talking about a portion of a day
+                in a running time of months/years (I could study 3 hours one day an only 20 minutes others).</p>
+              <p>That’s all!, or at least for now, until I know what more to write, and boy, I think I will write a lot (if not, you know I stopped trying and that
+                I’m really terrible at fulfilling the goals I give myself)</p>
 
             </div>
             <footer class="clearfix">
 
               <div class="tags">
 
-                <a href="/blog/tags/ffmpeg/">#ffmpeg</a>
+                <a href="/blog/tags/languages/">#languages</a>
 
-                <a href="/blog/tags/bash/">#bash</a>
+                <a href="/blog/tags/Chinese/">#Chinese</a>
 
-                <a href="/blog/tags/programming/">#programming</a>
+                <a href="/blog/tags/learning/">#learning</a>
 
-                <a href="/blog/tags/scripting/">#scripting</a>
+                <a href="/blog/tags/Chinese-Log/">#Chinese-Log</a>
 
               </div>
 

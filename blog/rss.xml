@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Tue, 19 Jan 2016 20:25:53 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Chinese Log - Step 1: Reading]]></title><description><![CDATA[<p>Here are the web pages I found useful when reading about Chinese Language as a complete beginner (huh, I’m talking like I knew Chinese, for the record: I’m a beginner!). Not all links are meant to be helpful for the beginner though, they’re just resources I found useful.</p>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Wed, 20 Jan 2016 18:56:25 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Chinese Log - Step 2: Learning Pronunciation]]></title><description><![CDATA[<p><em>This article is part of a series of posts on my Chinese learning experience,</em> <em>for more information visit the <a href="/blog/posts/2016/01/en/my-chinese-learning-log/">main series page</a></em></p>
+<p>My first ‘real’ step into learning Chinese has been to learn the pronunciation of the vowels and consonants in Chinese (or rather, the initials and finals), and later combine them and learn to distinguish between different tones.</p>
+<p>The Chinese syllables are composed of two parts an (optional) initial and a final, so my first step was getting to know the initials and the finals. But first of all, I learn the basics of IPA:</p>
+<h2 id="1-ipa">1. IPA</h2>
+<p>I use IPA to know approximately the sound of every consonant and vowel. For an explanation of the IPA system visit the <a href="https://fluent-forever.com/chapter3/">IPA explanation | Pronunciation/Ear training</a> from <a href="https://fluent-forever.com">Fluent Forever</a>, it is fundamental!.</p>
+<p>Then you can read the <a href="https://en.wikipedia.org/wiki/Help:IPA_for_Mandarin">IPA for Chinese</a>.</p>
+<p>And don’t forget to read the <a href="https://en.wikipedia.org/wiki/Pinyin">Pinyin Article (wikipedia)</a> as we will base our learning in pinyin.</p>
+<h2 id="2-initials">2. Initials</h2>
+<p>For the initials I first read the Wikipedia’s Pinyin Article (or some of it) and then I create an <a href="http://ankisrs.net/">Anki</a> Deck with “all” the initials using different audio recordings (links to all audio sources at the bottom of this post), you can download the deck from <a href="https://ankiweb.net/shared/decks/">Anki Shared Decks</a>: <a href="https://ankiweb.net/shared/info/2069190049">Pinyin - Initials - Multiple recordings per initial</a>, <strong>NOTE:</strong> the deck uses the Anki Addon <a href="https://ankiweb.net/shared/info/498789867">Replay Button</a> and relays heavily on it to work, thus this Anki Deck only works in Desktop Anki and its installation is mandatory.</p>
+<p>I got the IPA transcriptions from <a href="http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart">All Set Learning</a> and slightly modified them with the Pinyin/IPA Description from Wikipedia’s Article.</p>
+<h2 id="3-finals">3. Finals</h2>
+<p>For the finals I did exactly the same as with the initials. You can find the deck from ankiweb: <a href="https://ankiweb.net/shared/info/509132394">Pinyin - Finals - Multiple recordings per final sound</a>.</p>
+<h2 id="4-pairs-of-difficult-sounds">4. Pairs of difficult sounds</h2>
+<p>Some sounds are incredibly difficult for me to tell them apart, but as I read in <a href="https://fluent-forever.com/gallery/ear-training-flashcards/">Fluent Forever</a>, I could just hear one recording (<a href="http://www.sciencealert.com/here-are-4-key-strategies-for-remembering-everything-you-learn">repeat it</a>) and try to guess to which of two sounds does it correspond. For that, I create (guess what) an Anki Deck. For space reasons, I uploaded the <a href="/blog/data/pinyin/Pinyin__Pairs-v0.1.apkg">deck alone</a> (without the media files (audios)) and the media files separated in a <code>.zip</code> file, which you can find at the bottom of the post.</p>
+<p>To add new pairs you only need to create (it’s called <code>add</code> in Anki) a new card and fill the fields with the right information:</p>
+<ul>
+<li><strong>Pair Sounds:</strong> Sounds that are difficult for you to differentiate</li>
+<li><strong>Written Sound 1:</strong> The first of the two (or three) difficult sounds</li>
+<li><strong>IPA 1:</strong> First sound IPA notation</li>
+<li><strong>Written Sound 2:</strong> Same as 1</li>
+<li><strong>IPA 2:</strong> Same as 1</li>
+<li>…</li>
+<li><strong>Audio 1:</strong> Audios followed by their IPA notation, don’t forget to separate each audio with an <code>EOF</code></li>
+<li><strong>Audio 2:</strong> Same as <code>Audio 1</code></li>
+<li>…</li>
+<li><strong>Extra Info:</strong> Additional info you want to be displayed in the “back” of the card.</li>
+</ul>
+<p>You can get the audio and its IPA notation from the file: <a href="/blog/data/pinyin/all_with_IPA_per_sound-v0.1.csv">all_with_IPA_per_sound.csv</a>. I got all right pinyin sound possibilities from <a href="http://www.archchinese.com/chinese_pinyin.html">ArchChinese</a>.</p>
+<h2 id="5-tones">5. Tones</h2>
+<p>In <a href="/blog/data/pinyin/Pinyin__Tones-v0.1.apkg">this Anki Deck</a> you will find 30 cards to practice tones. Every time a card is displayed an audio will play with a random tone (from one of the four “possible” tones), and you need to guess which one it is.</p>
+<p><strong>Note:</strong> this Anki Deck is huge, in fact it contain all the pinyin sounds which are spoken (not all the possible pinyin and tones combinations, that are way more). You can find the audio media on a zip at the bottom of this post.</p>
+<p>Beware: there are two kinds of 3rd tones in the recordings. The first, the ‘traditional’, the tone that is learn everywhere, and the second, the ‘spoken’ or ‘real’ tone, the tone which you should learn to speak Chinese for a detailed explanation see <a href="http://www.sinosplice.com/life/archives/2008/12/10/toward-better-tones-in-natural-speech">Toward Better Tones in Natural Speech</a>.</p>
+<p></br></p>
+<h2 id="sources-">Sources:</h2>
+<p>Audio sources (listed in the same order in which they appear named in the decks), all credit goes to them:</p>
+<ol>
+<li><a href="http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart">http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart</a> (the audios from this source appear with an <code>_1</code> at the end)</li>
+<li><a href="https://chinese.yabla.com/chinese-pinyin-chart.php">https://chinese.yabla.com/chinese-pinyin-chart.php</a> (<code>_2</code> is the postfix for all audios from this source)</li>
+<li><a href="http://www.yoyochinese.com/chinese-learning-tools/Mandarin-Chinese-pronunciation-lesson/pinyin-chart-table">http://www.yoyochinese.com/chinese-learning-tools/Mandarin-Chinese-pronunciation-lesson/pinyin-chart-table</a> (<code>_3</code> so on …)</li>
+<li><a href="http://www.archchinese.com/chinese_pinyin.html">http://www.archchinese.com/chinese_pinyin.html</a></li>
+<li><a href="http://pinpinchinese.com/pinyin-chart/">http://pinpinchinese.com/pinyin-chart/</a></li>
+<li><a href="http://public.gettysburg.edu/~jli/PinYinChart/ChinesePinYinChartM.html">http://public.gettysburg.edu/~jli/PinYinChart/ChinesePinYinChartM.html</a></li>
+<li><a href="http://lost-theory.org/chinese/phonetics/">http://lost-theory.org/chinese/phonetics/</a></li>
+<li><a href="http://www.china-on-site.com/language/phonetic/phonetic.htm">http://www.china-on-site.com/language/phonetic/phonetic.htm</a> (this is the only source which audio doesn’t have a numeration in the audio saved in the card decks)</li>
+</ol>
+<p></br></p>
+<h2 id="deck-and-media-downloads-">Deck and media downloads:</h2>
+<ul>
+<li>All audios (Anki’s ‘Media Folder’ compressed): <a href="https://www.mediafire.com/?vpbv0m0me7b81zg">collection.media.zip (version 0.1)</a> (mediafire). You need this! Extract it under your personal Anki Media Folder.</li>
+<li><a href="/blog/data/pinyin/Pinyin__Initials-v0.1.apkg">Initials deck</a> (version 0.1) Alternative download <a href="/blog/data/pinyin/initials-v0.1.csv">csv file</a></li>
+<li><a href="/blog/data/pinyin/Pinyin__Finals-v0.1.apkg">Finals deck</a> (version 0.1) Alternative download <a href="/blog/data/pinyin/finals-v0.1.csv">csv file</a></li>
+<li><a href="/blog/data/pinyin/Pinyin__Pairs-v0.1.apkg">Pairs deck</a> (version 0.1) Alternative download <a href="/blog/data/pinyin/pairs-v0.1.csv">csv file</a></li>
+<li><a href="/blog/data/pinyin/Pinyin__Tones-v0.1.apkg">Tones deck</a> (version 0.1) Alternative download <a href="/blog/data/pinyin/tones-v0.1.csv">csv file</a></li>
+<li><a href="/blog/data/pinyin/all_with_IPA_per_sound-v0.1.csv">All spoken pinyin combinations</a> csv file (version 0.1)</li>
+</ul>
+]]></description><link>https://helq.github.io/blog/posts/2016/01/en/chinese-log-step-2</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2016/01/en/chinese-log-step-2</guid><pubDate>Tue, 19 Jan 2016 00:45:00 GMT</pubDate></item><item><title><![CDATA[Chinese Log - Step 1: Searching for Resources]]></title><description><![CDATA[<p><em>This article is part of a series of posts on my Chinese learning experience,</em> <em>for more information visit the <a href="/blog/posts/2016/01/en/my-chinese-learning-log/">main series page</a></em></p>
+<p>Here are the web pages I found useful when reading about Chinese Language as a complete beginner (huh, I’m talking like I knew Chinese, for the record: I’m a beginner!). Not all links are meant to be helpful for the beginner though, they’re just resources I found useful.</p>
 <p>The bold links are the most relevant for the first stage of the learning process, the pronunciation part. But I think it’s worthed to read all the links to get an initial picture of the Chinese language.</p>
 <h2 id="first-of-all-why-do-you-wanna-learn-chinese-">First of all, why do you wanna learn chinese?:</h2>
 <ul>
 <li><strong><a href="http://www.hackingchinese.com/goals-and-motivation-part-1-introduction/">Goals and motivation, part 1 – Introduction</a></strong> (my answer: just to know a different language. I wanted to learn French, Portuguese, or Chinese, and I decide for Chinese because is the hardest from my mother language (spanish, btw))</li>
+<li><strong><a href="http://www.sciencealert.com/here-are-4-key-strategies-for-remembering-everything-you-learn">How to learn effectively</a></strong> Few science based tips to improve learning, so you can achieve your learning goals (part of the reason why am I writting this in the first place ;) )</li>
 </ul>
 <h2 id="about-pronunciation-and-pinyin-">About pronunciation and Pinyin:</h2>
 <ul>
@@ -111,7 +168,19 @@
 <li><a href="https://www.youtube.com/watch?v=e73btaVo868">Cantonese Vs. Mandarin </a></li>
 <li><a href="http://popupchinese.com/lessons/absolute-beginners/casual-greetings-in-chinese">Casual Greetings in Chinese</a></li>
 </ul>
-]]></description><link>https://helq.github.io/blog/posts/2016/01/en/chinese-log-step-1</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2016/01/en/chinese-log-step-1</guid><pubDate>Sun, 17 Jan 2016 22:25:00 GMT</pubDate></item><item><title><![CDATA[Deaf Sign Language]]></title><description><![CDATA[<p><em>This article is based in an essay I wrote for an English class in the second semester of 2015</em></p>
+]]></description><link>https://helq.github.io/blog/posts/2016/01/en/chinese-log-step-1</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2016/01/en/chinese-log-step-1</guid><pubDate>Sun, 17 Jan 2016 22:25:00 GMT</pubDate></item><item><title><![CDATA[My Chinese Learning Log]]></title><description><![CDATA[<p>Welcome to my log! I intend to write here my progress while I learn Chinese from zero. That means, I will try to track my progress in this post (or list of posts), the tools I use, the tools I make, my worries and difficulties and what I learn in the process.</p>
+<p>I hope I will see in 1 or 2 years to this post and say, well… you did something with your “free” time.</p>
+<p>So, after spending 1 week searching for resources to study Chinese, I came up with this study plan:</p>
+<ol>
+<li><a href="/blog/posts/2016/01/en/chinese-log-step-1/">Search for information and read the most I can about the basics of the language</a>, which means to read: wikipedia, blogs, books and their commentaries, … (time spent in this step: few days to few weeks)</li>
+<li><a href="/blog/posts/2016/01/en/chinese-log-step-2/">Study pronunciation of Chinese Mandarin</a>, it’s a tricky language, with many weird sounds (zhi, chi, zi, ci, ji and qi sound incredibly similar to my ears) and tones. Use pinyin for this. (time spent: few weeks to one month or two)</li>
+<li>Study spoken Chinese with help of written pinyin. Don’t even bother with the written Chinese, maybe learn some useful characters but not focus on learning them. (time spent: One year to many! Actually, I think I’ll never go out from this level)</li>
+<li>Learn written Chinese, or memorize Characters by means of reading, mainly. Don’t focus on learning characters isolated, it’s a dumb idea (Chinese characters represent a sound, a syllable, and many (most?) words in Chinese are compose from 2 or more syllables).</li>
+</ol>
+<h2 id="measuring-my-progress">Measuring my progress</h2>
+<p>I will measure my progress on hours using a spread sheet. I don’t wanna use days, because days are no reliable when talking about a portion of a day in a running time of months/years (I could study 3 hours one day an only 20 minutes others).</p>
+<p>That’s all!, or at least for now, until I know what more to write, and boy, I think I will write a lot (if not, you know I stopped trying and that I’m really terrible at fulfilling the goals I give myself)</p>
+]]></description><link>https://helq.github.io/blog/posts/2016/01/en/my-chinese-learning-log</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2016/01/en/my-chinese-learning-log</guid><pubDate>Fri, 15 Jan 2016 19:25:00 GMT</pubDate></item><item><title><![CDATA[Deaf Sign Language]]></title><description><![CDATA[<p><em>This article is based in an essay I wrote for an English class in the second semester of 2015</em></p>
 <p>The first time I heard somebody was studying Deaf Sign Language was from my auntie. It seems that the city is giving free clases to learn the Colombian Deaf Sign Language. But what is a Deaf Sign Language?.</p>
 <p>Before searching a little in internet, I thought that the Deaf Sign Language was a language constructed mapping words from a Hearing Language, like Spanish, to hand gestures. This means, I thought, they only use a different set of skills to carry the words they are making, just like writing requires a different set of skills to what speaking requires, thus using the same Spanish grammar as I use. So, basically, if you want to learn Sign Language, I thought, you only need to learn to write or speak again using a different set of skills, with your hands mainly.</p>
 <p>That sounds right, but it isn’t, I was completely WRONG!.</p>

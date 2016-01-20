@@ -14,7 +14,7 @@ body {
   padding-top: 180px; }
 
 a {
-  color: #63AAFF;
+  color: #004EAB;
   text-decoration: none; }
   a:hover {
     color: #000;
@@ -444,9 +444,9 @@ article {
       color: #4E5359;
       font-size: 100%; }
       .entry .gist .gist-file .gist-meta a {
-        color: #63AAFF; }
+        color: #004EAB; }
         .entry .gist .gist-file .gist-meta a:visited {
-          color: #63AAFF; }
+          color: #004EAB; }
 .entry figure {
   margin: 0; }
   .entry figure.highlight {
