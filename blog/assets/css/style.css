@@ -11,7 +11,8 @@ html {
   background: #fff; }
 
 body {
-  padding-top: 180px; }
+  padding-top: 180px;
+  color: #444; }
 
 a {
   color: #004EAB;

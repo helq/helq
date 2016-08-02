@@ -63,7 +63,8 @@
             </header>
             <div class="entry">
 
-              <p><em>This article is part of a series of posts on my Chinese learning experience,</em> <em>for more information visit the <a href="/blog/posts/2016/01/en/my-chinese-learning-log/">main series page</a></em></p>
+              <p><em>This article is part of a series of posts on my Chinese learning experience,</em> <em>for more
+information visit the <a href="/blog/posts/2016/01/en/my-chinese-learning-log/">main series page</a></em></p>
               <p>My first ‘real’ step into learning Chinese has been to learn the pronunciation of vowels and consonants in Chinese (or rather, the initials and finals),
                 and later combine them and learn to distinguish between the different tones.</p>
               <p>The Chinese syllables are composed of two parts an (optional) initial and a final, so my first step was getting to know the initials and the finals.
@@ -111,14 +112,16 @@
             </header>
             <div class="entry">
 
-              <p><em>This article is part of a series of posts on my Chinese learning experience,</em> <em>for more information visit the <a href="/blog/posts/2016/01/en/my-chinese-learning-log/">main series page</a></em></p>
+              <p><em>This article is part of a series of posts on my Chinese learning experience,</em> <em>for more
+information visit the <a href="/blog/posts/2016/01/en/my-chinese-learning-log/">main series page</a></em></p>
               <p>Here are the web pages I found useful when reading about Chinese Language as a complete beginner (huh, I’m talking like I knew Chinese, for the record:
-                I’m a beginner!). Not all links are meant to be helpful for the beginner though, they’re just resources I found useful.</p>
+                I’m a beginner!). Not all links are meant to be helpful for the beginner though, they’re just resources I found useful.
+              </p>
               <p>The bold links are the most relevant for the first stage of the learning process, the pronunciation part. But I think it’s worthed to read all the
                 links to get an initial picture of the Chinese language.</p>
-              <h2 id="first-of-all-why-do-you-wanna-learn-chinese-">First of all, why do you wanna learn chinese?:</h2>
+              <h2 id="first-of-all-why-do-you-wanna-learn-chinese-">First of all, why do you wanna learn chinese?</h2>
               <ul>
-                <li><strong><a href="http://www.hackingchinese.com/goals-and-motivation-part-1-introduction/">Goals and motivation, part 1 – Introduction</a></strong>                  (my answer: just to know a different language. I wanted to learn French, Portuguese, or Chinese, and I deci…</li>
+                <li><strong><a href="http://www.hackingchinese.com/goals-and-motivation-part-1-introduction/">Goals and motivation, part 1 – Introduction</a></strong>                  (my answer: just to know a different language. I wanted to learn French, Portuguese, or Chinese, and I decid…</li>
               </ul>
 
             </div>
@@ -164,8 +167,9 @@
               <p>I hope I will see in 1 or 2 years to this post and say, well… you did something with your “free” time.</p>
               <p>So, after spending 1 week searching for resources to study Chinese, I came up with this study plan:</p>
               <ol>
-                <li><a href="/blog/posts/2016/01/en/chinese-log-step-1/">Search for information and read the most I can about the basics of the language</a>, which means
-                  to read: wikipedia, blogs, books and their commentaries, … (time spent in this step: few days to few weeks)</li>
+                <li><a href="/blog/posts/2016/01/en/chinese-log-step-1/">Search for information and read the most I can about the basics of the
+language</a>, which means to read: wikipedia, blogs, books and their commentaries, … (time spent in this step: few days to few weeks)
+                </li>
                 <li><a href="/blog/posts/2016/01/en/chinese-log-step-2/">Study pronunciation of Chinese Mandarin</a>, it’s a tricky language, with many weird sounds
                   (zhi, chi, zi, ci, ji and qi sound incredibly s…</li>
               </ol>
@@ -208,13 +212,14 @@
             </header>
             <div class="entry">
 
-              <p><em>This article is based in an essay I wrote for an English class in the second semester of 2015</em></p>
-              <p>The first time I heard somebody was studying Deaf Sign Language was from my auntie. It seems that the city is giving free clases to learn the Colombian
+              <p><em>This article is based in an essay I wrote for an English class in the second semester of
+2015</em></p>
+              <p>The first time I heard somebody was studying Deaf Sign Language was from my auntie. It seems that the city is giving free classes to learn the Colombian
                 Deaf Sign Language. But what is a Deaf Sign Language?.</p>
-              <p>Before searching a little in internet, I thought that the Deaf Sign Language was a language constructed mapping words from a Hearing Language, like
+              <p>Before searching a little in Internet, I thought that the Deaf Sign Language was a language constructed mapping words from a Hearing Language, like
                 Spanish, to hand gestures. This means, I thought, they only use a different set of skills to carry the words they are making, just like writing requires
                 a different set of skills to what speaking requires, thus using the same Spanish grammar as I use. So, basically, if you want to learn Sign Language,
-                I thought, you only need to learn to write or sp…</p>
+                I thought, you only need to learn to write or s…</p>
 
             </div>
             <footer class="clearfix">
@@ -250,19 +255,22 @@
             </header>
             <div class="entry">
 
-              <p>The present article describes how to split a video/sound in multiple files of same duration using ffmpeg. <a href="/blog/data/splitVideo.sh">Click to download automated bash script.</a></p>
+              <h2 id="-edit-2016-08-02-"><strong>Edit: 2016-08-02</strong></h2>
+              <p>I found a <a href="http://unix.stackexchange.com/a/283547">simpler, built-in in ffmpeg aproach</a> to split a sound/video file in multiple parts with
+                the same time length.</p>
+              <pre><code class="lang-bash">ffmpeg -i &#39;input_file.mp3&#39; \
+       -acodec copy -vcodec copy \
+       -f segment -segment_time 600 \
+       &#39;%03d_out_name.mp3&#39;
+</code></pre>
+              <p>In this example we have an input file called <code>input_file.mp3</code> and we break it in multiple files of 10 minutes each (600 seconds). Each output
+                file has a unique name of the form:
+                <code>XXX_out_name.mp3</code> where <code>XXX</code> represent a 3 number digit.</p>
+              <h2 id="_as-a-reference-the-old-article-_"><em>As a reference, the old article:</em></h2>
+              <p>The present article describes how to split a video/sound into multiple files of same duration using ffmpeg. <a href="/blog/data/splitVideo.sh">Click to download automated bash script.</a></p>
               <p>With ffmpeg, to copy just a fraction of a sound (<code>.mp3</code>, <code>.wma</code>, <code>.aac</code>, …) or video file (<code>.mp4</code>, <code>.wma</code>,
                 …) use:</p>
-              <pre><code class="lang-bash">ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy -t $splitLen -ss $start &quot;$new_name&quot;
-</code></pre>
-              <p>where <code>$name</code> is the name of the file to split, <code>$splitLen</code> is the length in seconds of the split, <code>$start</code> the second
-                in which the splitting start and the <code>$new_name</code> for the file.</p>
-              <p>The idea is to copy fractions of the song (or video) in pieces of the same size, so that adding all the pieces we get the original song (video). Here
-                a bash function that does the job:</p>
-              <pre><code class="lang-bash">splitVideo() {
-    # name file to split
-    name=&quot;$1&quot;
-    # splitting time in …</code></pre>
+              <pre><code class="lang-bash">…</code></pre>
 
             </div>
             <footer class="clearfix">
