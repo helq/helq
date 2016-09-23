@@ -1,106 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="description" content="">
-  <link rel="icon" type="image/x-icon" href="/blog/img/favicon.ico">
+	<meta charset="UTF-8"/>
+	<meta name="viewport"
+	      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="description" content="">
+	<link rel="icon" type="image/x-icon" href="/blog/img/favicon.ico">
+    
+    <link rel=alternate type="application/atom+xml" title="Atom Feed" href="/blog/rss.xml"/>
+    
 
-  <link rel=alternate type="application/atom+xml" title="Atom Feed" href="/blog/rss.xml" />
+	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css"/>
+	<link rel="stylesheet" href="/blog/assets/css/style.css">
+	<!-- stylesheet for coloring source code -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/tomorrow.min.css">
+	
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
-  <link rel="stylesheet" href="/blog/assets/css/style.css">
-  <!-- stylesheet for coloring source code -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/styles/tomorrow.min.css">
-
-  <title>omnomnomelq - Splitting video or sound in multiple files - ffmpeg [bash script]</title>
+    <title>omnomnomelq - Splitting video or sound in multiple files - ffmpeg [bash script]</title>
 </head>
-
 <body>
-  <header id="header">
-    <div class="center">
-      <div class="wrap">
-        <div id="site">
-          <h1><a href="/blog/">omnomnomelq</a></h1>
+<header id="header">
+	<div class="center">
+		<div class="wrap">
+			<div id="site">
+				<h1><a href="/blog/">omnomnomelq</a></h1>
+				
+				<h2><a href="/blog/">i&#39;m a subtitle!</a></h2>
+				
+			</div>
+			<nav id="menu">
+				<ul>
+					
+					<li><a href="/blog/">home</a></li>
+					
+					<li><a href="/blog/about/">about</a></li>
+					
+					<li><a href="/blog/archive/">archive</a></li>
+					
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
 
-          <h2><a href="/blog/">i&#39;m a subtitle!</a></h2>
 
-        </div>
-        <nav id="menu">
-          <ul>
+<div id="content">
+	<div class="center">
+		<div class="main-col">
+			
 
-            <li><a href="/blog/">home</a></li>
 
-            <li><a href="/blog/about/">about</a></li>
 
-            <li><a href="/blog/archive/">archive</a></li>
+<article class="post">
+    
+    <div class="post-content">
+        <header>
+            
+                <div class="meta">
+                    <div class="icon"></div>
+                    <time datetime="2015-08-23T20:12:00.000Z"><a href="/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg">2015-08-23</a></time>
+                </div>
+            
+            
 
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </header>
+<h1 class="title">Splitting video or sound in multiple files - ffmpeg [bash script]</h1>
 
-  <div id="content">
-    <div class="center">
-      <div class="main-col">
 
-        <article class="post">
 
-          <div class="post-content">
-            <header>
-
-              <div class="meta">
-                <div class="icon"></div>
-                <time datetime="2015-08-23T20:12:00.000Z"><a href="/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg">2015-08-23</a></time>
-              </div>
-
-              <h1 class="title">Splitting video or sound in multiple files - ffmpeg [bash script]</h1>
-
-            </header>
-            <div class="entry">
-
-              <h2 id="-edit-2016-08-02-"><strong>Edit: 2016-08-02</strong></h2>
-              <p>I found a <a href="http://unix.stackexchange.com/a/283547">simpler, built-in in ffmpeg aproach</a> to split a sound/video file in multiple parts with
-                the same time length.</p>
-              <pre><code class="lang-bash">ffmpeg -i &#39;input_file.mp3&#39; \
+        </header>
+        <div class="entry">
+          
+            <h2><strong>Edit: 2016-08-02</strong></h2>
+<p>I found a <a href="http://unix.stackexchange.com/a/283547">simpler, built-in in ffmpeg aproach</a> to split a sound/video file
+in multiple parts with the same time length.</p>
+<pre><code class="language-bash">ffmpeg -i 'input_file.mp3' \
        -acodec copy -vcodec copy \
        -f segment -segment_time 600 \
-       &#39;%03d_out_name.mp3&#39;
+       '%03d_out_name.mp3'
 </code></pre>
-              <p>In this example we have an input file called <code>input_file.mp3</code> and we break it in multiple files of 10 minutes each (600 seconds). Each output
-                file has a unique name of the form:
-                <code>XXX_out_name.mp3</code> where <code>XXX</code> represent a 3 number digit.</p>
-              <h2 id="_as-a-reference-the-old-article-_"><em>As a reference, the old article:</em></h2>
-              <p>The present article describes how to split a video/sound into multiple files of same duration using ffmpeg. <a href="/blog/data/splitVideo.sh">Click to download automated bash script.</a></p>
-              <p>With ffmpeg, to copy just a fraction of a sound (<code>.mp3</code>, <code>.wma</code>, <code>.aac</code>, …) or video file (<code>.mp4</code>, <code>.wma</code>,
-                …) use:</p>
-              <pre><code class="lang-bash">ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy -t $splitLen -ss $start &quot;$new_name&quot;
+<p>In this example we have an input file called <code>input_file.mp3</code> and we break it in multiple
+files of 10 minutes each (600 seconds). Each output file has a unique name of the form:
+<code>XXX_out_name.mp3</code> where <code>XXX</code> represent a 3 digit number.</p>
+<h2><em>As a reference, the old article:</em></h2>
+<p>The present article describes how to split a video/sound into multiple files of same
+duration using ffmpeg. <a href="/blog/data/splitVideo.sh">Click to download automated bash script.</a></p>
+<p>With ffmpeg, to copy just a fraction of a sound (<code>.mp3</code>, <code>.wma</code>, <code>.aac</code>, …) or video
+file (<code>.mp4</code>, <code>.wma</code>, …) use:</p>
+<pre><code class="language-bash">ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy -t $splitLen -ss $start &quot;$new_name&quot;
 </code></pre>
-              <p>where <code>$name</code> is the name of the file to split, <code>$splitLen</code> is the length in seconds of the split, <code>$start</code> the second
-                in which the splitting start and the <code>$new_name</code> for the file.
-              </p>
-              <p>The idea is to copy fractions of the song (or video) in pieces of the same size, so that adding all the pieces we get the original song (video). Here
-                a bash function that does the job:
-              </p>
-              <pre><code class="lang-bash">splitVideo() {
+<p>where <code>$name</code> is the name of the file to split, <code>$splitLen</code> is the length in seconds of
+the split, <code>$start</code> the second in which the splitting start and the <code>$new_name</code> for the
+file.</p>
+<p>The idea is to copy fractions of the song (or video) in pieces of the same size, so that
+adding all the pieces we get the original song (video). Here a bash function that does the
+job:</p>
+<pre><code class="language-bash">splitVideo() {
     # name file to split
     name=&quot;$1&quot;
     # splitting time in seconds
     splitLen=$2
 
     # total of the song
-    totalTime=&quot;$(ffprobe -i &quot;$name&quot; -show_format 2&gt; /dev/null | sed -n &#39;s/duration=//p&#39;)&quot;
+    totalTime=&quot;$(ffprobe -i &quot;$name&quot; -show_format 2&gt; /dev/null | sed -n 's/duration=//p')&quot;
     # number of splits required
-    numOfSplits=&quot;$(printf &#39;%.0f\n&#39; $[ totalTime / splitLen ])&quot;
+    numOfSplits=&quot;$(printf '%.0f\n' $[ totalTime / splitLen ])&quot;
 
     for i in {0..$numOfSplits}; do
         start=$[ splitLen * i ]
 
-        num=$(printf &#39;%02d&#39; $[i+1])
+        num=$(printf '%02d' $[i+1])
         new_name=&quot;${name%.*}_${num}.${name//*.}&quot;
 
         ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy \
@@ -110,67 +121,98 @@
     done
 }
 </code></pre>
-              <p>Mode of use: <code>splitVideo &quot;$name_of_the_file&quot; $time_in_seconds</code>, where <code>$time_in_seconds</code> is the size of the split in
-                seconds, for example, if you put 600 it means 10 minutes.</p>
-              <p><a href="/blog/data/splitVideo.sh">Here’s the bash script</a>. It is the same code as in the bash function, just in a bash file ;)</p>
+<p>Mode of use: <code>splitVideo &quot;$name_of_the_file&quot; $time_in_seconds</code>, where <code>$time_in_seconds</code>
+is the size of the split in seconds, for example, if you put 600 it means 10 minutes.</p>
+<p><a href="/blog/data/splitVideo.sh">Here’s the bash script</a>. It is the same code as in the bash function, just in a
+bash file ;)</p>
 
-            </div>
-            <footer class="clearfix">
+          
+        </div>
+        <footer class="clearfix">
+            
+            
+            
+<div class="tags">
+	
+	<a href="/blog/tags/ffmpeg/">#ffmpeg</a>
+	
+	<a href="/blog/tags/bash/">#bash</a>
+	
+	<a href="/blog/tags/programming/">#programming</a>
+	
+	<a href="/blog/tags/scripting/">#scripting</a>
+	
+</div>
 
-              <div class="tags">
 
-                <a href="/blog/tags/ffmpeg/">#ffmpeg</a>
 
-                <a href="/blog/tags/bash/">#bash</a>
 
-                <a href="/blog/tags/programming/">#programming</a>
-
-                <a href="/blog/tags/scripting/">#scripting</a>
-
-              </div>
-
-            </footer>
-          </div>
-        </article>
-
-      </div>
-
+        </footer>
     </div>
-  </div>
+</article>
 
-  <footer id="footer">
-    <div class="center">
-      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
-      <br /> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-      <br/> Any source code contained in any post is licensed under
-      <a href="http://www.wtfpl.net/"><img src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-2.png" width="80" height="15" alt="WTFPL" /></a>
-      unless otherwise noted.
-      <br/> &copy; 2016 helq. &nbsp;&nbsp; Blog generated using <a href="http://metalsmith.io">metalsmith</a> &nbsp;&nbsp; Layout based on the hexo theme <a href="https://github.com/dnxbf321/hexo-theme-simplest">simplest</a>      &nbsp;&nbsp; Find the <a href="https://github.com/helq/blag">source code in github</a>
-    </div>
-  </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
-  <!-- source code coloring -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad();
-  </script>
 
-  <script>
-    /* # reduce header while down scrolling */
-    (function() {
-      var $header = $('#header');
-      $(window).on('scroll', function() {
-        if (window.scrollY > 100) {
-          $header.addClass('small');
-        } else {
-          $header.removeClass('small');
-        }
-      });
-    }());
-  </script>
+
+
+		</div>
+		
+	</div>
+</div>
+
+<footer id="footer">
+	<div class="center">
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
+			alt="Creative Commons License" style="border-width:0"
+			src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
+		This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+		<br/>
+
+		Any source code contained in any post is licensed under
+		<a href="http://www.wtfpl.net/"><img
+            src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-2.png"
+            width="80" height="15" alt="WTFPL" /></a>
+		unless otherwise noted.
+		<br/>
+
+		&copy; 2015-2016
+		helq.
+		&nbsp;&nbsp;
+		Blog generated using <a href="http://metalsmith.io">metalsmith</a>
+		&nbsp;&nbsp;
+        Layout based on the hexo theme <a href="https://github.com/dnxbf321/hexo-theme-simplest">simplest</a>
+		&nbsp;&nbsp;
+		Find the <a href="https://github.com/helq/blag">source code in github</a>
+	</div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<!-- source code coloring -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.1.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+	/* # reduce header while down scrolling */
+	(function() {
+		var $header = $('#header');
+		$(window).on('scroll', function() {
+			if (window.scrollY > 100) {
+				$header.addClass('small');
+			} else {
+				$header.removeClass('small');
+			}
+		});
+	}());
+</script>
+
+
+
+
 
 </body>
-
 </html>

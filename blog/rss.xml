@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Tue, 02 Aug 2016 17:40:10 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Chinese Log - Step 2: Learning Pronunciation]]></title><description><![CDATA[<p><em>This article is part of a series of posts on my Chinese learning experience,</em> <em>for more
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Fri, 23 Sep 2016 15:16:59 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Chinese Log - Step 2: Learning Pronunciation]]></title><description><![CDATA[<p><em>This article is part of a series of posts on my Chinese learning experience,</em> <em>for more
 information visit the <a href="/blog/posts/2016/01/en/my-chinese-learning-log/">main series page</a></em></p>
 <p>My first ‘real’ step into learning Chinese has been to learn the pronunciation of vowels
 and consonants in Chinese (or rather, the initials and finals), and later combine them and
@@ -7,14 +7,14 @@ learn to distinguish between the different tones.</p>
 <p>The Chinese syllables are composed of two parts an (optional) initial and a final, so my
 first step was getting to know the initials and the finals. But first of all, I learnt the
 basics of IPA:</p>
-<h2 id="1-ipa">1. IPA</h2>
+<h2>1. IPA</h2>
 <p>I use IPA to know approximately the sound of every consonant and vowel. For an explanation
 of the IPA system visit <a href="https://fluent-forever.com/chapter3/">IPA explanation | Pronunciation/Ear training</a>
 from <a href="https://fluent-forever.com">Fluent Forever</a>, it is fundamental!.</p>
 <p>Then you can read <a href="https://en.wikipedia.org/wiki/Help:IPA_for_Mandarin">IPA for Chinese</a>.</p>
 <p>And don’t forget to read the <a href="https://en.wikipedia.org/wiki/Pinyin">Pinyin Article (wikipedia)</a>
 as we will base our learning in pinyin.</p>
-<h2 id="2-initials">2. Initials</h2>
+<h2>2. Initials</h2>
 <p>For the initials I first read the Wikipedia’s Pinyin Article (or some of it) and then I
 create an <a href="http://ankisrs.net/">Anki</a> Deck with “all” the initials using different audio
 recordings (links to all audio sources at the bottom of this post), you can download the
@@ -25,10 +25,10 @@ and relays heavily on it to work, thus this Anki Deck only works in Desktop Anki
 installation is mandatory.</p>
 <p>I got the IPA transcriptions from <a href="http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart">All Set Learning</a>
 and slightly modified them with the Pinyin/IPA Description from Wikipedia’s Article.</p>
-<h2 id="3-finals">3. Finals</h2>
+<h2>3. Finals</h2>
 <p>For the finals I did exactly the same as with the initials. You can find the deck from
 ankiweb: <a href="https://ankiweb.net/shared/info/509132394">Pinyin - Finals - Multiple recordings per final sound</a>.</p>
-<h2 id="4-pairs-of-difficult-sounds">4. Pairs of difficult sounds</h2>
+<h2>4. Pairs of difficult sounds</h2>
 <p>Some sounds are incredibly difficult for me to tell them apart, but as I read in
 <a href="https://fluent-forever.com/gallery/ear-training-flashcards/">Fluent Forever</a>,
 I could just hear one recording (<a href="http://www.sciencealert.com/here-are-4-key-strategies-for-remembering-everything-you-learn">repeat it</a>)
@@ -55,41 +55,42 @@ with an <code>EOF</code></li>
 <a href="/blog/data/pinyin/all_with_IPA_per_sound-v0.1.csv">all_with_IPA_per_sound.csv</a>.
 I got all right pinyin sound possibilities from
 <a href="http://www.archchinese.com/chinese_pinyin.html">ArchChinese</a>.</p>
-<h2 id="5-tones">5. Tones</h2>
+<h2>5. Tones</h2>
 <p>In <a href="/blog/data/pinyin/Pinyin__Tones-v0.1.apkg">this Anki Deck</a> you will find 30 cards to
 practice tones. Every time a card is displayed an audio will play with a random tone (from
 one of the four “possible” tones), and you need to guess which one it is.</p>
 <p><strong>Note:</strong> this Anki Deck is huge, in fact it contain all the pinyin sounds which are
-spoken (not all the possible pinyin and tones combinations, that are way more). You can
+spoken (not all the possible pinyin and tones combinations, those are many more). You can
 find the audio media on a zip at the bottom of this post.</p>
-<p>Beware: there are two kinds of 3rd tones in the recordings. The first, the ‘traditional’,
+<p>Beware: there are two kinds of 3rd tones in the recordings. The first, the 'traditional’,
 the tone that is learn everywhere, and the second, the ‘spoken’ or ‘real’ tone, the tone
 which you should learn to speak Chinese for a detailed explanation see
 <a href="http://www.sinosplice.com/life/archives/2008/12/10/toward-better-tones-in-natural-speech">Toward Better Tones in Natural Speech</a>.</p>
-<p></br></p>
-<h2 id="sources">Sources</h2>
+<hr>
+<h2>Sources</h2>
 <p>Audio sources (listed in the same order in which they appear named in the decks), all
 credit goes to them:</p>
 <ol>
-<li><a href="http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart">http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart</a> (the audios from
-this source appear with an <code>_1</code> at the end)</li>
-<li><a href="https://chinese.yabla.com/chinese-pinyin-chart.php">https://chinese.yabla.com/chinese-pinyin-chart.php</a> (<code>_2</code> is the postfix for all audios
-from this source)</li>
+<li><a href="http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart">http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart</a>
+(the audios from this source appear with an <code>_1</code> at the end)</li>
+<li><a href="https://chinese.yabla.com/chinese-pinyin-chart.php">https://chinese.yabla.com/chinese-pinyin-chart.php</a>
+(<code>_2</code> is the postfix for all audios from this source)</li>
 <li><a href="http://www.yoyochinese.com/chinese-learning-tools/Mandarin-Chinese-pronunciation-lesson/pinyin-chart-table">http://www.yoyochinese.com/chinese-learning-tools/Mandarin-Chinese-pronunciation-lesson/pinyin-chart-table</a>
 (<code>_3</code> so on …)</li>
 <li><a href="http://www.archchinese.com/chinese_pinyin.html">http://www.archchinese.com/chinese_pinyin.html</a></li>
 <li><a href="http://pinpinchinese.com/pinyin-chart/">http://pinpinchinese.com/pinyin-chart/</a></li>
 <li><a href="http://public.gettysburg.edu/~jli/PinYinChart/ChinesePinYinChartM.html">http://public.gettysburg.edu/~jli/PinYinChart/ChinesePinYinChartM.html</a></li>
 <li><a href="http://lost-theory.org/chinese/phonetics/">http://lost-theory.org/chinese/phonetics/</a></li>
-<li><a href="http://www.china-on-site.com/language/phonetic/phonetic.htm">http://www.china-on-site.com/language/phonetic/phonetic.htm</a> (this is the only source
-which audio doesn’t have a numeration in the audio saved in the card decks)</li>
+<li><a href="http://www.china-on-site.com/language/phonetic/phonetic.htm">http://www.china-on-site.com/language/phonetic/phonetic.htm</a>
+(this is the only source which audio doesn’t have a numeration in the audio saved in
+the card decks)</li>
 </ol>
-<p></br></p>
-<h2 id="deck-and-media-downloads">Deck and media downloads</h2>
+<hr>
+<h2>Deck and media downloads</h2>
 <ul>
 <li>All audios (Anki’s ‘Media Folder’ compressed):
-<a href="https://www.mediafire.com/?vpbv0m0me7b81zg">collection.media.zip (version 0.1)</a> (mediafire).
-You need this! Extract it under your personal Anki Media Folder.</li>
+<a href="https://www.mediafire.com/?vpbv0m0me7b81zg">collection.media.zip (version 0.1)</a>
+(mediafire).  You need this! Extract it under your personal Anki Media Folder.</li>
 <li>Anki Addon: <a href="https://ankiweb.net/shared/info/498789867">Replay Button</a> You need this!</li>
 <li><a href="/blog/data/pinyin/Pinyin__Initials-v0.1.apkg">Initials deck</a> (version 0.1)
 Alternative download <a href="/blog/data/pinyin/initials-v0.1.csv">csv file</a></li>
@@ -98,11 +99,9 @@ Alternative download <a href="/blog/data/pinyin/finals-v0.1.csv">csv file</a></l
 <li><a href="/blog/data/pinyin/Pinyin__Pairs-v0.1.apkg">Pairs deck</a> (version 0.1)
 Alternative download <a href="/blog/data/pinyin/pairs-v0.1.csv">csv file</a></li>
 <li><a href="/blog/data/pinyin/Pinyin__Tones-v0.1.apkg">Tones deck</a> (version 0.1)
-Alternative download <a href="/blog/data/pinyin/tones-v0.1.csv">csv file</a><ul>
+Alternative download <a href="/blog/data/pinyin/tones-v0.1.csv">csv file</a></li>
 <li><a href="/blog/data/pinyin/all_with_IPA_per_sound-v0.1.csv">All spoken pinyin combinations</a>
 csv file (version 0.1)</li>
-</ul>
-</li>
 </ul>
 ]]></description><link>https://helq.github.io/blog/posts/2016/01/en/chinese-log-step-2</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2016/01/en/chinese-log-step-2</guid><pubDate>Tue, 19 Jan 2016 00:45:00 GMT</pubDate></item><item><title><![CDATA[Chinese Log - Step 1: Searching for Resources]]></title><description><![CDATA[<p><em>This article is part of a series of posts on my Chinese learning experience,</em> <em>for more
 information visit the <a href="/blog/posts/2016/01/en/my-chinese-learning-log/">main series page</a></em></p>
@@ -113,7 +112,7 @@ useful.</p>
 <p>The bold links are the most relevant for the first stage of the learning process, the
 pronunciation part. But I think it’s worthed to read all the links to get an initial
 picture of the Chinese language.</p>
-<h2 id="first-of-all-why-do-you-wanna-learn-chinese-">First of all, why do you wanna learn chinese?</h2>
+<h2>First of all, why do you wanna learn chinese?</h2>
 <ul>
 <li><strong><a href="http://www.hackingchinese.com/goals-and-motivation-part-1-introduction/">Goals and motivation, part 1 – Introduction</a></strong>
 (my answer: just to know a different language. I wanted to learn French, Portuguese, or
@@ -123,7 +122,7 @@ Chinese, and I decide for Chinese because is the hardest from my mother language
 Few science based tips to improve learning, so you can achieve your learning goals (part
 of the reason why am I writing this in the first place ;) )</li>
 </ul>
-<h2 id="about-pronunciation-and-pinyin">About pronunciation and Pinyin</h2>
+<h2>About pronunciation and Pinyin</h2>
 <ul>
 <li><strong><a href="https://en.wikipedia.org/wiki/Help:IPA_for_Mandarin">IPA for Mandarin</a></strong> Take a look
 at the awesome chart in the wikipedia. Learn what is IPA and how can you use it to learn
@@ -142,7 +141,8 @@ Motivational post for pronunciation.</li>
 An explanation on how to produce the tones in Chinese.
 <a href="https://www.youtube.com/watch?v=3wV8B4bx1lM">One more from Yangyang</a></li>
 <li><a href="http://www.hackingchinese.com/24-great-resources-for-improving-your-mandarin-pronunciation/">24 Resources for improving pronunciation</a></li>
-<li>Some Pinyin Charts:<ul>
+<li>Some Pinyin Charts:
+<ul>
 <li><a href="https://en.wikipedia.org/wiki/Pinyin_table">Pinyin Table - Wikipedia</a></li>
 <li><strong><a href="http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart">Pinyin Chart - All Set Learning</a></strong>
 it also has each pinyin in IPA</li>
@@ -154,15 +154,14 @@ it has an special emphasis in the 3rd tone as a low tone (or half-3rd-tone)</li>
 <li><a href="https://chinese.yabla.com/chinese-pinyin-chart.php">Pinyin Chart - Yabla</a></li>
 <li><a href="http://lost-theory.org/chinese/phonetics/">Mandarin Chinese Phonetics Table - Lost Theory</a></li>
 <li><a href="http://public.gettysburg.edu/~jli/PinYinChart/ChinesePinYinChartM.html">Chinese Pinyin Chart - Gettysburg College</a></li>
-</ul>
-</li>
-<li>About the third tone:<ul>
+</ul></li>
+<li>About the third tone:
+<ul>
 <li><strong><a href="http://www.sinosplice.com/life/archives/2008/12/10/toward-better-tones-in-natural-speech">Toward Better Tones in Natural Speech</a></strong></li>
 <li><strong><a href="http://www.hackingchinese.com/learning-the-third-tone/">Learning the third tone</a></strong></li>
 <li><strong><a href="https://www.youtube.com/watch?v=aAqayUpWr_o">How to pronounce the 3rd tone like a native</a></strong>
 A video if you feel like not reading the other to resources ;).</li>
-</ul>
-</li>
+</ul></li>
 <li><strong><a href="http://www.hackingchinese.com/focusing-on-tone-pairs-to-improve-your-mandarin-pronunciation/">Tone pairs for improving
 pronunciation</a></strong></li>
 <li><strong><a href="http://www.sinosplice.com/learn-chinese/tone-pair-drills">Tone pair drills</a></strong></li>
@@ -170,7 +169,7 @@ pronunciation</a></strong></li>
 I left this at last because I haven’t even finish reading it. But it’s the wikipedia,
 so, I think, it has valuable information.</li>
 </ul>
-<h2 id="about-books">About books</h2>
+<h2>About books</h2>
 <ul>
 <li><strong><a href="http://www.amazon.com/Assimil-Language-Courses-Chinese-compact/dp/0320006158">Assimil Chinese with Ease</a></strong>
 Book focus in self-learning</li>
@@ -180,7 +179,7 @@ Book focus in self-learning</li>
 I’m not sure if this book is good because I don’t plan to learn to write in Chinese
 until I have the enough knowledge to understand Spoken Chinese.</li>
 </ul>
-<h2 id="characters">Characters</h2>
+<h2>Characters</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Chinese_characters">Chinese Characters - Wikipedia</a>
 (Man, I love the wikipedia so much)</li>
@@ -193,7 +192,7 @@ rather when I’m experienced in the language. For more:
 <li><a href="http://www.hanzicraft.com/">Character decomposition</a>
 (should this be in the dictionary list of resources below?)</li>
 </ul>
-<h2 id="about-grammar">About Grammar</h2>
+<h2>About Grammar</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Chinese_grammar">Chinese Grammar - Wikipedia</a></li>
 <li><a href="http://resources.allsetlearning.com/chinese/grammar">Chinese Grammar Wiki</a></li>
@@ -202,7 +201,7 @@ rather when I’m experienced in the language. For more:
 <li><a href="https://fluent-forever.com/learning-grammar-without-translation/">Learning grammar and abstract words without translation</a>
 A little tip to learn grammar without using translation (or trying it)</li>
 </ul>
-<h2 id="software">Software</h2>
+<h2>Software</h2>
 <ul>
 <li><a href="https://ankiweb.net/shared/info/235147699">Timo’s All-In-One Chinese Deck</a>
 a deck to use with <a href="http://ankisrs.net/">Anki</a></li>
@@ -210,7 +209,7 @@ a deck to use with <a href="http://ankisrs.net/">Anki</a></li>
 <li><a href="http://www.fon.hum.uva.nl/praat/">Praat</a> software to study phonetics, how to use it:
 <a href="http://www.sinosplice.com/life/archives/2008/01/21/seeing-the-tones-of-mandarin-chinese-with-praat">Seeing the Tones of Mandarin Chinese with Praat</a></li>
 </ul>
-<h2 id="dictionaries-and-word-lists">Dictionaries and word lists</h2>
+<h2>Dictionaries and word lists</h2>
 <ul>
 <li><a href="http://ce.linedict.com/dict.html#/cnen/home">Line Dict</a></li>
 <li><a href="http://www.hskhsk.com/word-lists.html">HSK Lists</a> word lists from the
@@ -219,7 +218,7 @@ a deck to use with <a href="http://ankisrs.net/">Anki</a></li>
 <li><a href="http://forvo.com/languages/zh/">Forvo</a> a web data base for thousands of word recordings
 in many languages</li>
 </ul>
-<h2 id="audios-y-videos">Audios y videos</h2>
+<h2>Audios y videos</h2>
 <ul>
 <li><a href="https://chinesepod.com/">Chinesepod</a> podcasts in Chinese/English with different levels
 of difficulty, and other audio/video resources.</li>
@@ -228,36 +227,36 @@ national Chinese news for foreigners</li>
 <li><a href="http://www.slow-chinese.com/">Slow Chinese</a>
 Podcasts in a slow Chinese, specially for learners</li>
 <li>I heard from <a href="https://www.youtube.com/watch?v=GjYXMFVOTmk">this guy (Steve Kaufmann)</a>
-that the dialogs from “Xiang Sheng 相声 (crosstalk)” usually emphasize on the tones, so
+that the dialogs from &quot;Xiang Sheng 相声 (crosstalk)&quot; usually emphasize on the tones, so
 search for them, and tell me what you think.</li>
 <li><a href="http://www.fluentu.com/">FluentU</a> a platform with videos subtitled in English and Chinese</li>
-<li>More audio video resources (<em>advanced</em>, but saved for the future):<ul>
-<li>Manhua (“chinese manga”):<ul>
+<li>More audio video resources (<em>advanced</em>, but saved for the future):
+<ul>
+<li>Manhua (“chinese manga”):
+<ul>
 <li><a href="http://myanimelist.net/topmanga.php?type=manhua">Manhua - My Anime List</a></li>
 <li><a href="http://manga.about.com/od/recommendedreading/tp/ChineseManhua.htm">Chinese Manhua, Comics and Graphic Novels</a></li>
-</ul>
-</li>
-<li>Chinese Animation (or “Chinese Anime” if you like):<ul>
+</ul></li>
+<li>Chinese Animation (or “Chinese Anime” if you like):
+<ul>
 <li><a href="http://sinomotion.tumblr.com">Sino Motion</a></li>
-</ul>
-</li>
-</ul>
-</li>
+</ul></li>
+</ul></li>
 <li><a href="http://www.chinese-forums.com/index.php?/topic/24097-tv-series-recommendations-and-index-thread/">TV Series Recommendations - Chinese-forums.com</a></li>
 </ul>
-<h2 id="-more-web-pages-for-learning-chinese">(more) web pages for learning Chinese</h2>
+<h2>(more) web pages for learning Chinese</h2>
 <ul>
 <li><a href="http://livemocha.com/pages/languages/learn-mandarin-chinese/">Learn Chinese - Livemocha</a></li>
 <li><a href="http://www.chinese-skill.com/cs.html">ChineseSkill</a> Chinese doulingo-ish app</li>
 <li><a href="http://www.archchinese.com/">ArchChinese</a> dictionary, flashcards, tones, …</li>
 </ul>
-<h2 id="more-resources-pages">More resources pages</h2>
+<h2>More resources pages</h2>
 <ul>
 <li><a href="http://www.iwillteachyoualanguage.com/resources/mandarin-chinese-resources/">111 Mandarin Chinese resources you wish you knew</a></li>
 <li><a href="https://eastasiastudent.net/china/mandarin/chinese-learning-tools/">My favourite Chinese learning tools</a></li>
 <li><a href="https://chinese.stackexchange.com/questions/1120/resources-for-learning-mandarin-chinese">Resources for learning Mandarin Chinese - StackExchange</a></li>
 </ul>
-<h2 id="and-some-random-stuff">And some random stuff</h2>
+<h2>And some random stuff</h2>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Lion-Eating_Poet_in_the_Stone_Den">Lion-Eating Poet in the Stone Den</a></li>
 <li><a href="https://www.youtube.com/watch?v=e73btaVo868">Cantonese Vs. Mandarin</a></li>
@@ -287,7 +286,7 @@ on learning characters isolated, it’s a dumb idea (Chinese characters represen
 sound, a syllable, and many (most?) words in Chinese are compose from 2 or more
 syllables).</li>
 </ol>
-<h2 id="measuring-my-progress">Measuring my progress</h2>
+<h2>Measuring my progress</h2>
 <p>I will measure my progress on hours using a spread sheet. I don’t wanna use days, because
 days are no reliable when talking about a portion of a day in a running time of
 months/years (I could study 3 hours one day an only 20 minutes others).</p>
@@ -351,23 +350,23 @@ requires her giving a lot of her energy into learn a new grammar, vocabulary, an
 hand-body skills. She did not know it at the beginning for sure, but she knows it now, and
 now she replies that the administration is losing money with her, because she thinks, she
 is a bad languages learner.</p>
-]]></description><link>https://helq.github.io/blog/posts/2015/12/en/deaf-sign-language</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2015/12/en/deaf-sign-language</guid><pubDate>Sat, 26 Dec 2015 17:40:00 GMT</pubDate></item><item><title><![CDATA[Splitting video or sound in multiple files - ffmpeg [bash script]]]></title><description><![CDATA[<h2 id="-edit-2016-08-02-"><strong>Edit: 2016-08-02</strong></h2>
+]]></description><link>https://helq.github.io/blog/posts/2015/12/en/deaf-sign-language</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2015/12/en/deaf-sign-language</guid><pubDate>Sat, 26 Dec 2015 17:40:00 GMT</pubDate></item><item><title><![CDATA[Splitting video or sound in multiple files - ffmpeg [bash script]]]></title><description><![CDATA[<h2><strong>Edit: 2016-08-02</strong></h2>
 <p>I found a <a href="http://unix.stackexchange.com/a/283547">simpler, built-in in ffmpeg aproach</a> to split a sound/video file
 in multiple parts with the same time length.</p>
-<pre><code class="lang-bash">ffmpeg -i &#39;input_file.mp3&#39; \
+<pre><code class="language-bash">ffmpeg -i 'input_file.mp3' \
        -acodec copy -vcodec copy \
        -f segment -segment_time 600 \
-       &#39;%03d_out_name.mp3&#39;
+       '%03d_out_name.mp3'
 </code></pre>
 <p>In this example we have an input file called <code>input_file.mp3</code> and we break it in multiple
 files of 10 minutes each (600 seconds). Each output file has a unique name of the form:
-<code>XXX_out_name.mp3</code> where <code>XXX</code> represent a 3 number digit.</p>
-<h2 id="_as-a-reference-the-old-article-_"><em>As a reference, the old article:</em></h2>
+<code>XXX_out_name.mp3</code> where <code>XXX</code> represent a 3 digit number.</p>
+<h2><em>As a reference, the old article:</em></h2>
 <p>The present article describes how to split a video/sound into multiple files of same
 duration using ffmpeg. <a href="/blog/data/splitVideo.sh">Click to download automated bash script.</a></p>
 <p>With ffmpeg, to copy just a fraction of a sound (<code>.mp3</code>, <code>.wma</code>, <code>.aac</code>, …) or video
 file (<code>.mp4</code>, <code>.wma</code>, …) use:</p>
-<pre><code class="lang-bash">ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy -t $splitLen -ss $start &quot;$new_name&quot;
+<pre><code class="language-bash">ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy -t $splitLen -ss $start &quot;$new_name&quot;
 </code></pre>
 <p>where <code>$name</code> is the name of the file to split, <code>$splitLen</code> is the length in seconds of
 the split, <code>$start</code> the second in which the splitting start and the <code>$new_name</code> for the
@@ -375,21 +374,21 @@ file.</p>
 <p>The idea is to copy fractions of the song (or video) in pieces of the same size, so that
 adding all the pieces we get the original song (video). Here a bash function that does the
 job:</p>
-<pre><code class="lang-bash">splitVideo() {
+<pre><code class="language-bash">splitVideo() {
     # name file to split
     name=&quot;$1&quot;
     # splitting time in seconds
     splitLen=$2
 
     # total of the song
-    totalTime=&quot;$(ffprobe -i &quot;$name&quot; -show_format 2&gt; /dev/null | sed -n &#39;s/duration=//p&#39;)&quot;
+    totalTime=&quot;$(ffprobe -i &quot;$name&quot; -show_format 2&gt; /dev/null | sed -n 's/duration=//p')&quot;
     # number of splits required
-    numOfSplits=&quot;$(printf &#39;%.0f\n&#39; $[ totalTime / splitLen ])&quot;
+    numOfSplits=&quot;$(printf '%.0f\n' $[ totalTime / splitLen ])&quot;
 
     for i in {0..$numOfSplits}; do
         start=$[ splitLen * i ]
 
-        num=$(printf &#39;%02d&#39; $[i+1])
+        num=$(printf '%02d' $[i+1])
         new_name=&quot;${name%.*}_${num}.${name//*.}&quot;
 
         ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy \
