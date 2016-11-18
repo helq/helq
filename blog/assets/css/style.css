@@ -3,7 +3,7 @@
   font-family: 'FontAwesome';
   font-style: normal;
   font-weight: normal;
-  src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/fonts/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/fonts/fontawesome-webfont.woff) format("woff"), url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/fonts/fontawesome-webfont.ttf) format("truetype"), url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/fonts/fontawesome-webfont.svg#FontAwesomeRegular) format("svg"); }
+  src: url(/blog/assets/fonts/fontawesome-webfont.eot) format("embedded-opentype"), url(/blog/assets/fonts/fontawesome-webfont.woff) format("woff"), url(/blog/assets/fonts/fontawesome-webfont.ttf) format("truetype"), url(/blog/assets/fonts/fontawesome-webfont.svg) format("svg"); }
 /* 1366 * 768 */
 /* iPhone 6+ 414px */
 html {
