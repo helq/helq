@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Fri, 18 Nov 2016 00:17:02 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Chinese Log - Step 2: Learning Pronunciation]]></title><description><![CDATA[<p><em>This article is part of a series of posts on my Chinese learning experience,</em> <em>for more
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Sat, 19 Nov 2016 17:47:57 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Chinese Log - Step 2: Learning Pronunciation]]></title><description><![CDATA[<p><em>This article is part of a series of posts on my Chinese learning experience,</em> <em>for more
 information visit the <a href="/blog/posts/2016/01/en/my-chinese-learning-log/">main series page</a></em></p>
 <p>My first ‘real’ step into learning Chinese has been to learn the pronunciation of vowels
 and consonants in Chinese (or rather, the initials and finals), and later combine them and
@@ -68,11 +68,11 @@ which you should learn to speak Chinese for a detailed explanation see
 <a href="http://www.sinosplice.com/life/archives/2008/12/10/toward-better-tones-in-natural-speech">Toward Better Tones in Natural Speech</a>.</p>
 <hr>
 <h2>Sources</h2>
-<p>Audio sources (listed in the same order in which they appear named in the decks), all
-credit goes to them:</p>
+<p>Sources of all the audios present in the compressed file (see “Deck and media downloads”
+below) and the anki decks. All credit goes to the corresponding webpages:</p>
 <ol>
 <li><a href="http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart">http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart</a>
-(the audios from this source appear with an <code>_1</code> at the end)</li>
+(the audios from this source appear in the compressed file with an <code>_1</code> at the end)</li>
 <li><a href="https://chinese.yabla.com/chinese-pinyin-chart.php">https://chinese.yabla.com/chinese-pinyin-chart.php</a>
 (<code>_2</code> is the postfix for all audios from this source)</li>
 <li><a href="http://www.yoyochinese.com/chinese-learning-tools/Mandarin-Chinese-pronunciation-lesson/pinyin-chart-table">http://www.yoyochinese.com/chinese-learning-tools/Mandarin-Chinese-pronunciation-lesson/pinyin-chart-table</a>
