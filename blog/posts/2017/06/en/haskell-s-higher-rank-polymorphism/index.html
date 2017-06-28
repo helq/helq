@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="description" content="">
+  <link rel="icon" type="image/x-icon" href="/blog/img/favicon.ico">
+    
+    <link rel=alternate type="application/atom+xml" title="Atom Feed" href="/blog/rss.xml"/>
+    
+
+  
+  <link rel="stylesheet" href="/blog/assets/js/normalize.min.css"/>
+  <link rel="stylesheet" href="/blog/assets/css/style.css">
+  <!-- stylesheet for coloring source code -->
+  <link rel="stylesheet" href="/blog/assets/js/tomorrow.min.css">
+  
+
+    <title>omnomnomelq - Higher Rank Polymorphism, a beginners explanation using typed lambda calculus</title>
+</head>
+<body>
+<header id="header">
+	<div class="center">
+		<div class="wrap">
+			<div id="site">
+				<h1><a href="/blog/">omnomnomelq</a></h1>
+				
+				<h2><a href="/blog/">i&#39;m a subtitle!</a></h2>
+				
+			</div>
+			<nav id="menu">
+				<ul>
+					
+					<li><a href="/blog/">home</a></li>
+					
+					<li><a href="/blog/about/">about</a></li>
+					
+					<li><a href="/blog/archive/">archive</a></li>
+					
+					<li><a href="/blog/personal/webcomics">webcomics</a></li>
+					
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+
+
+<div id="content">
+  <div class="center">
+    <div class="main-col">
+      
+
+
+
+<article class="post">
+    
+    <div class="post-content">
+        <header>
+            
+                <div class="meta">
+                    <div class="icon"></div>
+                    <time datetime="2017-06-28T18:08:00.000Z"><a href="/blog/posts/2017/06/en/haskell-s-higher-rank-polymorphism">2017-06-28</a></time>
+                </div>
+            
+            
+
+<h1 class="title">Higher Rank Polymorphism, a beginners explanation using typed lambda calculus</h1>
+
+
+
+        </header>
+        <div class="entry">
+          
+            <p><strong>Disclaimer:</strong> I’m not an expert on type systems, I was just trying to figure out what
+“higher rank polymorphism” was and found useful to use some ad-hoc typed lambda calculus.
+For what I’ve been reading for the last hour, all “code” below is in something close to
+“System F” (<a href="https://en.wikipedia.org/wiki/System_F">wikipedia</a>, <a href="https://crypto.stanford.edu/~blynn/lambda/systemf.html">an in-depth explanation of System F with an interpreter
+and actual runnable code</a>).</p>
+<p>As I understand, Typed Lambda Calculus is the basis of Haskell, so it makes sense to try
+to understand what something means in Haskell by studying it first in Typed Lambda
+Calculus. For those of you who doesn’t know what lambda calculus is, well, here is a
+micro-introduction (if you know what lambda calculus is, jump ahead to the typed lambda
+calculus explanation).</p>
+<h2>Lambda Calculus</h2>
+<p>In the 20’s at the same time Turing was formulating his &quot;Turing Machine&quot;, another guy
+called <a href="https://en.wikipedia.org/wiki/Alonzo_Church">Alonzo Church</a> (a friend of Turing) was working, just like Turing, in the
+problem of computability, he then formulated what we know now as lambda calculus. They
+(Church and Turing) proved that both formulations were equivalent, meaning that anything
+you can do with a Turing Machine can be done with Lambda Calculus. Basically, Haskell and
+C have the same power to compute anything.</p>
+<p>Let’s explain how does lambda calculus works. In Lambda Calculus we have terms, and we can
+build them using three rules:</p>
+<ul>
+<li>Variables: denoted by single characters, e.g., <code>x</code>, <code>a</code>, <code>w</code>, …</li>
+<li>Abstraction: with these we can build bigger things out of variables and terms, they’re
+like function definitions. Abstractions are denoted by <code>(λx.M)</code> (where <code>x</code> is a variable
+and <code>M</code> a term).</li>
+<li>Application: abstractions let us build bigger terms, applications let us apply terms to
+abstractions (yeah, kinda abstract, let’s see an example).  E.g., <code>(λx.x+1) 2</code> is an
+application of <code>(λx.x+1)</code> with the term <code>2</code>, when we reduce<a href="https://ro-che.info/ccc/18" title="A link to a cartoon explaining the difference between equality and reduction">reduce</a><sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> this
+application we get<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> the term <code>2+1</code><sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>.  Applications are denoted
+by two terms and a space! How weird is that!, I mean, this <code>E M</code>, and this <code>(λx.x+1) 2</code>,
+and this <code>y (λx.x**2)</code> are all valid applications (terms) in lambda
+calculus<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup>.</li>
+</ul>
+<p>With lambda calculus we many interesting things, but it’s a little cumbersome and verbose,
+for example, calculating the factorial:</p>
+<p>Given,</p>
+<pre><code class="language-plain">true = \x y . x
+false = \x y . y
+0 = \f x . x
+1 = \f x . f x
+succ = \n f x . f(n f x)
+pred = \n f x . n(\g h . h (g f)) (\u . x) (\u .u)
+mul = \m n f . m(n f)
+is0 = \n . n (\x . false) true
+Y = \f . (\x . x x)(\x . f(x x))
+fact = Y(\f n . (is0 n) 1 (mul n (f (pred n))))
+4 = (succ (succ (succ 1)))
+</code></pre>
+<p>the factorial of 4 can be computed by <code>fact 4</code>. I’ve taken the above code from <a href="https://crypto.stanford.edu/~blynn/lambda/">Ben
+Lynn’s notes on Lambda Calculus</a>, you can even try to run the same example right on
+Lynn’s page (click on the button that says <em>Factorial</em>).</p>
+<p>But well, that’s a pain on the guts to read and understand (unless your into that kind of
+stuff ;) ). So, I’m taking some liberties onward to extend this lambda calculus with
+numbers, strings and booleans with their respective operations, and allowing recursion.
+With this extensions it’s easy to write factorial:</p>
+<pre><code class="language-plain">fact = \x. if (x=0) 1 (x * fact (x-1))
+</code></pre>
+<p>Evaluating <code>fact 4</code> would give us:</p>
+<pre><code class="language-plain">fact 4
+// replacing fact for definition
+       = (λx.if (x=0) 1 (x*fact (x-1))) 4
+// β-reduction
+       = if (4=0) 1 (4*fact (4-1))
+// if rule applied, 4 != 0
+       = 4 * fact (4-1)
+// replacing fact for definition
+       = 4 * (λx.if (x=0) 1 (x*fact (x-1))) (4-1)
+// β-reduction
+       = 4 * if (4-1=0) 1 ((4-1)*fact (4-1-1))
+// if rule applied, 4-1 != 0
+       = 4 * (4-1) * fact (4-1-1)
+       = 4 * (4-1) * (λx.if (x=0) 1 (x*fact (x-1))) (4-1-1)
+       = 4 * (4-1) * if (4-1-1=0) 1 ((4-1-1)*fact (4-1-1-1))
+       = 4 * (4-1) * (4-1-1) * fact (4-1-1-1)
+       = 4 * (4-1) * (4-1-1) * (λx.if (x=0) 1 (x*fact (x-1))) (4-1-1-1)
+       = 4 * (4-1) * (4-1-1) * if (4-1-1-1=0) 1 ((4-1-1-1)*fact (4-1-1-1-1))
+       = 4 * (4-1) * (4-1-1) * (4-1-1-1) * fact (4-1-1-1-1)
+       = 4 * (4-1) * (4-1-1) * (4-1-1-1) * (λx.if (x=0) 1 (x*fact (x-1))) (4-1-1-1-1)
+       = 4 * (4-1) * (4-1-1) * (4-1-1-1) * if (4-1-1-1-1=0) 1 ((4-1-1-1-1)*fact (4-1-1-1-1-1))
+       = 4 * (4-1) * (4-1-1) * (4-1-1-1) * 1
+       = 4 * (4-1) * (4-1-1) * 1 * 1
+       = 4 * (4-1) * 2 * 1 * 1
+       = 4 * 3 * 2 * 1 * 1
+       = 24
+</code></pre>
+<p>Well, that’s nice, and “simple” too. In fact I didn’t write that by hand, I let a python
+script reduce the expression for me, you can find the python code
+<a href="https://github.com/helq/ILLA">here</a><sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup>.</p>
+<h2>Typed Lambda Calculus</h2>
+<p>Lambda Calculus is nice but it lacks types, and as we know from Haskell, types are
+awesome! When we have types, we can ask the compiler/interpreter to dectect if what we’re
+saying is coherent or not. Fortunately adding types to lambda calculus is quite simple and
+intuitive, and as any good professor I’ll give it to you as an exercise for home by saying
+that it’s trivial and left to the reader to finish (take that calculus<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup> books :P).</p>
+<p>Remember we use <code>λ</code> to create an abstraction using a variable an a term? Well, in Typed
+Lambda Calculus<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup> we use the character <code>Λ</code> to create an “abstraction” where the left side
+holds not a variable but a <strong>type</strong> variable. For example:</p>
+<pre><code>ΛT.λx:T.x
+</code></pre>
+<p>it’s the equivalent lambda expression to <code>λx.x</code> in untyped lambda calculus. If we apply to
+the term, for example, <code>Int 5</code><sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup>, we’ll get:</p>
+<pre><code>(ΛT.λx:T.x) Int 5
+= (λx:Int.x) 5 // beta-reduction
+= 5:Int // beta-reduction
+</code></pre>
+<p>Note that the type of the whole expression <code>ΛT.λx:T.x</code> is <code>∀X.(X-&gt;X)</code>, meaning that when
+we apply any type <code>X</code> to whole the term we get a new term with type <code>X-&gt;X</code>, aka. an
+abstraction that “returns” a term with of the same type it gets in. Thus, in typed lambda
+calculus we have that any term, with and without type variables, has a type. Let’s look
+at some more typed lambda calculus terms (lambda expressions is shorter ;) ):</p>
+<pre><code>λx:Int.x+1            // with type: Int -&gt; Int
+λx:String.x&lt;&gt;&quot; text&quot;  // String -&gt; String
+λx:String.x+1         // String -&gt; String, this definition is inconsistent with + which is defined for numbers only (at least for this explanation)
+ΛT.λx:Int.x           // ∀T.(Int-&gt;Int)
+ΛX. ΛY. λx:X. λy:Y. x // ∀X.∀Y.X-&gt;Y-&gt;X
+</code></pre>
+<p>Take a close look at that last example, and make sure you understand it. I’ve gain some
+insight by working backwards, reading the type definition <code>∀X.∀Y.X-&gt;Y-&gt;X</code> and trying to
+create the term definition.</p>
+<p>Let’s apply some types and terms to the lambda expressions above:</p>
+<pre><code>(λx:Int.x+1) 5                // Int
+(λx:String.x&lt;&gt;&quot; text&quot;) &quot;some&quot; // String
+(λx:String.x+1) &quot;more text&quot;   // failure!!! type mismatch of x:String and operator (+):Int-&gt;Int-&gt;Int
+(ΛT.λx:Int.x) String 4        // Int
+
+(ΛX. ΛY. λx:X. λy:Y. x) Int          // ∀Y.Int-&gt;Y-&gt;Int
+(ΛX. ΛY. λx:X. λy:Y. x) Int String   // Int-&gt;String-&gt;Int
+(ΛX. ΛY. λx:X. λy:Y. x) Int String 5 // Int
+</code></pre>
+<h2>Higher Rank Polymorphism</h2>
+<p>Before we explore higher rank polymorphism, I would like to ask you to give me the type
+definition of some haskell functions in typed lambda calculus. For that we will need to
+translate the haskell code into typed lambda calculus, and get the type definition from
+there. For example, to get the type of <code>map</code> on typed lambda calculus:</p>
+<h3><code>map</code>'s into typed lambda calculus</h3>
+<p>Given <code>map</code>'s definition:</p>
+<pre><code class="language-haskell">rmap _ []     = []; rmap f (x:xs) = f x : map f xs
+</code></pre>
+<p>we can rewrite it as the untyped lambda expression<sup class="footnote-ref"><a href="#fn9" id="fnref9">[9]</a></sup>:</p>
+<pre><code>map = λf.λxs.if (xs=nil) nil (cons ((f (car xs)) (map f (cdr xs))))
+</code></pre>
+<p>Notice, how the lack of pattern matching on lambda expressions forces us to check if the
+list is empty, in case the list is empty we return an empty list, otherwise we return a
+new list applying the function at the first element of the list and applying map
+recursively to the rest of the list. Rewritten back into Haskell, we’d get:</p>
+<pre><code class="language-haskell">map f xs = if null xs
+            then []
+            else f (head xs) : map f (last xs)
+</code></pre>
+<p>Finally writing it into typed lambda calculus, we’d get<sup class="footnote-ref"><a href="#fn12" id="fnref12">[12]</a></sup>:</p>
+<pre><code>map = ΛX.ΛY.λf:X-&gt;Y.λxs:[X].if (xs=nil) nil (cons ((f (car xs)) (map f (cdr xs))))
+</code></pre>
+<p>with type:</p>
+<pre><code>∀X.∀Y.(X-&gt;Y)-&gt;[X]-&gt;[Y]
+</code></pre>
+<p>Here is where I want you to notice how this type looks very similar to the haskell type
+for <code>map</code>:</p>
+<pre><code class="language-haskell">Prelude&gt; :t map
+map :: (a -&gt; b) -&gt; [a] -&gt; [b]
+</code></pre>
+<p>but there is no <code>∀X.∀Y.</code> in that haskell type, or there is? (yeah, it is there, but it is
+implicit). You can define you’re own <code>map</code> function and specify the type you want for it
+using <code>forall</code> in the type definition (available in the extension <code>RankNTypes</code>):</p>
+<pre><code>$ ghci -XRankNTypes
+Prelude&gt; let rmap f xs = if null xs then [] else f (head xs) : rmap f (tail xs); rmap :: forall a. forall b. (a-&gt;b) -&gt; [a] -&gt; [b]
+</code></pre>
+<p>Notice the type definition <code>rmap :: forall a. forall b. (a-&gt;b) -&gt; [a] -&gt; [b]</code>, it’s very
+similar to the type of our typed lambda expression. Unfortunatelly, haskell ignores all
+<code>forall</code>'s (when they’re rank 1), so we get in console the type:</p>
+<pre><code>Prelude&gt; :t rmap
+rmap :: (a -&gt; b) -&gt; [a] -&gt; [b]
+</code></pre>
+<p>By the way, functions with <code>forall</code> in their type definition are called <strong>polymorphic</strong>.</p>
+<h3>More typed lambda expressions</h3>
+<p>Now, a little exercise for you, get the type definitions of the following Haskell
+functions using <code>forall</code>.</p>
+<pre><code class="language-haskell">foldl _ z []     = z
+foldl f z (x:xs) = foldl f (f z x) xs
+
+const a _ = a
+
+length []     = 0
+length (_:xs) = 1 + length xs
+
+fst (a, b) = a
+</code></pre>
+<p>And the answers are:</p>
+<pre><code class="language-haskell">foldl :: forall a b. (a -&gt; b -&gt; a) -&gt; a -&gt; [b] -&gt; a
+const :: forall a b. a -&gt; b -&gt; a
+length :: forall a. [a] -&gt; Int
+fst :: forall a b. (a, b) -&gt; a
+</code></pre>
+<p>Well, it wasn’t that hard, was it?</p>
+<h3>Higher Rank Polymorphism (finally)</h3>
+<p>What should be type of <code>weird</code> (defined below), if we want to call it with parameters
+<code>id 5 &quot;ho&quot;</code>?</p>
+<pre><code class="language-haskell">weird g a s = (g a, g s)
+</code></pre>
+<p>Our first guess could be:</p>
+<pre><code class="language-haskell">weird :: forall x y. (x-&gt;x) -&gt; y -&gt; String -&gt; (y, String)
+</code></pre>
+<p>but Haskell objects:</p>
+<pre><code class="language-plain">&lt;interactive&gt;:18:27: error:
+    • Couldn't match expected type ‘x’ with actual type ‘String’
+      ‘x’ is a rigid type variable bound by
+        the type signature for:
+          weird :: forall x y. (x -&gt; x) -&gt; y -&gt; String -&gt; (y, String)
+        at &lt;interactive&gt;:18:46
+    • In the first argument of ‘g’, namely ‘s’
+      In the expression: g s
+      In the expression: (g a, g s)
+    • Relevant bindings include
+        g :: x -&gt; x (bound at &lt;interactive&gt;:18:11)
+        weird :: (x -&gt; x) -&gt; y -&gt; String -&gt; (y, String)
+          (bound at &lt;interactive&gt;:18:5)
+</code></pre>
+<p>But, what does that mean? Basically, that <code>x</code> was expected to be of the type <code>String</code>, and
+that’s weird, because we wrote <code>forall x</code> to tell the type inference system that it should
+expect to receive a polymorphic function <code>x-&gt;x</code>.</p>
+<p>What the heck is happening?!</p>
+<p>Well, to understand why that type doesn’t really work, we can rewrite our function as an
+typed lambda expression:</p>
+<pre><code>weird = ΛY. ΛX. λg:(X-&gt;X). λa:Y.  λs:String. (g a, g s)
+</code></pre>
+<p>with type (we hope)</p>
+<pre><code>∀Y.∀X.(X-&gt;X)-&gt;Y-&gt;String-&gt;(Y, String)
+</code></pre>
+<p>and try on our own to reduce the application <code>weird Int String (λb.b) 5 &quot;ho&quot;</code>.</p>
+<pre><code class="language-plain">weird Int String (λb.b) 5 &quot;ho&quot;
+  = (ΛY. ΛX. λg:(X-&gt;X). λa:Y. λs:String. (g a, g s)) Int String (λb.b) 5 &quot;ho&quot;
+  = (ΛX. λg:(X-&gt;X). λa:Int. λs:String. (g a, g s)) String (λb.b) 5 &quot;ho&quot;
+  = (λg:(String-&gt;String). λa:Int. λs:String. (g a, g s)) (λb.b) 5 &quot;ho&quot;        // g:(λX.X) stops being polymorphic!!!
+  = (λa:Int. λs:String. ((λb:String.b) a, (λb:String.b) s)) 5 &quot;ho&quot;
+  = (λs:String. ((λb:String.b) (5:Int), (λb:String.b) s)) &quot;ho&quot;
+  = ((λb:String.b) (5:Int), (λb:String.b) (&quot;ho&quot;:String))
+  FAIL!! 5 has type `Int` but (λb:String.b) requires 5 to be `String`
+</code></pre>
+<p>You now why it fails? Yeah, going from line 3 to 4 the type of g gets converted from what
+we expected to be polymorphic to <code>String-&gt;String</code>. What does this mean, is that we’re
+forcing to pick the type of <code>X-&gt;X</code> when we give the type of the first element <code>a</code>, in the
+end the real type of the whole lambda expression would be:</p>
+<pre><code>∀Y.∀X.(String-&gt;String)-&gt;String-&gt;String-&gt;(String, String)
+</code></pre>
+<p>to prove it, let’s reduce the expression <code>weird String String (λb.b) &quot;hi&quot; &quot;ho&quot;</code>:</p>
+<pre><code class="language-plain">weird String String (λb.b) &quot;hi&quot; &quot;ho&quot;
+  == (ΛY. ΛX. λg:(X-&gt;X). λa:Y. λs:String. (g a, g s)) String String (λb.b) &quot;hi&quot; &quot;ho&quot;
+  == (ΛX. λg:(X-&gt;X). λa:String. λs:String. (g a, g s)) String (λb.b) &quot;hi&quot; &quot;ho&quot;
+  == (λg:(String-&gt;String). λa:String. λs:String. (g a, g s)) (λb.b) &quot;hi&quot; &quot;ho&quot;
+  == (λa:String. λs:String. ((λb:String.b) a, (λb:String.b) s)) &quot;hi&quot; &quot;ho&quot;
+  == (λs:String. ((λb:String.b) &quot;Hi&quot;:String, (λb:String.b) s:String)) &quot;ho&quot;
+  == ((λb:String.b) (&quot;Hi&quot;:String), (λb:String.b) (&quot;ho&quot;:String))
+  == ((&quot;Hi&quot;:String), (λb:String.b) (&quot;ho&quot;:String))
+  == (&quot;Hi&quot;:String, &quot;ho&quot;:String)
+</code></pre>
+<p>But there is something we haven’t explored, we can define the type of <code>g</code> using <code>∀</code>!
+Mmmm…, let’s see what happens if we rewrite our typed lambda expression:</p>
+<pre><code>weird = ΛY. λg:(∀X.(X-&gt;X)). λa:Y. λs:String. (g Y a, g String s)
+</code></pre>
+<p>and now, the type of <code>weird</code> would be:</p>
+<pre><code>∀Y.(∀X.X-&gt;X)-&gt;Y-&gt;String-&gt;(Y, String)
+</code></pre>
+<p>Notice how <code>g</code> receives two parameters now! The first is the type and the second a term.
+Reducing the application <code>weird Int (ΛX.λb:X.b) 5 &quot;hi&quot;</code> we get:</p>
+<pre><code class="language-plain">weird Int (ΛX.λb:X.b) 5 &quot;hi&quot;
+  == (ΛY. λg:(∀X.(X-&gt;X)). λa:Y. λs:String. (g Y a, g String s)) Int (ΛX.λb:X.b) 5 &quot;hi&quot;
+  == (λg:(∀X.(X-&gt;X)). λa:Int. λs:String. (g Int a, g String s)) (ΛX.λb:X.b) 5 &quot;hi&quot;
+  == (λa:Int. λs:String. ((ΛX.λb:X.b) Int a, (ΛX.λb:X.b) String s)) 5 &quot;hi&quot;
+  == (λs:String. ((ΛX.λb:X.b) Int 5, (ΛX.λb:X.b) String s)) &quot;hi&quot;
+  == ((ΛX.λb:X.b) Int 5, (ΛX.λb:X.b) String &quot;hi&quot;)
+  == ((λb:Int.b) 5, (ΛX.λb:X.b) String &quot;hi&quot;)
+  == (5:Int, (ΛX.λb:X.b) String &quot;hi&quot;)
+  == (5:Int, (λb:String.b) &quot;hi&quot;)
+  == (5:Int, &quot;hi&quot;:String)
+</code></pre>
+<p>Awesome, it worked! If we translate it to Haskell, we get:</p>
+<pre><code>Prelude&gt; let weird g a s = (g a, g s); weird :: forall y. (forall x. x-&gt;x) -&gt; y -&gt; String -&gt; (y, String)
+Prelude&gt;
+</code></pre>
+<p>and</p>
+<pre><code>Prelude&gt; weird id 5 &quot;ho&quot;
+(5,&quot;ho&quot;)
+Prelude&gt; :t weird id (5::Int) &quot;ho&quot;
+weird id (5::Int) &quot;ho&quot; :: (Int, String)
+Prelude&gt;
+</code></pre>
+<p><code>weird</code> is then what is called a rank-2 polymorphic function ;), it’s rank-2 because it
+has a <code>forall</code> nested inside. By default Haskell doesn’t understand rank-2 functions, so
+to define them we need to use the GHC extension <code>RankNTypes</code> which we were using in the
+examples above.</p>
+<p>Further readings:</p>
+<ul>
+<li><a href="https://en.wikibooks.org/wiki/Haskell/Polymorphism">Polymorphism (Haskell Wikibook)</a></li>
+<li><a href="https://ocharles.org.uk/blog/guest-posts/2014-12-18-rank-n-types.html">24 Days of GHC Extensions: Rank N Types</a></li>
+<li><a href="https://apocalisp.wordpress.com/2010/07/02/higher-rank-polymorphism-in-scala/">Higher-Rank Polymorphism in Scala</a></li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1"  class="footnote-item"><p>Lambda Calculus is like maths written on paper, you need an interpreter
+(in the case of a piece of paper, the intrepreter will be your head), an iterpreter that
+transforms an term into another term by applying a set of rules. In lambda calculus,
+there are two main rules to transform between different terms: <strong>alpha-conversion</strong>
+(renaming of variables inside an abstraction, e.g., <code>(λy.y+1)</code> gets alpha-converted into
+<code>(λm.m+1)</code> or <code>(λz.z+1)</code>, …), and <strong>beta-reduction</strong> (gets the right side of an
+application and replaces all appeareances of the variable on the abstraction on the left
+side of the application, e.g., <code>(λx.x+1) 2</code> gets beta-reduced into <code>2+1</code><sup class="footnote-ref"><a href="#fn3" id="fnref3:1">[3]</a></sup>) <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn2"  class="footnote-item"><p>Using the beta-reduction. <a href="#fnref2" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn3"  class="footnote-item"><p><code>2+1</code> can be further reduced to <code>3</code> by using the intuitive rule of adding, or
+if you want to be less pragmatic write <code>2</code>, <code>1</code>, <code>+</code>, and <code>2+1</code> as pure lambda calculus
+terms. Some guidence on that can be found in the wikipedia
+<a href="https://en.wikipedia.org/wiki/Lambda_calculus">here</a>, you nerds. <a href="#fnref3" class="footnote-backref">↩</a> <a href="#fnref3:1" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn4"  class="footnote-item"><p>wait, that’s looks just like Haskell code!. Well, we can do after all
+this <code>sum list</code> (with <code>list = [1..10]</code>, for example), this <code>(\x-&gt;x+1) 2</code>, and this
+<code>y (\x-&gt;x**2)</code> (with <code>y f = f 3</code> or <code>y = ($3)</code>, for example) in Haskell. <a href="#fnref4" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn5"  class="footnote-item"><p>Sorry for the spelling mistakes, I didn’t know any better at that time. <a href="#fnref5" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn6"  class="footnote-item"><p>or should it be <em>calculi</em>? <em>calculuses</em>? <em>calculus’s</em>? <em>calculises’</em>??? <a href="#fnref6" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn7"  class="footnote-item"><p>In <a href="https://en.wikipedia.org/wiki/System_F">System F</a> to be more precise <a href="#fnref7" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn8"  class="footnote-item"><p>Note that I’m abusing (“extending”) again the notation of lambda calculus to
+add some simple and intuitive types like <code>String</code>, <code>Int</code> and <code>Bool</code>. Also, I need to
+aknowledge <a href="https://elmanantialdebits.blogspot.com.co/2010/04/polimorfismo-de-rango-superior.html">this awesome post</a> which got me thinking on type lambda
+calculus and Higher Order Polymorphism. <a href="#fnref8" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn9"  class="footnote-item"><p><code>cons</code>, <code>car</code> and <code>cdr</code> are some simple functions to operate with tuples in
+languages like lisp (<code>cons</code> creates a new tuple from two values, <code>car</code> and <code>cdr</code> take a
+tuple and return the first element and second element, respectively)<sup class="footnote-ref"><a href="#fn10" id="fnref10">[10]</a></sup>. Lisp
+was designed directly from untyped lambda calculus, thus it’s easier to write an
+expression first in lisp and then translate it into a lambda expresion of untyped lambda
+calculus. <a href="#fnref9" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn10"  class="footnote-item"><p>We may think that the “equivalents” of <code>cons</code>, <code>car</code> and <code>cdr</code> in haskell
+would be <code>(,)</code>, <code>fst</code> and <code>snd</code>, but they aren’t! they behave different to the original
+lisp’s definitions, it is not possible to create a list using only <code>(,)</code>'s (unless you
+wrapped <code>(,)</code> in a newtype definition and did some more trickery), i.e., this fails in
+haskell: <code>range n m = if n&gt;m then () else (n, range (n+1) m)</code>, but this works just fine
+in lisp: <code>(defun range (n m) (cons n (range (+ n 1) m)))</code><sup class="footnote-ref"><a href="#fn11" id="fnref11">[11]</a></sup> <a href="#fnref10" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn11"  class="footnote-item"><p>yeah, those are a lot of brackets! It’s after all called LISP (Lots of
+Irritating Superfluous Parentheses) <a href="#fnref11" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn12"  class="footnote-item"><p>you know the drill, I’m extending the typed lambda calculus with lists, and
+their type is represented by the type <code>[] a</code> or <code>[a]</code> (which has kind: unary type constructor<sup class="footnote-ref"><a href="#fn13" id="fnref13">[13]</a></sup>). <a href="#fnref12" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn13"  class="footnote-item"><p>kinds are another extension to Lambda Calculus which give us the power to
+parametrized types, it’s another whole topic (and to be honest, I don’t get it
+completely), you can find more info in the <a href="https://en.wikipedia.org/wiki/Kind_(type_theory)">wikipedia</a>. <a href="#fnref13" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
+
+          
+        </div>
+        <footer class="clearfix">
+            
+            
+            
+<div class="tags">
+	
+	<a href="/blog/tags/development/">#development</a>
+	
+	<a href="/blog/tags/haskell/">#haskell</a>
+	
+	<a href="/blog/tags/lambda-calculus/">#lambda-calculus</a>
+	
+</div>
+
+
+
+
+        </footer>
+    </div>
+</article>
+
+
+
+
+
+
+    </div>
+    
+  </div>
+</div>
+
+<footer id="footer">
+	<div class="center">
+		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
+    alt="Creative Commons License" style="border-width:0"
+    src="/blog/assets/images/creativecommons-88x31.png" /></a>
+		This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+		<br/>
+
+    All code snippets found in posts are licensed under
+      <a rel="license"
+         href="http://creativecommons.org/publicdomain/zero/1.0/">
+        <img src="/blog/assets/images/cc0-88x31.png" style="border-style: none;" alt="CC0" />
+      </a>
+		unless otherwise is stated.
+		<br/>
+
+		&copy; 2015-2017
+		helq.
+		&nbsp;&nbsp;
+		Blog generated using <a href="http://metalsmith.io">metalsmith</a>
+		&nbsp;&nbsp;
+        Layout based on the hexo theme <a href="https://github.com/dnxbf321/hexo-theme-simplest">simplest</a>
+		&nbsp;&nbsp;
+		Find the <a href="https://github.com/helq/blag">source code in github</a>
+	</div>
+</footer>
+
+
+
+<script src="/blog/assets/js/jquery.min.js"></script>
+
+<!-- source code coloring -->
+<script src="/blog/assets/js/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+  /* # reduce header while down scrolling */
+  (function() {
+    var $header = $('#header');
+    $(window).on('scroll', function() {
+      if (window.scrollY > 100) {
+        $header.addClass('small');
+      } else {
+        $header.removeClass('small');
+      }
+    });
+  }());
+</script>
+
+
+
+
+
+</body>
+</html>
