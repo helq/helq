@@ -121,7 +121,7 @@ Y = \f . (\x . x x)(\x . f(x x))
 fact = Y(\f n . (is0 n) 1 (mul n (f (pred n))))
 4 = (succ (succ (succ 1)))
 </code></pre>
-<p>The factorial of 4 can be computed by <code>fact 4</code>. I’ve taken the above code from <a href="https://crypto.stanford.edu/~blynn/lambda/">Ben
+<p>The factorial of 4 can be computed by <code>fact 4</code>. I’ve taken the code above from <a href="https://crypto.stanford.edu/~blynn/lambda/">Ben
 Lynn’s notes on Lambda Calculus</a>, you can even try to run the same example right on
 Lynn’s page (click on the button that says <em>Factorial</em>).</p>
 <p>But well, that’s a pain on the guts to read and understand (unless your into that kind of
@@ -167,7 +167,7 @@ awesome! When we have types, we can ask the compiler/interpreter to dectect if w
 saying is coherent or not. Fortunately adding types to lambda calculus is quite simple and
 intuitive, and as any good professor I’ll give it to you as an exercise for home by saying
 that it’s trivial and left to the reader to finish (take that calculus<sup class="footnote-ref"><a href="#fn7" id="fnref7">[7]</a></sup> books :P).</p>
-<p>Do you remember that we use <code>λ</code> to create an abstraction using a variable an a term? Well,
+<p>Do you remember that we use <code>λ</code> to create an abstraction using a variable and a term? Well,
 in Typed Lambda Calculus<sup class="footnote-ref"><a href="#fn8" id="fnref8">[8]</a></sup> we use the character <code>Λ</code> to create an “abstraction”
 where the left side holds not a variable but a <strong>type</strong> variable. For example:</p>
 <pre><code>ΛT.λx:T.x
@@ -397,7 +397,8 @@ this <code>sum list</code> (with <code>list = [1..10]</code>, for example), this
 <code>y (\x-&gt;x**2)</code> (with <code>y f = f 3</code> or <code>y = ($3)</code>, for example) in Haskell. <a href="#fnref4" class="footnote-backref">↩</a></p>
 </li>
 <li id="fn5"  class="footnote-item"><p>Sorry if you see too many spelling mistakes on the python script, it’s some code
-I wrote some years for a class on “compilers”<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup>, I didn’t know any better at that time. <a href="#fnref5" class="footnote-backref">↩</a></p>
+I wrote some years ago for a class on “compilers”<sup class="footnote-ref"><a href="#fn6" id="fnref6">[6]</a></sup>, I didn’t know any better
+at that time. <a href="#fnref5" class="footnote-backref">↩</a></p>
 </li>
 <li id="fn6"  class="footnote-item"><p>ikr, shameless self-promotion. <a href="#fnref6" class="footnote-backref">↩</a></p>
 </li>
@@ -503,6 +504,8 @@ completely), you can find more info in the <a href="https://en.wikipedia.org/wik
 
 <script src="/blog/assets/js/jquery.min.js"></script>
 
+<!-- smooth and padded anchor scrolling -->
+<script src="/blog/assets/js/anchor_scrolls.js"></script>
 <!-- source code coloring -->
 <script src="/blog/assets/js/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
