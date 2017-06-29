@@ -4,11 +4,13 @@
  */
 
 (function(document, history, location) {
+  "use strict";
+
   var HISTORY_SUPPORT = !!(history && history.pushState);
 
   var anchorScrolls = {
     ANCHOR_REGEX: /^#[^ ]+$/,
-    OFFSET_HEIGHT_PX: 80,
+    ADDED_OFFSET_HEIGHT_PX: 10,
 
     /**
      * Establish events, and fix initial scroll position if a hash is provided.
@@ -24,7 +26,13 @@
      * Modify as appropriate to allow for dynamic calculations
      */
     getFixedOffset: function() {
-      return this.OFFSET_HEIGHT_PX;
+      // if the header isn't fixed on top of the page, then it should't count in the offset
+      if( $('#header').css('position') === 'absolute' ) {
+        return this.ADDED_OFFSET_HEIGHT_PX;
+      } else {
+        let header_height = document.getElementById('header').offsetHeight;
+        return header_height + this.ADDED_OFFSET_HEIGHT_PX;
+      }
     },
 
     /**
