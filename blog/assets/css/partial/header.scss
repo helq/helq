@@ -7,8 +7,12 @@ $margin: 15px;
   z-index: 9;
   padding: 10px 0;
   width: 100%;
+  color: white;
   background: $color-background-header;
   text-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  h1 {
+    font-family: $font-title-header;
+  }
   .center {
     .wrap {
       display: table;
@@ -20,6 +24,10 @@ $margin: 15px;
     }
     a {
       color: inherit;
+      &:hover {
+        color: white;
+        font-weight: bold;
+      }
     }
   }
 }

@@ -28,7 +28,8 @@ article {
   &.link {
     .icon {
       &::before {
-        content: '\f0c1'
+        content: '\f0c1';
+        color: black;
       }
     }
     .title {
@@ -107,9 +108,9 @@ article {
         overflow: hidden;
         width: 30px;
         height: 100%;
-        background: #E75A30;
+        background: $color-icon;
         &::before {
-          color: #fff;
+          color: #000;
           font: 20px $font-icon;
           line-height: 32px;
         }
@@ -119,10 +120,10 @@ article {
         float: left;
         padding: 0 10px;
         height: 100%;
-        background: #F9B940;
+        background: $color-time;
         a {
           display: block;
-          color: #fff;
+          color: #000;
           font-size: 13px;
           line-height: 32px;
         }
@@ -131,6 +132,7 @@ article {
 
     .title {
       font-weight: normal;
+      font-family: $font-title;
       a {
         color: inherit;
         &:hover {
@@ -175,8 +177,8 @@ article {
     }
 
     code, pre {
-      font-family: $font-mono
-      line-height: normal
+      font-family: $font-mono;
+      line-height: normal;
     }
 
     code {
@@ -216,11 +218,13 @@ article {
       margin-top: 1.5em;
       font-weight: normal;
       line-height: 1;
+      font-family: $font-title;
     }
 
     h3, h4, h5, h6 {
       font-weight: normal;
       line-height: 1;
+      font-family: $font-title;
     }
 
     img, video {

@@ -1,13 +1,14 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Slabo+27px|Special+Elite");
 @font-face {
   font-family: 'FontAwesome';
   font-style: normal;
   font-weight: normal;
-  src: url(/blog/assets/fonts/fontawesome-webfont.eot) format("embedded-opentype"), url(/blog/assets/fonts/fontawesome-webfont.woff) format("woff"), url(/blog/assets/fonts/fontawesome-webfont.ttf) format("truetype"), url(/blog/assets/fonts/fontawesome-webfont.svg) format("svg"); }
+  src: url(/blog/assets/fonts/fontawesome-webfont.eot?#iefix) format("embedded-opentype"), url(/blog/assets/fonts/fontawesome-webfont.woff) format("woff"), url(/blog/assets/fonts/fontawesome-webfont.ttf) format("truetype"), url(/blog/assets/fonts/fontawesome-webfont.svg#FontAwesomeRegular) format("svg"); }
 /* 1366 * 768 */
 /* iPhone 6+ 414px */
 html {
-  font-family: "Microsoft Yahei", sans-serif;
+  font-family: "Open Sans", sans-serif;
   background: #fff; }
 
 body {
@@ -15,7 +16,7 @@ body {
   color: #444; }
 
 a {
-  color: #004EAB;
+  color: #56a411;
   text-decoration: none; }
   a:hover {
     color: #000;
@@ -33,7 +34,7 @@ a {
   min-width: 300px;
   max-width: 800px; }
 
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 860px) {
   .center {
     margin: 0 30px; } }
 @media screen and (max-width: 500px) {
@@ -46,8 +47,11 @@ a {
   z-index: 9;
   padding: 10px 0;
   width: 100%;
-  background: #f9e9d4;
+  color: white;
+  background: #444247;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.05); }
+  #header h1 {
+    font-family: "Special Elite"; }
   #header .center .wrap {
     display: table;
     width: 100%; }
@@ -56,6 +60,9 @@ a {
       vertical-align: bottom; }
   #header .center a {
     color: inherit; }
+    #header .center a:hover {
+      color: white;
+      font-weight: bold; }
 
 #site h1 {
   margin: 15px 0; }
@@ -116,7 +123,8 @@ article {
   article.photo .icon::before {
     content: '\f030'; }
   article.link .icon::before {
-    content: ""; }
+    content: '\f0c1';
+    color: black; }
   article.link .title a::after {
     padding-left: 10px;
     color: #4E5359;
@@ -172,9 +180,9 @@ article {
       overflow: hidden;
       width: 30px;
       height: 100%;
-      background: #E75A30; }
+      background: #ffbb69; }
       article header .meta .icon::before {
-        color: #fff;
+        color: #000;
         font: 20px FontAwesome;
         line-height: 32px; }
     article header .meta time {
@@ -182,14 +190,15 @@ article {
       float: left;
       padding: 0 10px;
       height: 100%;
-      background: #F9B940; }
+      background: #ffda8b; }
       article header .meta time a {
         display: block;
-        color: #fff;
+        color: #000;
         font-size: 13px;
         line-height: 32px; }
   article header .title {
-    font-weight: normal; }
+    font-weight: normal;
+    font-family: "Slabo 27px"; }
     article header .title a {
       color: inherit; }
       article header .title a:hover {
@@ -251,10 +260,12 @@ article {
     article .entry h1, article .entry h2 {
       margin-top: 1.5em;
       font-weight: normal;
-      line-height: 1; }
+      line-height: 1;
+      font-family: "Slabo 27px"; }
     article .entry h3, article .entry h4, article .entry h5, article .entry h6 {
       font-weight: normal;
-      line-height: 1; }
+      line-height: 1;
+      font-family: "Slabo 27px"; }
     article .entry img, article .entry video {
       max-width: 100%;
       height: auto;
@@ -416,7 +427,10 @@ article {
 #footer {
   padding: 30px 0;
   color: #4E5359;
-  font-size: 12px; }
+  font-size: 12px;
+  background: #80C1C9; }
+  #footer a {
+    color: black; }
 
 .entry .gist {
   overflow: auto;
@@ -445,9 +459,9 @@ article {
       color: #4E5359;
       font-size: 100%; }
       .entry .gist .gist-file .gist-meta a {
-        color: #004EAB; }
+        color: #56a411; }
         .entry .gist .gist-file .gist-meta a:visited {
-          color: #004EAB; }
+          color: #56a411; }
 .entry figure {
   margin: 0; }
   .entry figure.highlight {
@@ -540,5 +554,3 @@ article {
   color: #8E3539; }
 .entry pre .deletion {
   color: #DA0C30; }
-
-/*# sourceMappingURL=style.css.map */

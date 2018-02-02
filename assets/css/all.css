@@ -1,0 +1,181 @@
+/*@codeFont: Menlo, "Lucida Console", Courier, monospace;*/
+/* Margins and positioning */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+#page {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+}
+#content {
+  display: inline-block;
+  padding-bottom: 30px;
+}
+#header {
+  margin-bottom: 30px;
+}
+#footer {
+  display: inline-block;
+  bottom: 0;
+  width: 100%;
+}
+.break {
+  clear: both;
+}
+.container {
+  padding-right: 100px;
+  padding-left: 100px;
+  margin: 0;
+}
+/* Fonts and colors */
+body {
+  background-color: #FFF;
+  color: #444;
+  font-family: "Open Sans", Verdana, Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+}
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 30px;
+  font-family: Ubuntu, "Open Sans", Verdana, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+}
+h1 {
+  color: #444;
+}
+h2,
+h3,
+h4 {
+  color: #444;
+}
+h1 {
+  font-size: 200%;
+}
+h2 {
+  font-size: 150%;
+}
+h3 {
+  font-size: 125%;
+}
+h4 {
+  font-size: 100%;
+}
+a {
+  text-decoration: none;
+  color: #56a411;
+}
+#header {
+  background-color: #444247;
+}
+ul.nav-list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  width: 100%;
+}
+.nav-elem a {
+  display: block;
+  padding: 10px;
+  margin: 0px;
+  color: #EEE;
+  font-family: Ubuntu, "Open Sans", Verdana, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+}
+.nav-head a {
+  padding-left: 0px;
+  padding-right: 30px;
+  color: #EEE;
+}
+.nav-elem a:active,
+.nav-elem a:hover,
+.nav-elem a:focus {
+  background-color: #56a411;
+}
+.nav-head a:active,
+.nav-head a:hover,
+.nav-head a:focus {
+  background-color: #444247;
+}
+.nav-active a {
+  background-color: #444247;
+}
+li.nav-left {
+  float: left;
+}
+li.nav-right {
+  float: right;
+}
+#footer {
+  background-color: #80C1C9;
+  color: #444;
+  font-size: 12px;
+}
+#footer a {
+  color: black;
+}
+.foot-block {
+  float: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.foot-about {
+  width: 250px;
+  margin-right: 20px;
+}
+.foot-map {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.foot-head {
+  font-weight: 600;
+  margin-bottom: .25em;
+}
+.foot-list {
+  padding: 0;
+  margin-top: 0;
+}
+.foot-item {
+  display: block;
+}
+.foot-contact {
+  margin-top: 1em;
+}
+.foot-madeby {
+  position: absolute;
+  bottom: 0;
+  text-align: right;
+  right: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 10px;
+}
+/*@import "code.less";*/
+.img-me {
+  float: left;
+  max-width: 150px;
+  margin-right: 20px;
+}
+.big-name {
+  margin-bottom: .33em;
+}
+.affiliation {
+  margin-top: .5em;
+}
+.contact {
+  margin-top: .5em;
+}
+/*@import "news.less";*/
+/*@import "pubs.less";*/
+/*@import "schedule.less";*/

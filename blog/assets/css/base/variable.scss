@@ -6,23 +6,31 @@ $font-icon-path: '/blog/assets/fonts/fontawesome-webfont';
   src: url(#{$font-icon-path}.eot?#iefix) format('embedded-opentype'), url(#{$font-icon-path}.woff) format('woff'), url(#{$font-icon-path}.ttf) format('truetype'), url(#{$font-icon-path}.svg#FontAwesomeRegular) format('svg');
 }
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Slabo+27px|Special+Elite');
+
 // Color
 $color-background: #fff;
-$color-background-header: #f9e9d4;
+$color-background-header: #444247;
+$color-background-footer: #80C1C9;
 $color-font: #0D0000;
 $color-meta: #4E5359;
 $color-border: #7C848C;
-$color-link: #004EAB;
+$color-link: #56a411;
 $color-link-hover: #000;
+$color-icon: #ffbb69;
+$color-time: #ffda8b;
 
 // Font
-$font-default: "Microsoft Yahei", sans-serif;
+$font-default: 'Open Sans', sans-serif;
 $font-serif: serif;
 $font-mono: Monaco, Menlo, Consolas, "Courier New", monospace;
 $font-icon: FontAwesome;
+$font-title: 'Slabo 27px';
+$font-title-header: 'Special Elite';
+$font-subtitle-header: 'Ubuntu';
 
 // Width
-$width-wide: 1200px;
+$width-wide: 800px;
 /* 1366 * 768 */
 $width-normal: 768px;
 /* iPhone 6+ 414px */
