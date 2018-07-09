@@ -175,6 +175,9 @@ li.nav-right {
 .contact {
   margin-top: .5em;
 }
+.footnotes {
+  font-size: 80%;
+}
 /*@import "news.less";*/
 /*@import "pubs.less";*/
 /*@import "schedule.less";*/
