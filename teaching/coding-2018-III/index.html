@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Intro to Programming with C++  - Elkin Cruz</title>
+  <meta charset="UTF-8">
+  <!--
+     -TODO: Fix layout to display on small screens (mobile) and activate this meta viewport tag
+     -<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+     -->
+  <link href="http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans" rel="stylesheet" type="text/css">
+  <link href="/assets/css/all.css" rel="stylesheet" type="text/css">
+  <link href="/assets/css/print.css" rel="stylesheet" type="text/css" media="print">
+  <link rel="shortcut icon" type="image/png" href="/data/qrcode-me.png" sizes="196x196">
+</head>
+
+<div id="page">
+
+<div id="header">
+  <div class="container">
+
+    <ul class="nav-list">
+      <li class="nav-elem nav-left nav-head">
+        <a href="/">Elkin Cruz</a>
+      </li>
+      <li class="nav-elem nav-left ">
+        <a href="/teaching/">Teaching</a>
+      </li>
+      <li class="nav-elem nav-left ">
+        <a href="/research/">Research</a>
+      </li>
+      <!--
+         -<li class="nav-elem nav-left ">
+         -  <a href="/publications/">Publications</a>
+         -</li>
+         -->
+      <li class="nav-elem nav-right">
+        <a href="/blog/">Blag</a>
+      </li>
+      <li class="nav-elem nav-right">
+        <a href="https://github.com/helq">GitHub</a>
+      </li>
+      <!--
+         -<li class="nav-elem nav-right">
+         -  <a href="/CV.pdf">CV</a>
+         -</li>
+         -->
+    </ul>
+
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+    
+<h1>Programación de Computadores - Universidad Nacional de Colombia - 2018-III</h1>
+<hr>
+<h2>Important Links</h2>
+<p><a href="./schedule_material" title="click me!"><strong>Schedule and Material</strong></a></p>
+<!--[**Exams platform and additional material (in Spanish)**](http://unmoocs.unal.edu.co)-->
+<hr>
+<h2>Syllabus</h2>
+<p><strong>Course’s credits</strong>: 3 (one credit equals <strong>3 hours</strong> of work <strong>a week</strong>)</p>
+<p><strong>Instructor:</strong> Elkin Cruz, <a href="mailto:elacruzca@unal.edu.co">elacruzca@unal.edu.co</a></p>
+<p><strong>Office Hours:</strong> Tuesday 14:00-16:00, Wednesday 9:00-11:00. Lab 207 - Aulas de
+Ingeniería<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup></p>
+<p><strong>Webpage:</strong> <a href="https://helq.github.io/teaching/coding-2018-III">here</a> (slides, contents and announcements)</p>
+<p><strong>Prerequisites:</strong> (high-)school maths</p>
+<h1>How is the class organized</h1>
+<p>The class is (highly) practical. Learning to code is not easy, it will require many hours of
+individual and, often, lonely work!</p>
+<p>There will be homework every week, the homework is mandatory but it will no be graded. I
+assume you will do it diligently each week. I will take every week some exercises from the
+homework and I will quiz you on them! All quizzes will be on the second class of the week
+(either Wednesday or Thursday), please arrive on time.</p>
+<p>There will be three (3) exams during the semester, they are mandatory and represent 50% of
+the final grade. All students of all courses of “Intro To Programming” take the exams on
+the same week.</p>
+<p>All students must present at the end of the semester (on the last week of class) a class
+project. The topic of the project will be defined at least 5 weeks in advance.</p>
+<h1>Content (Goals)</h1>
+<p>The course is divided into three blocks (and one small kickstart block)</p>
+<ol>
+<li>Structure of class, presentation, Motivation, Examples of Programming in the wild, and
+some history of programming languages. (about week and a half)</li>
+<li>Getting C++, how to compile, how to run executables, logic and sets (maths), <code>if</code>
+statement, loops (<code>while</code> and <code>for</code> statements), and functions. (about 6
+weeks)</li>
+<li>Recursive functions, <code>do-while</code> loop, input from the user, passing by value and
+reference, and arrays. (about 4 weeks)</li>
+<li>Pointers (the messy truth behind arrays), <code>new</code> keyword, string operations, matrices
+(arrays of arrays), structures, and some functions from <code>std</code> libraries.</li>
+</ol>
+<h1>Material</h1>
+<p>We will focus on learning the basics of C<ins>. So, you will need to install a compiler for
+C</ins> (a tool to work with C<ins>). We will work with a tool called &quot;Code::Blocks
+Dev-C</ins>&quot;<sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>. You can download it from: <a href="http://www.codeblocks.org/downloads/26">http://www.codeblocks.org/downloads/26</a>
+(recommended version to download: <code>mingw-setup</code>).</p>
+<p>We will follow the book &quot;The Little CPPler&quot;. You can find it in the webpage of the class,
+or in the following link:</p>
+<ul>
+<li><a href="https://github.com/helq/the-little-cppler-book/raw/master/the_little_cppler.pdf">https://github.com/helq/the-little-cppler-book/raw/master/the_little_cppler.pdf</a></li>
+</ul>
+<p>Optionally, an additional book to learn some more mathematical topics related to computing
+can be found at:</p>
+<ul>
+<li><a href="https://drive.google.com/open?id=1gAyavvqNzwNLpNe9QOexbXnLhDDK04ZU">https://drive.google.com/open?id=1gAyavvqNzwNLpNe9QOexbXnLhDDK04ZU</a></li>
+</ul>
+<h1>Evaluation of knowledge from content (exams)</h1>
+<p>Each of the three blocks of the course ends with an exam. The exam will be on an online
+platform. Registration steps will be given before the first exam.</p>
+<p>The topics to appear on each exam are<sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup>:</p>
+<ol>
+<li>Programming Languages basics (history and types), logic and sets (maths), simple
+programs in C++, and <code>if</code> statement.</li>
+<li>Recursive functions, and loops (<code>while</code>, <code>for</code>, and <code>do-while</code>).</li>
+<li>Arrays, matrices, and strings.</li>
+</ol>
+<h1>Grades</h1>
+<ul>
+<li>50% Exams (one per block, divided in 15%, 15% and 20%)</li>
+<li>20% Quizzes and Homework (at least 8)</li>
+<li>30% Class Project (due to the second last week of class)
+<ul>
+<li>half of Class Project’s grade corresponds to the implementation (code)</li>
+<li>half of Class Project’s grade corresponds to a quiz on the implementation (on the code)</li>
+</ul></li>
+</ul>
+<h1>Code of Conduct</h1>
+<p>You (the student) must conform to the University’s Regulation. If you incur into any kind
+of plagiarism (that includes quizzes) or misconduct, your grade for the assignment
+(whichever it is) will be zero!</p>
+<p>Repeated infractions may be a causal to be expeled from the university!</p>
+<p>Please, take a closer look at “Concepto 2 de 2015 Oficina Jurídica Nacional”<sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup></p>
+<!-- vim:set filetype=markdown.pandoc : -->
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1"  class="footnote-item"><p>Please send me an email before you arrive to the lab in the office
+hours. I may not be there if nobody sends me an email. <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn2"  class="footnote-item"><p>Code::Blocks is an IDE, it is a tool that combines several other tools to make
+your life easier. An IDE typically is comprised of a compiler (or interpreter), a text
+editor, and a debug tool. <a href="#fnref2" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn3"  class="footnote-item"><p>Small disclosure, the topics to appear on each exam may change due to
+changes on the schedule or any unintended problem that may appear on any of the other
+groups of intro to programming. Any change in the exams’ topics will be notified at
+least a week in advance. <a href="#fnref3" class="footnote-backref">↩</a></p>
+</li>
+<li id="fn4"  class="footnote-item"><p><a href="http://www.legal.unal.edu.co/sisjurun/normas/Norma1.jsp?i=87497">http://www.legal.unal.edu.co/sisjurun/normas/Norma1.jsp?i=87497</a> <a href="#fnref4" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
+
+
+  </div>
+</div>
+
+<div id="footer">
+  <div class="container">
+    <div class="foot-block foot-about">
+      <div class="foot-head">About Me</div>
+      I'm a computer engineer and I like to do things like everybody else.
+      Writing is that thing I would like to do more often.
+    </div>
+    
+    <div class="foot-block foot-map">
+      <div class="foot-head">Pages</div>
+      <ul class="foot-list">
+        <li class="foot-item">
+          <a href="/">Home</a>
+        </li>
+        <li class="foot-item">
+          <a href="/teaching/">Teaching</a>
+        </li>
+        <li class="foot-item">
+          <a href="/research/">Research</a>
+        </li>
+        <!--
+           -<li class="foot-item">
+           -  <a href="/publications/">Publications</a>
+           -</li>
+           -->
+        <li class="foot-item">
+          <a href="/blog/">Blog</a>
+        </li>
+      </ul>
+    </div>
+    
+    <!--
+       -<div class="foot-block foot-map">
+       -  <div class="foot-head">Projects</div>
+       -  <ul class="foot-list">
+       -    <li class="foot-item">
+       -      <a href="/">first</a>
+       -    </li>
+       -    <li class="foot-item">
+       -      <a href="/">second</a>
+       -    </li>
+       -    <li class="foot-item">
+       -      <a href="/">third</a>
+       -    </li>
+       -    <li class="foot-item">
+       -      <a href="/">fourth</a>
+       -    </li>
+       -  </ul>
+       -</div>
+       -->
+    
+    <div class="foot-block foot-map">
+      <div class="foot-head">Profiles</div>
+      <ul class="foot-list">
+        <li class="foot-item">
+          <a href="https://github.com/helq">GitHub</a>
+        </li>
+        <!--
+           -<li class="foot-item">
+           -  <a href="https://twitter.com/">Twitter</a>
+           -</li>
+           -<li class="foot-item">
+           -  <a href="http://scholar.google.com/citations?user=">Google Scholar</a>
+           -</li>
+           -->
+      </ul>
+    </div>
+    
+    <div class="foot-madeby">
+      © Elkin Cruz, <a href="https://gitlab.com/helq/blag/blob/master/LICENSE.md">details</a>
+      based on <a href="http://web.engr.oregonstate.edu/~walkiner/">Eric's webpage</a>
+    </div>
+
+  </div>
+</div>
+
+</div>
+<!--
+   -<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+   -<script src="./js/scripts.js"></script>
+   -<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+   -->
+</body>
+</html>
