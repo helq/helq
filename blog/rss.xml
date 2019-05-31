@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Fri, 19 Apr 2019 19:51:56 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Higher Rank Polymorphism, a beginners explanation using typed lambda calculus]]></title><description><![CDATA[<p><strong>Disclaimer:</strong> I’m not an expert on type systems, I was just trying to figure out what
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Fri, 31 May 2019 16:37:03 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Higher Rank Polymorphism, a beginners explanation using typed lambda calculus]]></title><description><![CDATA[<p><strong>Disclaimer:</strong> I’m not an expert on type systems, I was just trying to figure out what
 “higher rank polymorphism” was and found useful to use some ad-hoc typed lambda calculus.
 For what I’ve been reading for the last hour, all “code” below is in something close to
 “System F” (<a href="https://en.wikipedia.org/wiki/System_F">wikipedia</a>, and <a href="https://crypto.stanford.edu/~blynn/lambda/systemf.html">an in-depth explanation of System F with an interpreter
@@ -362,110 +362,84 @@ completely), you can find more info in the <a href="https://en.wikipedia.org/wik
 </li>
 </ol>
 </section>
-]]></description><link>https://helq.github.io/blog/posts/2017/06/en/haskell-s-higher-rank-polymorphism</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2017/06/en/haskell-s-higher-rank-polymorphism</guid><pubDate>Wed, 28 Jun 2017 18:08:00 GMT</pubDate></item><item><title><![CDATA[Chinese Log - Step 2: Learning Pronunciation]]></title><description><![CDATA[<p><em>This article is part of a series of posts on my Chinese learning experience,</em> <em>for more
-information visit the <a href="/blog/posts/2016/01/en/my-chinese-learning-log/">main series page</a></em></p>
-<p>My first ‘real’ step into learning Chinese has been to learn the pronunciation of vowels
-and consonants in Chinese (or rather, the initials and finals), and later combine them and
-learn to distinguish between the different tones.</p>
-<p>The Chinese syllables are composed of two parts an (optional) initial and a final, so my
-first step was getting to know the initials and the finals. But first of all, I learnt the
-basics of IPA:</p>
-<h2>1. IPA</h2>
-<p>I use IPA to know approximately the sound of every consonant and vowel. For an explanation
-of the IPA system visit <a href="https://fluent-forever.com/chapter3/">IPA explanation | Pronunciation/Ear training</a>
-from <a href="https://fluent-forever.com">Fluent Forever</a>, it is fundamental!.</p>
-<p>Then you can read <a href="https://en.wikipedia.org/wiki/Help:IPA_for_Mandarin">IPA for Chinese</a>.</p>
-<p>And don’t forget to read the <a href="https://en.wikipedia.org/wiki/Pinyin">Pinyin Article (wikipedia)</a>
-as we will base our learning in pinyin.</p>
-<h2>2. Initials</h2>
-<p>For the initials I first read the Wikipedia’s Pinyin Article (or some of it) and then I
-create an <a href="http://ankisrs.net/">Anki</a> Deck with “all” the initials using different audio
-recordings (links to all audio sources at the bottom of this post), you can download the
-deck from <a href="https://ankiweb.net/shared/decks/">Anki Shared Decks</a>:
-<a href="https://ankiweb.net/shared/info/2069190049">Pinyin - Initials - Multiple recordings per initial</a>,
-<strong>NOTE:</strong> the deck uses the Anki Addon <a href="https://ankiweb.net/shared/info/498789867">Replay Button</a>
-and relays heavily on it to work, thus this Anki Deck only works in Desktop Anki and its
-installation is mandatory.</p>
-<p>I got the IPA transcriptions from <a href="http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart">All Set Learning</a>
-and slightly modified them with the Pinyin/IPA Description from Wikipedia’s Article.</p>
-<h2>3. Finals</h2>
-<p>For the finals I did exactly the same as with the initials. You can find the deck from
-ankiweb: <a href="https://ankiweb.net/shared/info/509132394">Pinyin - Finals - Multiple recordings per final sound</a>.</p>
-<h2>4. Pairs of difficult sounds</h2>
-<p>Some sounds are incredibly difficult for me to tell them apart, but as I read in
-<a href="https://fluent-forever.com/gallery/ear-training-flashcards/">Fluent Forever</a>,
-I could just hear one recording (<a href="http://www.sciencealert.com/here-are-4-key-strategies-for-remembering-everything-you-learn">repeat it</a>)
-and try to guess to which of two sounds does it correspond. For that, I create (guess
-what) an Anki Deck. For space reasons, I uploaded the <a href="/blog/data/pinyin/Pinyin__Pairs-v0.1.apkg">deck alone</a>
-(without the media files (audios)) and the media files separated in a <code>.zip</code> file, which
-you can find at the bottom of the post.</p>
-<p>To add new pairs you only need to create (it’s called <code>add</code> in Anki) a new card and fill
-the fields with the right information:</p>
-<ul>
-<li><strong>Pair Sounds:</strong> Sounds that are difficult for you to differentiate</li>
-<li><strong>Written Sound 1:</strong> The first of the two (or three) difficult sounds</li>
-<li><strong>IPA 1:</strong> First sound IPA notation</li>
-<li><strong>Written Sound 2:</strong> Same as 1</li>
-<li><strong>IPA 2:</strong> Same as 1</li>
-<li>…</li>
-<li><strong>Audio 1:</strong> Audios followed by their IPA notation, don’t forget to separate each audio
-with an <code>EOF</code></li>
-<li><strong>Audio 2:</strong> Same as <code>Audio 1</code></li>
-<li>…</li>
-<li><strong>Extra Info:</strong> Additional info you want to be displayed in the “back” of the card.</li>
-</ul>
-<p>You can get the audio and its IPA notation from the file:
-<a href="/blog/data/pinyin/all_with_IPA_per_sound-v0.1.csv">all_with_IPA_per_sound.csv</a>.
-I got all right pinyin sound possibilities from
-<a href="http://www.archchinese.com/chinese_pinyin.html">ArchChinese</a>.</p>
-<h2>5. Tones</h2>
-<p>In <a href="/blog/data/pinyin/Pinyin__Tones-v0.1.apkg">this Anki Deck</a> you will find 30 cards to
-practice tones. Every time a card is displayed an audio will play with a random tone (from
-one of the four “possible” tones), and you need to guess which one it is.</p>
-<p><strong>Note:</strong> this Anki Deck is huge, in fact it contain all the pinyin sounds which are
-spoken (not all the possible pinyin and tones combinations, those are many more). You can
-find the audio media on a zip at the bottom of this post.</p>
-<p>Beware: there are two kinds of 3rd tones in the recordings. The first, the 'traditional’,
-the tone that is learn everywhere, and the second, the ‘spoken’ or ‘real’ tone, the tone
-which you should learn to speak Chinese for a detailed explanation see
-<a href="http://www.sinosplice.com/life/archives/2008/12/10/toward-better-tones-in-natural-speech">Toward Better Tones in Natural Speech</a>.</p>
+]]></description><link>https://helq.github.io/blog/posts/2017/06/en/haskell-s-higher-rank-polymorphism</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2017/06/en/haskell-s-higher-rank-polymorphism</guid><pubDate>Wed, 28 Jun 2017 18:08:00 GMT</pubDate></item><item><title><![CDATA[Chinese Log - Step 2: Learning Pronunciation]]></title><description><![CDATA[<p><em>Updated: 2019.05.29</em></p>
+<p><em>This article was supposed to be one in a series of posts documenting my Mandarin learning
+journey. I’ve stopped to learn the language but I still think that the Anki deck
+presented in this post is valuable for anyone who whishes to trully learn the phonetics of
+the language. You can find the deck in <a href="https://ankiweb.net/shared/info/854183352">ankiweb</a> and the source code in
+<a href="https://github.com/helq/pinyin-beginners-anki-deck">github</a>.</em></p>
+<p><em>The previous post can be found <a href="https://github.com/helq/blag/blob/0188da8b861a0a8d3d8b4895181ef0f4d5485bd2/src/blog/posts/2016-01-18-chinese-log-step-2.md">in here</a>.</em></p>
 <hr>
-<h2>Sources</h2>
-<p>Sources of all the audios present in the compressed file (see “Deck and media downloads”
-below) and the anki decks. All credit goes to the corresponding webpages:</p>
+<p>The goal of this post is to explain the stuff I considered into the creation of an Anki
+deck to learn Chinese phonetics.</p>
+<p>First, some terminology. Mandarin syllables can be divided into two parts: an (optional)
+initial part and a final part.</p>
+<p>Mandarin initials and finals are quite different to many sounds (phonemes) found in
+English (or Spanish, in my case). So, learning initials and finals in isolation will be
+our first task.</p>
+<p>Notice that even though we can study initials and finals in isolation, not all
+combinations of initials and finals are valid sounds in Mandarin, similar to how not all
+combinations of consonants and vowels in English make sense or are easy to pronunce (try with
+<code>Szczęście</code>, happiness in Polish).</p>
+<p>Once we master the individual sounds, we need to be able to recognise (and pronunce) the
+sounds together, which means: we need to learn the syllables. And as if that wasn’t
+enough, Mandarin has this little thing that no other European Language has: Tones.</p>
+<p>Tones are hard, unless you are familiar with them or have a trained ear. I think musicians
+may have some advantage here, as they are trained to understand, tell apart, and detect
+changes in pitch. I, a humble programmer, am not, and pitch presents for me the hardest of
+challenges.</p>
+<p>Anyway, in the rest of this post I want to give an overview of what you should know before
+you go deep into your ear (and pronunciation) training.</p>
+<p>I hope that by breaking the problem into little steps, I will be able to learn a new
+characteristic of the language at the time and not be overwelmed by the immense difference
+between the phonetic systems of my mother language and Mandarin.  This is of course an
+oversimplification, but it is an useful simplification.</p>
+<p>So, let’s start. First, you need to know IPA!</p>
+<h2>IPA and Pinyin</h2>
+<p>I use IPA as a guide to tell apart different sounds in a language that otherwise would
+look like the same in paper from how they are written. What I mean is that if you are
+learning to pronunce Mandarin using only Pinyin as your guide, you may be misguided into
+thinking that, for example, <code>-ei</code> sounds like <code>-e</code> with some other sound added at the end,
+but that is completely wrong. In fact, <code>-ei</code> is usually pronunced as <code>[eɪ̯]</code> while <code>-e</code> is
+pronunced as <code>[ɯ̯ʌ]</code>.</p>
+<p>An in depth introduction of IPA can be found at <a href="https://fluent-forever.com/chapter3/">IPA explanation | Pronunciation/Ear training</a>
+by Fluent Forever. The people behind <a href="https://fluent-forever.com">Fluent Forever</a> have
+been putting quality resources on Language Learning for years, be sure to check them out.</p>
+<p>Also, the wikipedia is a great resource: <a href="https://en.wikipedia.org/wiki/Help:IPA_for_Mandarin">IPA for Mandarin</a>.
+Don’t forget to read the <a href="https://en.wikipedia.org/wiki/Pinyin">Pinyin Article in the Wikipedia</a>.</p>
+<h2>The deck</h2>
+<p>Now, <a href="https://ankiweb.net/shared/info/854183352">the deck</a> and the <a href="https://github.com/helq/pinyin-beginners-anki-deck">source code</a>.</p>
+<p>The deck is composed of four different decks. Each card in the deck has its own audio,
+pinyin and IPA. The subdecks are:</p>
+<ul>
+<li>Initials,</li>
+<li>Finals,</li>
+<li>(some) Minimal Pairs (tailored to the sounds <em>I</em> find the hardest),</li>
+<li>and, Tones.</li>
+</ul>
+<p><em>Beware:</em> there are two kinds of 3rd tones in the recordings. The first kind is the
+&quot;traditional 3rd tone&quot;, i.e. the 3rd tone that is taught everywhere. The second kind is
+the &quot;Spoken/Real 4th Tone&quot;, which is is the tone spoken by people in real conversations.
+For a detailed explanation on what I mean by traditional vs spoken see
+<a href="http://www.sinosplice.com/life/archives/2008/12/10/toward-better-tones-in-natural-speech">Toward Better Tones in Natural Speech</a>.</p>
+<p>I made the deck so that every time you check a card, the card picks a random audio from a
+set of audios. For this to work properly in Anki Desktop, you need to install the
+<a href="https://ankiweb.net/shared/info/498789867">Replay Button Addon</a>. No addon is needed for
+AnkiDroid. I’ve only checked the deck in Anki Desktop and AnkiDroid.</p>
+<h2>Sources and Acknoledgements</h2>
+<p>Special thanks to <a href="https://github.com/SimonLammer/anki-persistence">anki-persistence</a> which allows me to easily retrieve information
+shown at the front of the card.</p>
+<p>I don’t own any of the recordings. All credit for the recordings goes to:</p>
 <ol>
-<li><a href="http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart">http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart</a>
-(the audios from this source appear in the compressed file with an <code>_1</code> at the end)</li>
-<li><a href="https://chinese.yabla.com/chinese-pinyin-chart.php">https://chinese.yabla.com/chinese-pinyin-chart.php</a>
-(<code>_2</code> is the postfix for all audios from this source)</li>
-<li><a href="http://www.yoyochinese.com/chinese-learning-tools/Mandarin-Chinese-pronunciation-lesson/pinyin-chart-table">http://www.yoyochinese.com/chinese-learning-tools/Mandarin-Chinese-pronunciation-lesson/pinyin-chart-table</a>
-(<code>_3</code> so on …)</li>
+<li><a href="http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart">http://resources.allsetlearning.com/chinese/pronunciation/Pinyin_chart</a></li>
+<li><a href="https://chinese.yabla.com/chinese-pinyin-chart.php">https://chinese.yabla.com/chinese-pinyin-chart.php</a></li>
+<li><a href="http://www.yoyochinese.com/chinese-learning-tools/Mandarin-Chinese-pronunciation-lesson/pinyin-chart-table">http://www.yoyochinese.com/chinese-learning-tools/Mandarin-Chinese-pronunciation-lesson/pinyin-chart-table</a></li>
 <li><a href="http://www.archchinese.com/chinese_pinyin.html">http://www.archchinese.com/chinese_pinyin.html</a></li>
 <li><a href="http://pinpinchinese.com/pinyin-chart/">http://pinpinchinese.com/pinyin-chart/</a></li>
 <li><a href="http://public.gettysburg.edu/~jli/PinYinChart/ChinesePinYinChartM.html">http://public.gettysburg.edu/~jli/PinYinChart/ChinesePinYinChartM.html</a></li>
 <li><a href="http://lost-theory.org/chinese/phonetics/">http://lost-theory.org/chinese/phonetics/</a></li>
-<li><a href="http://www.china-on-site.com/language/phonetic/phonetic.htm">http://www.china-on-site.com/language/phonetic/phonetic.htm</a>
-(this is the only source which audio doesn’t have a numeration in the audio saved in
-the card decks)</li>
+<li><a href="http://www.china-on-site.com/language/phonetic/phonetic.htm">http://www.china-on-site.com/language/phonetic/phonetic.htm</a></li>
 </ol>
-<hr>
-<h2>Deck and media downloads</h2>
-<ul>
-<li>All audios (Anki’s ‘Media Folder’ compressed):
-<a href="https://www.mediafire.com/?vpbv0m0me7b81zg">collection.media.zip (version 0.1)</a>
-(mediafire).  You need this! Extract it under your personal Anki Media Folder.</li>
-<li>Anki Addon: <a href="https://ankiweb.net/shared/info/498789867">Replay Button</a> You need this!</li>
-<li><a href="/blog/data/pinyin/Pinyin__Initials-v0.1.apkg">Initials deck</a> (version 0.1)
-Alternative download <a href="/blog/data/pinyin/initials-v0.1.csv">csv file</a></li>
-<li><a href="/blog/data/pinyin/Pinyin__Finals-v0.1.apkg">Finals deck</a> (version 0.1)
-Alternative download <a href="/blog/data/pinyin/finals-v0.1.csv">csv file</a></li>
-<li><a href="/blog/data/pinyin/Pinyin__Pairs-v0.1.apkg">Pairs deck</a> (version 0.1)
-Alternative download <a href="/blog/data/pinyin/pairs-v0.1.csv">csv file</a></li>
-<li><a href="/blog/data/pinyin/Pinyin__Tones-v0.1.apkg">Tones deck</a> (version 0.1)
-Alternative download <a href="/blog/data/pinyin/tones-v0.1.csv">csv file</a></li>
-<li><a href="/blog/data/pinyin/all_with_IPA_per_sound-v0.1.csv">All spoken pinyin combinations</a>
-csv file (version 0.1)</li>
-</ul>
 ]]></description><link>https://helq.github.io/blog/posts/2016/01/en/chinese-log-step-2</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2016/01/en/chinese-log-step-2</guid><pubDate>Tue, 19 Jan 2016 00:45:00 GMT</pubDate></item><item><title><![CDATA[Chinese Log - Step 1: Searching for Resources]]></title><description><![CDATA[<p><em>This article is part of a series of posts on my Chinese learning experience,</em> <em>for more
 information visit the <a href="/blog/posts/2016/01/en/my-chinese-learning-log/">main series page</a></em></p>
 <p>Here are the web pages I found useful when reading about Chinese Language as a complete
