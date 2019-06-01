@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Fri, 31 May 2019 16:37:03 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Higher Rank Polymorphism, a beginners explanation using typed lambda calculus]]></title><description><![CDATA[<p><strong>Disclaimer:</strong> I’m not an expert on type systems, I was just trying to figure out what
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Sat, 01 Jun 2019 15:21:50 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Higher Rank Polymorphism, a beginners explanation using typed lambda calculus]]></title><description><![CDATA[<p><strong>Disclaimer:</strong> I’m not an expert on type systems, I was just trying to figure out what
 “higher rank polymorphism” was and found useful to use some ad-hoc typed lambda calculus.
 For what I’ve been reading for the last hour, all “code” below is in something close to
 “System F” (<a href="https://en.wikipedia.org/wiki/System_F">wikipedia</a>, and <a href="https://crypto.stanford.edu/~blynn/lambda/systemf.html">an in-depth explanation of System F with an interpreter
@@ -390,10 +390,12 @@ changes in pitch. I, a humble programmer, am not, and pitch presents for me the 
 challenges.</p>
 <p>Anyway, in the rest of this post I want to give an overview of what you should know before
 you go deep into your ear (and pronunciation) training.</p>
-<p>I hope that by breaking the problem into little steps, I will be able to learn a new
-characteristic of the language at the time and not be overwelmed by the immense difference
-between the phonetic systems of my mother language and Mandarin.  This is of course an
-oversimplification, but it is an useful simplification.</p>
+<!--
+   -I hope that by breaking the problem into little steps, I will be able to learn a new
+   -characteristic of the language at the time and not be overwelmed by the immense difference
+   -between the phonetic systems of my mother language and Mandarin.  This is of course an
+   -oversimplification, but it is an useful simplification.
+   -->
 <p>So, let’s start. First, you need to know IPA!</p>
 <h2>IPA and Pinyin</h2>
 <p>I use IPA as a guide to tell apart different sounds in a language that otherwise would
@@ -419,7 +421,7 @@ pinyin and IPA. The subdecks are:</p>
 </ul>
 <p><em>Beware:</em> there are two kinds of 3rd tones in the recordings. The first kind is the
 &quot;traditional 3rd tone&quot;, i.e. the 3rd tone that is taught everywhere. The second kind is
-the &quot;Spoken/Real 4th Tone&quot;, which is is the tone spoken by people in real conversations.
+the &quot;Spoken/Real 3rd Tone&quot;, which is the tone spoken by people in real conversations.
 For a detailed explanation on what I mean by traditional vs spoken see
 <a href="http://www.sinosplice.com/life/archives/2008/12/10/toward-better-tones-in-natural-speech">Toward Better Tones in Natural Speech</a>.</p>
 <p>I made the deck so that every time you check a card, the card picks a random audio from a
