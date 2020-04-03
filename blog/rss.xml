@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Wed, 03 Jul 2019 18:52:27 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Understanding Higher Rank Polymorphism: A small guide using Typed Lambda Calculus]]></title><description><![CDATA[<p><strong>Disclaimer:</strong> I’m not an expert on type systems. I was just trying to figure out what
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Fri, 03 Apr 2020 19:12:24 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Understanding Higher Rank Polymorphism: A small guide using Typed Lambda Calculus]]></title><description><![CDATA[<p><strong>Disclaimer:</strong> I’m not an expert on type systems. I was just trying to figure out what
 “higher rank polymorphism” means and found useful to use some ad-hoc Typed Lambda
 Calculus.  For what I’ve been reading for the last hour, all “code” below is in something
 close to “System F” (<a href="https://en.wikipedia.org/wiki/System_F">wikipedia</a>, and <a href="https://crypto.stanford.edu/~blynn/lambda/systemf.html">an in-depth explanation of System F with an
@@ -374,7 +374,7 @@ completely), you can find more info in the <a href="https://en.wikipedia.org/wik
 </li>
 </ol>
 </section>
-]]></description><link>https://helq.github.io/blog/posts/2017/06/en/haskell-s-higher-rank-polymorphism</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2017/06/en/haskell-s-higher-rank-polymorphism</guid><pubDate>Wed, 28 Jun 2017 18:08:00 GMT</pubDate></item><item><title><![CDATA[Chinese Log - Step 2: Learning Pronunciation]]></title><description><![CDATA[<p><em>Updated: 2019.05.29</em></p>
+]]></description><link>https://helq.github.io/blog/posts/2017/06/en/haskell-s-higher-rank-polymorphism</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2017/06/en/haskell-s-higher-rank-polymorphism</guid><pubDate>Wed, 28 Jun 2017 17:08:00 GMT</pubDate></item><item><title><![CDATA[Chinese Log - Step 2: Learning Pronunciation]]></title><description><![CDATA[<p><em>Updated: 2019.05.29</em></p>
 <p><em>This article was supposed to be one in a series of posts documenting my Mandarin learning
 journey. I’ve stopped to learn the language but I still think that the Anki deck
 presented in this post is valuable for anyone who whishes to trully learn the phonetics of
@@ -762,4 +762,4 @@ job:</p>
 is the size of the split in seconds, for example, if you put 600 it means 10 minutes.</p>
 <p><a href="/blog/data/splitVideo.sh">Here’s the bash script</a>. It is the same code as in the bash function, just in a
 bash file ;)</p>
-]]></description><link>https://helq.github.io/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg</guid><pubDate>Sun, 23 Aug 2015 20:12:00 GMT</pubDate></item></channel></rss>
+]]></description><link>https://helq.github.io/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg</guid><pubDate>Sun, 23 Aug 2015 19:12:00 GMT</pubDate></item></channel></rss>
