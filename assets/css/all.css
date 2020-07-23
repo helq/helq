@@ -139,7 +139,7 @@ li.nav-right {
 }
 .foot-head {
   font-weight: 600;
-  margin-bottom: .25em;
+  margin-bottom: 0.25em;
 }
 .foot-list {
   padding: 0;
@@ -160,6 +160,17 @@ li.nav-right {
   padding-bottom: 20px;
   font-size: 10px;
 }
+/* Styling for code blocks */
+.csl-bib-body {
+  padding-left: 0;
+  margin-left: 0;
+}
+.csl-entry {
+  margin-left: 2em;
+  text-indent: -2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
 /*@import "code.less";*/
 .img-me {
   float: left;
@@ -167,13 +178,13 @@ li.nav-right {
   margin-right: 20px;
 }
 .big-name {
-  margin-bottom: .33em;
+  margin-bottom: 0.33em;
 }
 .affiliation {
-  margin-top: .5em;
+  margin-top: 0.5em;
 }
 .contact {
-  margin-top: .5em;
+  margin-top: 0.5em;
 }
 .footnotes {
   font-size: 80%;
