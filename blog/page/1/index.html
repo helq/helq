@@ -64,6 +64,68 @@
             
                 <div class="meta">
                     <div class="icon"></div>
+                    <time datetime="2020-10-16T19:20:00.000Z"><a href="/blog/posts/2020/10/es/improvisionando-1">2020-10-16</a></time>
+                </div>
+            
+            
+
+<h1 class="title"><a href="/blog/posts/2020/10/es/improvisionando-1">Improvisionando 1</a></h1>
+
+
+
+        </header>
+        <div class="entry">
+          
+            <p>Cuando la ví pensé que era una ilusión. La camioneta más pequeña que había visto en mi
+vida. Pequeña, diminuta, sólo apta para hormigas y nada más. ¿A quién se le ocurrió la
+idea de construir una camioneta que sólo insectos pudieran conducir? Ni idea, pero quién
+sea, pero se ha hecho multimillonario. Es absurdo, bastante absurdo, pero estos animalitos
+han entrado al mundo del capitalismo y deberíamos temer por el impacto que puedan tener en
+el ambiente. Aún así nadie parece prestarles atención. ¿Qué podrían hacer unos animalitos
+tan insignificantemente pequeños y míseros como ellos? Pues, no sé, ¿contaminar el planeta
+con más CO2?, ¿deforestar lo poco que nos queda?, ¿competir por recursos? No, nada de eso
+interesa. La oportunidad económica es muy grande, y además está la naciente clase me…</p>
+          
+        </div>
+        <footer class="clearfix">
+            
+                
+                    <div class="read-more">
+                        <a href="/blog/posts/2020/10/es/improvisionando-1#more" class="more-link">read more</a>
+                    </div>
+                
+                
+            
+            
+            
+<div class="tags">
+	
+	<a href="/blog/tags/improv/">#improv</a>
+	
+	<a href="/blog/tags/creative-writing/">#creative-writing</a>
+	
+</div>
+
+
+
+
+            
+        </footer>
+    </div>
+</article>
+
+
+
+  
+    
+    
+    <article class="post">
+    
+    <div class="post-content">
+        <header>
+            
+                <div class="meta">
+                    <div class="icon"></div>
                     <time datetime="2017-06-28T17:08:00.000Z"><a href="/blog/posts/2017/06/en/haskell-s-higher-rank-polymorphism">2017-06-28</a></time>
                 </div>
             
@@ -81,12 +143,11 @@
 Calculus.  For what I’ve been reading for the last hour, all “code” below is in something
 close to “System F” (<a href="https://en.wikipedia.org/wiki/System_F">wikipedia</a>, and <a href="https://crypto.stanford.edu/~blynn/lambda/systemf.html">an in-depth explanation of System F with an
 interpreter and actual runnable code</a>).</p>
+<!--Note to self: Actually. After a couple of years and some weeks studying lambda
+calculus I came to understand that the lambda calculus variant used in this document is:
+λ2 . You can read more about it in here: https://en.wikipedia.org/wiki/Lambda_cube#(%CE%BB2)_System_F -->
 <p>As I understand, Typed Lambda Calculus is the basis of Haskell, so it makes sense to try
-to understand what something means in Haskell by studying it first in Typed Lambda
-Calculus. That is why, I have written this little guide to understand “Higher Rank
-Polymorphism” using Typed Lambda Calculus.</p>
-<p>For those of you who don’t know what Lambda Calculus is, I’ve written a micro-introduction
-below. If you know what Lambda Calcu…</p>
+to understand what something means in Haskell by studying …</p>
           
         </div>
         <footer class="clearfix">
@@ -401,83 +462,11 @@ want to learn Sign Language, I thought, you only need to learn to write or s…<
 
 
   
-    
-    
-    <article class="post">
-    
-    <div class="post-content">
-        <header>
-            
-                <div class="meta">
-                    <div class="icon"></div>
-                    <time datetime="2015-08-23T19:12:00.000Z"><a href="/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg">2015-08-23</a></time>
-                </div>
-            
-            
-
-<h1 class="title"><a href="/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg">Splitting video or sound in multiple files - ffmpeg [bash script]</a></h1>
-
-
-
-        </header>
-        <div class="entry">
-          
-            <h2><strong>Edit: 2016-08-02</strong></h2>
-<p>I found a <a href="http://unix.stackexchange.com/a/283547">simpler, built-in in ffmpeg aproach</a> to split a sound/video file
-in multiple parts with the same time length.</p>
-<pre><code class="language-bash">ffmpeg -i 'input_file.mp3' \
-       -acodec copy -vcodec copy \
-       -f segment -segment_time 600 \
-       '%03d_out_name.mp3'
-</code></pre>
-<p>In this example we have an input file called <code>input_file.mp3</code> and we break it in multiple
-files of 10 minutes each (600 seconds). Each output file has a unique name of the form:
-<code>XXX_out_name.mp3</code> where <code>XXX</code> represents a 3 digit number.</p>
-<h2><em>As a reference, the old article:</em></h2>
-<p>The present article describes how to split a video/sound into multiple files of same
-duration using ffmpeg. <a href="/blog/data/splitVideo.sh">Click to download automated bash script.</a></p>
-<p>With ffmpeg, to copy just a fraction of a sound (<code>.mp3</code>, <code>.wma</code>, <code>.aac</code>, …) or video
-file (<code>.mp4</code>, <code>.wma</code>, …) use:</p>
-<pre><code class="language-bash">ffmpeg -i &quot…</code></pre>
-          
-        </div>
-        <footer class="clearfix">
-            
-                
-                    <div class="read-more">
-                        <a href="/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg#more" class="more-link">read more</a>
-                    </div>
-                
-                
-            
-            
-            
-<div class="tags">
-	
-	<a href="/blog/tags/ffmpeg/">#ffmpeg</a>
-	
-	<a href="/blog/tags/bash/">#bash</a>
-	
-	<a href="/blog/tags/programming/">#programming</a>
-	
-	<a href="/blog/tags/scripting/">#scripting</a>
-	
-</div>
-
-
-
-
-            
-        </footer>
-    </div>
-</article>
-
-
-
-  
   
   <nav id="pagination">
 	
+	
+	<a href="/blog/page/2/" class="next">next</a>
 	
 </nav>
 
@@ -492,19 +481,9 @@ file (<code>.mp4</code>, <code>.wma</code>, …) use:</p>
 
 <footer id="footer">
 	<div class="center">
-		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img
-    alt="Creative Commons License" style="border-width:0"
-    src="/blog/assets/images/creativecommons-88x31.png" /></a>
-		This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-		<br/>
-
-    All code snippets found in posts are licensed under
-      <a rel="license"
-         href="http://creativecommons.org/publicdomain/zero/1.0/">
-        <img src="/blog/assets/images/cc0-88x31.png" style="border-style: none;" alt="CC0" />
-      </a>
-		unless otherwise is stated.
-		<br/>
+  
+  
+  
 
 		&copy; 2015-2020
 		helq.

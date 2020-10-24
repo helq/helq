@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="/blog/assets/js/tomorrow.min.css">
   
 
-    <title>omnomnomelq - Splitting video or sound in multiple files - ffmpeg [bash script]</title>
+    <title>omnomnomelq - helq&#39;s blog</title>
 </head>
 <body>
 <header id="header">
@@ -54,9 +54,10 @@
     <div class="main-col">
       
 
-
-
-<article class="post">
+  
+    
+    
+    <article class="post">
     
     <div class="post-content">
         <header>
@@ -68,7 +69,7 @@
             
             
 
-<h1 class="title">Splitting video or sound in multiple files - ffmpeg [bash script]</h1>
+<h1 class="title"><a href="/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg">Splitting video or sound in multiple files - ffmpeg [bash script]</a></h1>
 
 
 
@@ -91,46 +92,17 @@ files of 10 minutes each (600 seconds). Each output file has a unique name of th
 duration using ffmpeg. <a href="/blog/data/splitVideo.sh">Click to download automated bash script.</a></p>
 <p>With ffmpeg, to copy just a fraction of a sound (<code>.mp3</code>, <code>.wma</code>, <code>.aac</code>, …) or video
 file (<code>.mp4</code>, <code>.wma</code>, …) use:</p>
-<pre><code class="language-bash">ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy -t $splitLen -ss $start &quot;$new_name&quot;
-</code></pre>
-<p>where <code>$name</code> is the name of the file to split, <code>$splitLen</code> is the length in seconds of
-the split, <code>$start</code> the second in which the splitting start and the <code>$new_name</code> for the
-file.</p>
-<p>The idea is to copy fractions of the song (or video) in pieces of the same size, so that
-adding all the pieces we get the original song (video). Here a bash function that does the
-job:</p>
-<pre><code class="language-bash">splitVideo() {
-    # name file to split
-    name=&quot;$1&quot;
-    # splitting time in seconds
-    splitLen=$2
-
-    # total of the song
-    totalTime=&quot;$(ffprobe -i &quot;$name&quot; -show_format 2&gt; /dev/null | sed -n 's/duration=//p')&quot;
-    # number of splits required
-    numOfSplits=&quot;$(printf '%.0f\n' $[ totalTime / splitLen ])&quot;
-
-    for i in {0..$numOfSplits}; do
-        start=$[ splitLen * i ]
-
-        num=$(printf '%02d' $[i+1])
-        new_name=&quot;${name%.*}_${num}.${name//*.}&quot;
-
-        ffmpeg -i &quot;$name&quot; -acodec copy -vcodec copy \
-               -t $splitLen -ss $start \
-               -metadata &quot;track=$[i+1]&quot; \
-               &quot;$new_name&quot;
-    done
-}
-</code></pre>
-<p>Mode of use: <code>splitVideo &quot;$name_of_the_file&quot; $time_in_seconds</code>, where <code>$time_in_seconds</code>
-is the size of the split in seconds, for example, if you put 600 it means 10 minutes.</p>
-<p><a href="/blog/data/splitVideo.sh">Here’s the bash script</a>. It is the same code as in the bash function, just in a
-bash file ;)</p>
-
+<pre><code class="language-bash">ffmpeg -i &quot…</code></pre>
           
         </div>
         <footer class="clearfix">
+            
+                
+                    <div class="read-more">
+                        <a href="/blog/posts/2015/08/en/splitting-video-or-sound-in-multiple-files-ffmpeg#more" class="more-link">read more</a>
+                    </div>
+                
+                
             
             
             
@@ -150,22 +122,23 @@ bash file ;)</p>
 
 
             
-                <p align="right">
-    <a href="https://github.com/helq/blag/blob/master/src/blog/posts/2015-08-23-splitting-video-or-sound-in-multiple-files-ffmpeg.md">This article&#39;s source code!</a>
-</p>
-
-
-
-            
         </footer>
     </div>
 </article>
 
 
 
+  
+  
+  <nav id="pagination">
+	
+	<a href="/blog/" class="prev">prev</a>
+	
+	
+</nav>
 
-
-
+  
+  
 
 
     </div>
@@ -176,16 +149,7 @@ bash file ;)</p>
 <footer id="footer">
 	<div class="center">
   
-		<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/blog/assets/images/cc-by-sa-80x15.png" />
-    </a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-    <br/>
   
-  
-  
-    Code snippets are licensed under
-      <a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/"> <img src="/blog/assets/images/cc-zero-80x15.png" style="border-style: none;" alt="CC0" /></a>
-		unless otherwise is stated.
-		<br/>
   
 
 		&copy; 2015-2020

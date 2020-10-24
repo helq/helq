@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Licensed under CC0 (Public Domain): https://creativecommons.org/publicdomain/zero/1.0/
+
 if [ "$#" -ne 2 ]; then
     echo "Usage: $0 song_name split_time"
     exit 1
