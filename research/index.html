@@ -3,24 +3,20 @@
 <head>
   <title>Research  - Elkin Cruz</title>
   <meta charset="UTF-8">
-  
-  <link href="http://fonts.googleapis.com/css?family=Ubuntu%7COpen+Sans" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link href="/assets/css/all.css" rel="stylesheet" type="text/css">
   <link href="/assets/css/print.css" rel="stylesheet" type="text/css" media="print">
   <link rel="shortcut icon" type="image/png" href="/data/qrcode-me.png" sizes="196x196">
+  <script src="/blog/assets/js/jquery.min.js"></script>
 </head>
 
-<div id="page">
-
+<body>
 <div id="header">
   <div class="container">
 
     <ul class="nav-list">
       <li class="nav-elem nav-left nav-head">
         <a href="/">Elkin Cruz</a>
-      </li>
-      <li class="nav-elem nav-left ">
-        <a href="/projects/">Projects</a>
       </li>
       <li class="nav-elem nav-left ">
         <a href="/research/">Research</a>
@@ -43,9 +39,10 @@
   <div class="container">
     
 
-<p>I am currently dipping my toes in Static Verification of Stochastic Processes with
-professor <a href="https://www.cs.rpi.edu/~cvarela/">Carlos Varela</a> and his group <a href="http://wcl.cs.rpi.edu/">WCL</a>. The goal of the group’s
-research is the construction of verified aviation systems to prevent airplane accidents.</p>
+<p>I am dipping my toes in PDES (Parallel Discrete Event Simulation) and neuromorphic
+computing under the supervision of Professor <a href="https://www.cs.rpi.edu/~chrisc/">Christopher D. Carothers</a>. I am
+building a spiking neural network (SNN) simulator for HPC (High Performance Computing)
+called <a href="https://github.com/helq/doryta">doryta</a>.</p>
 <p>In my masters at <a href="https://unal.edu.co">UNAL</a>, I studied in depth how to check for errors produced by
 mismatched tensors in machine learning applications. The result of my work, with the help
 of my advisors <a href="https://dis.unal.edu.co/~fgonza/">Fabio González</a> and <a href="https://dis.unal.edu.co/~ferestrepoca/">Felipe Restrepo Calle</a>, was an abstract
@@ -64,12 +61,13 @@ The result of the colaboration can be found at <a href="https://gitlab.com/homoc
   </div>
 </div>
 
+<div class="spacer"></div>
+
 <div id="footer">
   <div class="container">
     <div class="foot-block foot-about">
       <div class="foot-head">About Me</div>
-      I'm a computer engineer and I like to do things like everybody else.
-      Writing is that thing I would like to do more often.
+      A human-being, computer engineer, aspiring fiction writer, and sucker for weird stuff. Molly says hi! She is my kitty.
     </div>
     
     <div class="foot-block foot-map">
@@ -105,15 +103,21 @@ The result of the colaboration can be found at <a href="https://gitlab.com/homoc
     </div>
     
     <div class="foot-madeby">
-      © Elkin Cruz, <a href="https://gitlab.com/helq/blag/blob/master/LICENSE.md">details</a>
-      based on <a href="http://web.engr.oregonstate.edu/~walkiner/">Eric's webpage</a>
+      © Elkin Cruz, <a href="https://github.com/helq/blag/blob/master/LICENSE.md">details</a>.
+      Based on <a href="http://web.engr.oregonstate.edu/~walkiner/">Eric's webpage</a>
     </div>
 
   </div>
 </div>
 
-</div>
-
-</div>
+<script>
+// Sticky footer: https://stackoverflow.com/a/9345207
+$(function (){
+    var height_diff = $( window ).height() - $( 'body' ).height();
+    if ( height_diff > 0 ) {
+        $('.spacer').css( 'height', height_diff );
+    }
+});
+</script>
 </body>
 </html>
