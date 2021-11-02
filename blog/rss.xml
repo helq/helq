@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Wed, 29 Sep 2021 21:04:29 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Improvisionando 3]]></title><description><![CDATA[<p>Querida madrecita, que me has manteteninini, hay cosos que ya hombre no haber, hubiera,
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[omnomnomelq - helq's blog]]></title><description><![CDATA[i'm a subtitle!]]></description><link>https://helq.github.io/</link><generator>metalsmith-feed</generator><lastBuildDate>Tue, 02 Nov 2021 14:35:18 GMT</lastBuildDate><atom:link href="https://helq.github.io/blog/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Improvisionando 3]]></title><description><![CDATA[<p>Querida madrecita, que me has manteteninini, hay cosos que ya hombre no haber, hubiera,
 habría comido. Es que tal veces, dos cuartos de un cereberole pensativando encontrarón lo
 quo hubo pasusu. ¿Cuántes años vos vozes voceando tu tal vez? No, nunca, jamés haber yo.
 Te mamo, te quaro, te—no podríe decirto—dolor, mi alma limpia estuviera. Érase una
@@ -213,23 +213,23 @@ be done again and again.</p>
 ]]></description><link>https://helq.github.io/blog/posts/2020/10/en/improvisioning-2</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2020/10/en/improvisioning-2</guid><pubDate>Fri, 23 Oct 2020 16:14:00 GMT</pubDate></item><item><title><![CDATA[Improvisionando 1]]></title><description><![CDATA[<p>Cuando la ví pensé que era una ilusión. La camioneta más pequeña que había visto en mi
 vida. Pequeña, diminuta, sólo apta para hormigas y nada más. ¿A quién se le ocurrió la
 idea de construir una camioneta que sólo insectos pudieran conducir? Ni idea, pero quién
-sea, pero se ha hecho multimillonario. Es absurdo, bastante absurdo, pero estos animalitos
+sea se ha hecho multimillonario. Es absurdo, bastante absurdo; estos animalitos
 han entrado al mundo del capitalismo y deberíamos temer por el impacto que puedan tener en
 el ambiente. Aún así nadie parece prestarles atención. ¿Qué podrían hacer unos animalitos
 tan insignificantemente pequeños y míseros como ellos? Pues, no sé, ¿contaminar el planeta
 con más CO2?, ¿deforestar lo poco que nos queda?, ¿competir por recursos? No, nada de eso
 interesa. La oportunidad económica es muy grande, y además está la naciente clase media de
-entre las hormigas.  El sistema económico que ellas tienen es muy distinto al nuestro.
+entre las hormigas. El sistema económico que ellas tienen es muy distinto al nuestro.
 Ellas no tienen hijos por si mismas, sólo la reina puede, así que los bienes se pasan de
 amigas en amigas. Un sistema social-capitalista de lo más adecuado para nuestro siglo.
-Algunos ya han pegado el grito en el cielo. No es posible que esos animalitos tengas los
-mismos derechos que nosotros los mamiferos, es ridículo que una hormiga sea capaz de
-comprar lo mismo que un perro, o un hombre de ojalata. Ridículo, doblemente absurdo, y
+Algunos ya han pegado el grito en el cielo. No es posible que esos animalitos tengan los
+mismos derechos que nosotros los mamíferos, es ridículo que una hormiga sea capaz de
+comprar lo mismo que un perro o un hombre de ojalata. Ridículo, doblemente absurdo, y
 además ¿quién ha pensado en los niños? ¡Los niños creerán que todas las especies son
 iguales! ¿Qué clase de basófia es esa? Paren este tren, camión, carro, bagoneta, jacusi
 andante, ¡me quiero bajar! Quiero volver al tiempo en que podía salir y pisar el césped
-sin que me denunciáran. ¿Qué he matado una familia entera de zancudos? ¿¡Y Qué han hecho
-ellos por mí!?</p>
+sin que me denunciáran. ¿Qué he matado una familia entera de zancudos? ¿¡Y qué carajos han
+hecho ellos por mí!?</p>
 ]]></description><link>https://helq.github.io/blog/posts/2020/10/es/improvisionando-1</link><guid isPermaLink="true">https://helq.github.io/blog/posts/2020/10/es/improvisionando-1</guid><pubDate>Fri, 16 Oct 2020 19:20:00 GMT</pubDate></item><item><title><![CDATA[Understanding Higher Rank Polymorphism: A small guide using Typed Lambda Calculus]]></title><description><![CDATA[<p><strong>Disclaimer:</strong> I’m not an expert on type systems. I was just trying to figure out what
 “higher rank polymorphism” means and found useful to use some ad-hoc Typed Lambda
 Calculus.  For what I’ve been reading for the last hour, all “code” below is in something
