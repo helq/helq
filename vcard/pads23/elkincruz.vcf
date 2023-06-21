@@ -1,0 +1,21 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Cruz-Camacho;Elkin;;;
+FN:Elkin Cruz-Camacho
+ORG:RPI
+ADR;TYPE=WORK:
+TITLE:4th year PhD Student
+TEL;TYPE=CELL:+13232323233
+TEL;TYPE=WORK:
+TEL;TYPE=HOME:
+TEL;TYPE=MSG:
+EMAIL;TYPE=WORK:
+URL;TYPE=Digital Business Card:https://helq.github.io/vcard/pads23
+URL:https://helq.github.io
+URL;TYPE=Website:https://helq.github.io
+URL;TYPE=LinkedIn:https://linkedin.com/in/elkin-cruz
+URL;TYPE=GitHub:https://github.com/helq
+KEY;TYPE=PGP;ENCODING=b:
+NOTE:Working on HPC applications via PDES (parallel-discrete event simulation). Currently, finding ways to speed up HPC network simulations. Proudly advised by Prof. Chris Carothers
+UID:MyPresentationSeriousReallyCard-4280910
+END:VCARD
