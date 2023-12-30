@@ -1,0 +1,119 @@
+@inproceedings{cruz2023pads,
+  title = {Hybrid {{PDES Simulation}} of {{HPC Networks Using Zombie Packets}}},
+  booktitle = {{{ACM SIGSIM Conference}} on {{Principles}} of {{Advanced Discrete Simulation}}},
+  author = {{Cruz-Camacho}, Elkin and Brown, Kevin A. and Wang, Xin and Xu, Xiongxiao and Shu, Kai and Lan, Zhiling and Ross, Robert B. and Carothers, Christopher D.},
+  year = {2023},
+  month = jun,
+  pages = {128--132},
+  publisher = {{ACM}},
+  address = {{Orlando FL USA}},
+  urldate = {2023-07-23},
+  abstract = {High-fidelity network simulations provide insights into new realms for high-performance computing (HPC) architectures, although at a high cost. Surrogate models offer a significant reduction in runtime, yet they cannot serve as complete replacements and should be only used when appropriate. Thus the need for hybrid modeling, where high-fidelity simulation and surrogates run side-by-side. We present a surrogate model for HPC networks in which packets bypass the network, and the network state itself is suspended when switching to the surrogate. To bypass the network, every packet is scheduled to arrive at a predicted time in the future estimated from historical data; to suspend the network, all in-flight packets are delivered to their destinations, but they are kept in the system to awaken as zombies when switching back to high-fidelity. Speedup for a hybrid model is relative to the proportion of surrogate to high-fidelity. We obtained a 3{\texttimes} speedup for a simulation where 70\% of virtual time was spent in surrogate mode. When considering the surrogate portion only, the speedup jumps to nearly 20{\texttimes} on a uniform random network traffic example. The accuracy of the overall simulation increased when the network state was suspended instead of ignored, which demonstrates the need for modeling the network state when transitioning from surrogate back to high-fidelity mode.},
+  isbn = {9798400700309},
+  langid = {english}
+}
+
+@inproceedings{xu2023pads,
+  title = {Machine {{Learning}} for {{Interconnect Network Traffic Forecasting}}: {{Investigation}} and {{Exploitation}}},
+  shorttitle = {Machine {{Learning}} for {{Interconnect Network Traffic Forecasting}}},
+  booktitle = {Proceedings of the 2023 {{ACM SIGSIM Conference}} on {{Principles}} of {{Advanced Discrete Simulation}}},
+  author = {Xu, Xiongxiao and Wang, Xin and {Cruz-Camacho}, Elkin and D. Carothers, Christopher and A. Brown, Kevin and B. Ross, Robert and Lan, Zhiling and Shu, Kai},
+  year = {2023},
+  pages = {133--137}
+}
+
+@article{cruz2023jais,
+  title = {Formal {{Safety Envelopes}} for {{Provably Accurate State Classification}} by {{Data-Driven Flight Models}}},
+  author = {{Cruz-Camacho}, Elkin and Amer, Ahmad and Kopsaftopoulos, Fotis and Varela, Carlos A.},
+  year = {2023},
+  month = jan,
+  journal = {Journal of Aerospace Information Systems},
+  volume = {20},
+  number = {1},
+  pages = {3--16},
+  issn = {1940-3151, 2327-3097},
+  urldate = {2023-09-21},
+  abstract = {Aerospace systems are inherently stochastic and increasingly data-driven, thus hard to formally verify. Data-driven statistical models can be used to estimate the state and classify potentially anomalous conditions of aerospace systems from multiple heterogeneous sensors with high accuracy. In this paper, we consider the problem of precisely bounding the regions in the sensor input space of a stochastic system in which safe state classification can be formally proven. As an archetypal application, we consider a statistical model created to detect aerodynamic stall in a prototype wing retrofitted with piezoelectric sensors and used to generate data in a wind tunnel for different flight states. We formally define safety envelopes as regions parameterized by [Formula: see text] and [Formula: see text], to respectively capture how model-predictable observed sensor values are, and given these values, how likely the model's accurate state classification is. Safety envelopes are formalized in the Agda proof assistant, used to also generate formally verified runtime monitors for sensor data stream analyses in the Haskell programming language. We further propose a new metric for model classification quality, evaluate it on our wing prototype model, and compare it to the model restricted to two different fixed airspeeds, and enhanced to a continuous Gaussian process regression model. Safety envelopes are an important step in formally verifying precise probabilistic properties of data-driven models used in stochastic aerospace systems and could be used by advanced control algorithms to maintain these systems well within safe operation boundaries.},
+  langid = {english}
+}
+
+@article{cruz2023methodx,
+  title = {Linear Stability Analysis of Chemical Mechanism, {{Listanalchem}}: {{A}} Tool for the Search of Spontaneous Mirror Symmetry Breaking},
+  shorttitle = {Linear Stability Analysis of Chemical Mechanism, {{Listanalchem}}},
+  author = {Cruz, Elkin and Montoya, Andr{\'e}s and {\'A}greda, Jes{\'u}s},
+  year = {2023},
+  month = dec,
+  journal = {MethodsX},
+  volume = {11},
+  pages = {102307},
+  issn = {2215-0161},
+  urldate = {2023-09-21},
+  abstract = {Homochirality, the phenomenon by which one of two virtually identical (non-superimposable mirror images) compounds is favored over the other in the chemistry of life, has been regarded as a requisite for the emergence of all living things on earth. Spontaneous mirror symmetry breaking has been proposed to produce the imbalance. Under this framework, Frank presented, in his foundational article ``On spontaneous asymmetric synthesis'', a simple chemical reaction network that displays spontaneous symmetry breaking for a specific set of reaction rates. Research has since focused on finding more complex and plausible models, each one with its advantages and disadvantages. Nevertheless, finding reaction rate values that make a model exhibit spontaneous symmetry breaking is a complex task, even for specially crafted models. LInear STability ANALysis of CHEmical Mechanism, Listanalchem, is a method and software for the search for appropriate reaction rates. It includes four different algorithms inspired by the analysis of Frank's network. Two classical algorithms are also included in Listanalchem: the Trace-Determinant plane and the Stoichiometric Network Analysis by Bruce Clarke. Listanalchem reads a chemical reaction network from plain text and runs one or more of the available algorithms according to the user selection. Listanalchem is tested and verified by studying classical, modified, and recent models proposed to explain the origin of biological homochirality.{\textbullet}Listanalchem allows a fast and reliable search for instability behavior in chemical mechanisms that pretend to explain spontaneous mirror symmetry breaking.{\textbullet}Listanalchem contains several model examples, including the most cited in the related literature.{\textbullet}Listanalchem is a tool that tests models that pretend to explain the origin of biological homochirality, helps find errors, and aids in designing new models.},
+  keywords = {Frank inequality,Frank model,Homochirality,Linear stability analysis,Stoichiometric network analysis}
+}
+
+@article{paul2023aesm,
+  title = {Formal {{Verification}} of {{Safety-Critical Aerospace Systems}}},
+  author = {Paul, Saswata and Cruz, Elkin and Dutta, Airin and Bhaumik, Ankita and Blasch, Erik and Agha, Gul and Patterson, Stacy and Kopsaftopoulos, Fotis and Varela, Carlos},
+  year = {2023},
+  month = may,
+  journal = {IEEE Aerospace and Electronic Systems Magazine},
+  volume = {38},
+  number = {5},
+  pages = {72--88},
+  issn = {1557-959X},
+  abstract = {Developments in autonomous aircraft, such as electrical vertical take-off and landing vehicles and multicopter drones, raise safety-critical concerns in populated areas. This article presents the Analysis of Safety-Critical Systems Using Formal Methods-Based Runtime Evaluation (ASSURE) framework, which is a collection of techniques for aiding in the formal verification of safety-critical aerospace systems. ASSURE supports the rigorous verification of deterministic and nondeterministic properties of both distributed and centralized aerospace applications by using formal theorem proving tools. We present verifiable algorithms and software, formal reasoning models, formal proof libraries, and a data-driven runtime verification approach for aerospace systems toward a provably safe Internet of Planes infrastructure.},
+  keywords = {Aerospace and electronic systems,Aerospace electronics,Aerospace safety,Aircraft,Autonomous aerial vehicles,Cognition,distributed systems,Runtime,runtime verification,Software,stochastic systems,theorem proving}
+}
+
+@inproceedings{cruz2022pads,
+      title = {Evaluating Performance of Spintronics-Based Spiking Neural Network Chips using Parallel Discrete Event Simulation},
+     author = {Cruz-Camacho, Elkin and Qian, Siyuan and Shukla, Ankit and McGlohon, Neil and Rakheja, Shaloo and Carothers, Christopher D},
+  booktitle = {Proceedings of the 2022 ACM SIGSIM Conference on Principles of Advanced Discrete Simulation},
+      pages = {69--80},
+       year = {2022}
+}
+
+@InProceedings{cruz2020dddas,
+     author = {Cruz-Camacho, Elkin and Paul, Saswata and Kopsaftopoulos, Fotis and Varela, Carlos A.},
+     editor = {Darema, Frederica and Blasch, Erik and Ravela, Sai and Aved, Alex},
+      title = {Towards Provably Correct Probabilistic Flight Systems},
+  booktitle = {Dynamic Data Driven Application Systems},
+       year = {2020},
+      month = {Oct},
+  publisher = {Springer International Publishing},
+    address = {Cham},
+      pages = {236--244},
+   abstract = {Safety envelopes are meant to determine under which conditions and state space regions a probabilistic property of a data-driven system can be asserted with high confidence. Dynamic data-driven applications systems (DDDAS) can make use of safety envelopes to be cognizant of the formal warranties derived from their models and assumptions. An example of safety envelopes is presented as the intersection of two simpler concepts: {\$}{\$}z{\$}{\$}-predictability and {\$}{\$}{\backslash}tau {\$}{\$}-confidence; which correspond to state estimation and classification, respectively. To illustrate safety envelopes, stall detection from signal energy is shown with data gathered by piezo-electric sensors in a composite wing inside a wind tunnel under varying angles of attack and airspeed configuration. A formalization of these safety envelopes is presented in the Agda proof assistant, from which formally proven sentinel code can be generated.},
+       isbn = {978-3-030-61725-7}
+}
+
+@article{cruz2020colombiana,
+    title = {CHEMical KINetics SimuLATOR (Chemkinlator): A friendly user interface for chemical kinetics simulations},
+   author = {Cruz, Elkin and Montoya, Andrés and Ágreda, Jesús},
+  journal = {Revista Colombiana de Química},
+     note = {Accepted and waiting to be published}, % TODO: REMOVE ME!!!
+     year = {2020}
+}
+
+@article{montoya2019life,
+      title = {Computing the Parameter Values for the Emergence of Homochirality in Complex Networks},
+     author = {Montoya, Andrés and Cruz, Elkin and {\'A}greda, Jes{\'u}s},
+    journal = {Life},
+     volume = {9},
+     number = {3},
+      pages = {74},
+       year = {2019},
+  publisher = {Multidisciplinary Digital Publishing Institute}
+}
+
+@article{montoya2018match,
+    title = {On the stability analysis of chiral networks and the emergence of homochirality},
+   author = {Montoya, J Andrés and Mejía, Carolina and Bourdón, Rubén D and Cruz, Elkin and Ágreda, Jesús},
+  journal = {MATCH Commun. Math. Comput. Chem},
+   volume = {80},
+    pages = {311--344},
+     year = {2018}
+}
+
+// Remember to put publications on date order, the most recent on top
